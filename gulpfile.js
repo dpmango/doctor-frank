@@ -3,6 +3,7 @@ var rename        = require('gulp-rename');
 var pug           = require('gulp-pug');
 var postcss       = require('gulp-postcss');
 var sourcemaps    = require('gulp-sourcemaps');
+var assets      = require('postcss-assets');
 var autoprefixer  = require('autoprefixer');
 var sugarss       = require('sugarss');
 var precss        = require('precss');
@@ -60,6 +61,7 @@ var processors = [
     precss(),
     short(),
     colorFunction(),
+    assets( {loadPaths: ['./src/images'], relative: true } ),
     svginline(),
     autoprefixer({browsers: ['> 1%', 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']}),
     sorting(),
@@ -67,7 +69,6 @@ var processors = [
     pixrem(),
     //cssnano(),
 ];
-
 gulp.task('postcss', function() {
   return gulp.src('./src/pcss/style.sss')
       .pipe( sourcemaps.init() )
@@ -103,6 +104,14 @@ gulp.task('pug', function buildHTML() {
       }));
 });
 
+gulp.task('bootstrap', function() {
+  return gulp.src('./src/sass/bootstrap.sass')
+      .pipe( sass({ includePaths : ['./src/sass'] }) )
+      .pipe( postcss(processors) )
+      .pipe( gulp.dest('./src/css/lib') )
+});
+
+
 /////
 // OPTIMIZATION TASKS
 /////
@@ -124,7 +133,7 @@ gulp.task('images', function(){
 });
 
 gulp.task('fonts', function() {
-  return gulp.src('.src/fonts/**/*')
+  return gulp.src('./src/fonts/*')
   .pipe(gulp.dest('dist/fonts'))
 })
 

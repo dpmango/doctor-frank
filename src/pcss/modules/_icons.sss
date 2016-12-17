@@ -6,6 +6,19 @@
 
 // mixin
 @define-mixin myIcon $name
-  background: url('../images/$(name).svg') no-repeat center
-  width: 1em
-  height: 1em
+  background: url('../images/$(name)') no-repeat center
+  background-size: 100%
+  height: height('$(name)', 2)
+  width: width('$(name)', 2)
+
+.ico-social-insta
+  @mixin myIcon insta_icon.png
+
+.ico-social-fb
+  @mixin myIcon facebook_icon.png
+
+.ico-scroll-down
+  @mixin myIcon mouse_scroll_down.png
+
+.ico-scroll-down--gray
+  @mixin myIcon mouse_scroll_down_gray.png

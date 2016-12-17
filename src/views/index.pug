@@ -3,12 +3,63 @@ html
   include shared/head.pug
 
   body
-    include shared/header.pug
+    //TRANPARENT HEADER:: START
+    header.header.header--transparent
+      .container
+        .row
+          .col-sm-12
+            .header__wrapper
+              ul.header__navi
+                li.header__navi__btn
+                  a(href="#") Записаться на прием
+                .header__navi__sections
+                  li
+                    a(href="#") НАШИ КЛИНИКИ
+                  li
+                    a(href="#") НАШИ КЛИНИКИ
+                  li
+                    a(href="#") ПЕРСОНАЛ
+                  li
+                    a(href="#") УСЛУГИ
+                  li
+                    a(href="#") ПОРТФОЛИО
+                  li
+                    a(href="#") КОНТАКТЫ
 
-    //SECTION::START
-    section.section
-    //SECTION::END
+                li.header__navi__lang-switcher
+                  a(href="#") RU
+                li.header__navi__lang-switcher
+                  a(href="#") EN
+                li.fl-r
+                  a(href="#")
+                    i.ico.ico-social-fb
+                li.fl-r
+                  a(href="#")
+                    i.ico.ico-social-insta
+    //TRANPARENT HEADER::END
 
-    // HEADER::START
-    footer.footer
-    //HEADER::END
+    //HERO::START
+    .hero.hero--mainpage
+      .container
+        .row
+          .col-sm-12.text-sm-center
+            .hero__logo.img-fluid
+        .row
+          .col-sm-12
+            .hero__title МОЙ ОПЫТ. <br /> МОЯ ОТВЕТСТВЕННОСТЬ.
+            .hero__signature Мария Михайловна Франк
+              span Кандидат медицинских наук, <br /> главный врач клиники Doctor FRANK
+        .row
+          .col-sm-12.text-xs-center
+            .scroll-down
+              i.ico.ico-scroll-down
+              span Переходите <br> ниже
+    //HERO::END
+
+    //ABOUT::START
+    section.about.about--mainpage
+      .container
+        .row
+          .col-sm-12.text-sm-center
+            
+    //ABOUT::END
