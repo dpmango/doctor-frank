@@ -1,0 +1,101 @@
+doctype html
+html
+  include shared/head.pug
+
+body
+  .st-container#st-container
+    .st-pusher
+      include shared/sidebar-menu.pug
+
+      .st-content
+        .st-content-inner
+          #st-trigger-effects
+            button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
+              span.hamburger-box
+                span.hamburger-inner
+
+          //TRANPARENT HEADER:: START
+          header.header.header--static.header--transparent
+            .container
+              .row
+                .col-sm-12
+                  .header__wrapper
+                    ul.header__navi
+                      li.header__navi__btn
+                        a(href="#") Записаться на прием
+                      .header__navi__sections
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") ПЕРСОНАЛ
+                        li
+                          a(href="#") УСЛУГИ
+                        li
+                          a(href="#") ПОРТФОЛИО
+                        li
+                          a(href="#") КОНТАКТЫ
+
+                      li.header__navi__lang-switcher
+                        a(href="#") RU
+                      li.header__navi__lang-switcher
+                        a(href="#") EN
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-fb
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-insta
+
+          //HERO::START
+          .hero.hero--short.hero--faq
+            .container
+              .row
+                .col-sm-12.text-sm-center
+                  .hero__logo.img-fluid.hero__logo--white
+
+          //faq::START
+          section.faq
+            .container
+              .row
+                .col-sm-8
+                  .heading
+                    .heading__crumbs
+                      a.heading__crumbs__home(href="#") Главная
+                      span /
+                      a(href="#") ВОПРОС-ОТВЕТ
+                    h1.heading__name ВОПРОС-ОТВЕТ
+                    .heading__desc По сути это те же пломбы, но изготовленные в лаборатории по индивидуальным слепкам, как правило, из керамики. Обладают максимальной точностью прилегания и высокой эстетикой.
+              .row
+                .col-sm-12
+                  .faq__item
+                    .row
+                      .col-sm-2
+                        i.ico.faq__item__question
+                      .col-sm-10
+                        .faq__item__name АЛЕКСАНДР
+                        .faq__item__content Здравствуйте,объясните пожалуйста как происходит удаление разрушенного зуба (верхняя 6-ка не имеющая коронки) если еще в полость остатков зуба наросла дисна спрятав тем самым остатки и корень зуба, и какова приблизительная стоимость такого удаления? Заранее благодарю за ответ, спасибо!
+                    .row.faq__item__answer
+                      .col-sm-2
+                        img(src="/images/faq_user_pic.png").img-fluid
+                      .col-sm-10
+                        .faq__item__name АЛЕКСАНДР
+                        .faq__item__status ВРАЧ ИМПЛАНТОЛОГ
+                        .faq__item__content Здравствуйте,объясните пожалуйста как происходит удаление разрушенного зуба (верхняя 6-ка не имеющая коронки) если еще в полость остатков зуба наросла дисна спрятав тем самым остатки и корень зуба, и какова приблизительная стоимость такого удаления? Заранее благодарю за ответ, спасибо!
+                  .faq__item
+                    .row
+                      .col-sm-2
+                        i.ico.faq__item__question
+                      .col-sm-10
+                        .faq__item__name АЛЕКСАНДР
+                        .faq__item__content Здравствуйте,объясните пожалуйста как происходит удаление разрушенного зуба (верхняя 6-ка не имеющая коронки) если еще в полость остатков зуба наросла дисна спрятав тем самым остатки и корень зуба, и какова приблизительная стоимость такого удаления? Заранее благодарю за ответ, спасибо!
+                    .row.faq__item__answer
+                      .col-sm-2
+                        img(src="/images/faq_user_pic.png").img-fluid
+                      .col-sm-10
+                        .faq__item__name АЛЕКСАНДР
+                        .faq__item__status ВРАЧ ИМПЛАНТОЛОГ
+                        .faq__item__content Здравствуйте,объясните пожалуйста как происходит удаление разрушенного зуба (верхняя 6-ка не имеющая коронки) если еще в полость остатков зуба наросла дисна спрятав тем самым остатки и корень зуба, и какова приблизительная стоимость такого удаления? Заранее благодарю за ответ, спасибо!
+
+          include shared/footer.pug

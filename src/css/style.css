@@ -21,6 +21,16 @@
 		url('../fonts/HarmoniaSansProCyr-Regular.ttf') format('truetype');
 }
 @font-face {
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'HarmoniaSemiBold';
+    src: url('../fonts/HarmoniaSansProCyr-SemiBd.eot');
+    src: url('../fonts/HarmoniaSansProCyr-SemiBd.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HarmoniaSansProCyr-SemiBd.woff2') format('woff2'),
+		url('../fonts/HarmoniaSansProCyr-SemiBd.woff') format('woff'),
+		url('../fonts/HarmoniaSansProCyr-SemiBd.ttf') format('truetype');
+}
+@font-face {
     font-weight: 400;
     font-style: normal;
     font-family: 'Muller';
@@ -94,6 +104,12 @@ body, html {
     position: fixed;
     top: 50px;
 }
+.header--static {
+    position: absolute;
+}
+.footer {
+    font-size: 18px;
+}
 .hero {
     position: relative;
     padding-top: 1.3em;
@@ -102,6 +118,14 @@ body, html {
 }
 .hero--mainpage {
     background: url('../images/main_slide_1.jpg') no-repeat center;
+    background-size: cover;
+}
+.hero--short {
+    min-height: 500px;
+    height: 500px;
+}
+.hero--faq {
+    background: url('../images/faq_hero.jpg') no-repeat center;
     background-size: cover;
 }
 .about {
@@ -123,7 +147,10 @@ body, html {
 .services--mainpage {
     background: url('../images/hand_2.jpg') no-repeat center;
     background-size: cover;
+    background-size: cover;
 }
+/* inner pages */
+.faq {}
 /* Helpers */
 .flex {
     display: -webkit-box;
@@ -174,6 +201,41 @@ body, html {
 }
 .scroll-down--gray span {
     color: #4b4b4b;
+}
+/* heading */
+.heading {}
+.heading__crumbs {
+    padding-top: 40px;
+    font-size: 12px;
+    font-family: 'HarmoniaSemiBold';
+}
+a.heading__crumbs__home {
+    color: #3db4b2;
+}
+.heading__crumbs span {
+    display: inline-block;
+    padding: 0 5px;
+}
+.heading__name {
+    margin: 30px 0 5px 0;
+    text-transform: uppercase;
+    font-size: 75px;
+    font-family: 'DIN';
+    line-height: 1.1em;
+}
+.heading__desc {
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 1.6em;
+}
+/*footer */
+.footer__copy {
+    padding: 30px 0 35px 0;
+    border-top: 2px solid #aeaeae;
+}
+.footer__developer {
+    padding: 30px 0 35px 0;
+    color: #3db4b2;
 }
 /* header */
 .header__wrapper {
@@ -244,6 +306,9 @@ body, html {
     height: 67.5px;
     background: url('../images/logo_gray.png') no-repeat center;
     background-size: contain;
+}
+.hero__logo--white {
+    background-image: url('../images/Logo_white.png');
 }
 .hero__title {
     margin-top: 260px;
@@ -400,6 +465,78 @@ a.serivces__spiral__pos-eight {
 a.serivces__spiral__pos-eight::before {
     display: inline-block;
     vertical-align: -10px;
+}
+/* faq */
+.faq__item {
+    position: relative;
+    padding: 50px 0;
+    border-bottom: 2px dotted #c6c6c6;
+}
+.faq__item:last-child {
+    border-bottom: none;
+}
+.faq__item::before {
+    position: absolute;
+    top: 85px;
+    left: 60px;
+    display: block;
+    width: 4.5px;
+    height: 312.5px;
+    background: url('../images/faq_dots.png') repeat-x left center;
+    background-size: cover;
+    content: ' ';
+}
+.faq__item__question {
+    width: 115.5px;
+    height: 106.5px;
+    background: url('../images/talk_buble.png') no-repeat center;
+    background-size: cover;
+}
+.faq__item__name {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'HarmoniaBlack';
+}
+.faq__item__content {
+    position: relative;
+    margin-top: 50px;
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 1.6em;
+}
+.faq__item__content::after, .faq__item__content::before {
+    position: absolute;
+    font-size: 75px;
+    font-family: 'HarmoniaBlack';
+}
+.faq__item__content::after {
+    top: -5px;
+    left: -5px;
+    content: '“';
+}
+.faq__item__content::before {
+    right: 50%;
+    bottom: -30px;
+    content: '”';
+}
+.faq__item__status {
+    color: #9e9e9e;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'HarmoniaBlack';
+}
+.faq__item__answer {
+    margin-top: 80px;
+}
+.faq__item__answer .img-fluid {
+    max-width: 80%;
+}
+.faq__item__answer .faq__item__name {
+    color: #3db4b2;
+}
+.faq__item__answer .faq__item__content {}
+.faq__item__answer .faq__item__content::after, .faq__item__answer .faq__item__content::before {
+    color: #3db4b2;
 }
 
 /* 3. Elements */

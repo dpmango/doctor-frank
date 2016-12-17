@@ -15,6 +15,7 @@ $hd-from: width >= 1680px
 $fontColor: #333
 $grayColor: #4b4b4b
 $colorPrimary: #39908f
+$colorPrimaryLight: #3db4b2
 $colorGreen: #4ab68f
 $colorRed: #f45b63
 $colorYellow: #fda737
@@ -61,6 +62,11 @@ body, html
   &--floating
     position: fixed
     top: 50px
+  &--static
+    position: absolute
+
+.footer
+  font-size: 18px
 
 .hero
   height: 100vh
@@ -69,6 +75,11 @@ body, html
   position: relative
   &--mainpage
     @mixin bgImg main_slide_1.jpg
+  &--short
+    min-height: 500px
+    height: 500px
+  &--faq
+    @mixin bgImg faq_hero.jpg
 
 .about
   height: 100vh
@@ -85,3 +96,7 @@ body, html
   position: relative
   &--mainpage
     @mixin bgImg hand_2.jpg
+    background-size: cover
+
+// inner pages
+.faq
