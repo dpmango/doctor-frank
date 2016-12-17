@@ -2,75 +2,110 @@ doctype html
 html
   include shared/head.pug
 
-  body
-    //TRANPARENT HEADER:: START
-    header.header.header--transparent
-      .container
-        .row
-          .col-sm-12
-            .header__wrapper
-              ul.header__navi
-                li.header__navi__btn
-                  a(href="#") Записаться на прием
-                .header__navi__sections
-                  li
-                    a(href="#") НАШИ КЛИНИКИ
-                  li
-                    a(href="#") НАШИ КЛИНИКИ
-                  li
-                    a(href="#") ПЕРСОНАЛ
-                  li
-                    a(href="#") УСЛУГИ
-                  li
-                    a(href="#") ПОРТФОЛИО
-                  li
-                    a(href="#") КОНТАКТЫ
+body
+  .st-container#st-container
+    .st-pusher
+      nav.st-menu.st-effect-8#menu-8
+        ul
+          li
+            a(href="#") Hаши клиники
+          li
+            a(href="#") Персонал
+          li
+            a(href="#") Услуги
+          li
+            a(href="#") Портфолио
+          li
+            a(href="#") Новости
+          li
+            a(href="#") Пациентам
+          li
+            a(href="#") Вопрос-ответ
+          li
+            a(href="#") Отзывы
+          li
+            a(href="#") Партнеры
+          li
+            a(href="#") Kонтакты
 
-                li.header__navi__lang-switcher
-                  a(href="#") RU
-                li.header__navi__lang-switcher
-                  a(href="#") EN
-                li.fl-r
-                  a(href="#")
-                    i.ico.ico-social-fb
-                li.fl-r
-                  a(href="#")
-                    i.ico.ico-social-insta
-    //TRANPARENT HEADER::END
 
-    //HERO::START
-    .hero.hero--mainpage
-      .container
-        .row
-          .col-sm-12.text-sm-center
-            .hero__logo.img-fluid
-        .row
-          .col-sm-12
-            .hero__title МОЙ ОПЫТ. <br /> МОЯ ОТВЕТСТВЕННОСТЬ.
-            .hero__signature Мария Михайловна Франк
-              span Кандидат медицинских наук, <br /> главный врач клиники Doctor FRANK
-        .row
-          .col-sm-12.text-xs-center
-            .scroll-down
-              i.ico.ico-scroll-down
-              span Переходите <br> ниже
-    //HERO::END
+      .st-content
+        .st-content-inner
+          #st-trigger-effects
+            button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
+              span.hamburger-box
+                span.hamburger-inner
 
-    //ABOUT::START
-    section.about.about--mainpage
-      .container
-        .row
-          .col-sm-5.offset-sm-1
-            .about__block.about__block--primary
-              span В своих решениях мы опираемся на знания и многолетний собственный опыт и опыт наших зарубежных коллег. Наш пациент знает, что получает лучшее.
-              a.btn.btn--huge.btn--rounded.btn--outline.btn--white(href="#") ПОЛНАЯ ИНФОРМАЦИЯ →
-          .col-sm-7.pull-sm-1.absolute
-            .about__block.about__block--light
-              .about__block__title О клиниках
-              span Безусловный приоритет работы нашей клиники - оказание всесторонней высококвалифицированной стоматологической помощи взрослым и детям. Используя новейшие технологии мировой стоматологии , мы уверены в их качестве, пользе , безопасности.
-        .row
-          .col-sm-12.text-xs-center
-            .scroll-down.scroll-down--gray
-              i.ico.ico-scroll-down--gray
-              span Переходите <br> ниже
-    //ABOUT::END
+          //TRANPARENT HEADER:: START
+          header.header.header--transparent
+            .container
+              .row
+                .col-sm-12
+                  .header__wrapper
+                    ul.header__navi
+                      li.header__navi__btn
+                        a(href="#") Записаться на прием
+                      .header__navi__sections
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") ПЕРСОНАЛ
+                        li
+                          a(href="#") УСЛУГИ
+                        li
+                          a(href="#") ПОРТФОЛИО
+                        li
+                          a(href="#") КОНТАКТЫ
+
+                      li.header__navi__lang-switcher
+                        a(href="#") RU
+                      li.header__navi__lang-switcher
+                        a(href="#") EN
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-fb
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-insta
+
+          //HERO::START
+          .hero.hero--mainpage
+            .container
+              .row
+                .col-sm-12.text-sm-center
+                  .hero__logo.img-fluid
+              .row
+                .col-sm-12
+                  .hero__title МОЙ ОПЫТ. <br /> МОЯ ОТВЕТСТВЕННОСТЬ.
+                  .hero__signature Мария Михайловна Франк
+                    span Кандидат медицинских наук, <br /> главный врач клиники Doctor FRANK
+              .row
+                .col-sm-12.text-xs-center
+                  .scroll-down
+                    i.ico.ico-scroll-down
+                    span Переходите <br> ниже
+
+          //ABOUT::START
+          section.about.about--mainpage
+            .container
+              .row
+                .col-sm-5.offset-sm-1
+                  .about__block.about__block--primary
+                    span В своих решениях мы опираемся на знания и многолетний собственный опыт и опыт наших зарубежных коллег. Наш пациент знает, что получает лучшее.
+                    a.btn.btn--huge.btn--rounded.btn--outline.btn--white(href="#") ПОЛНАЯ ИНФОРМАЦИЯ →
+                .col-sm-7.pull-sm-1.absolute
+                  .about__block.about__block--light
+                    .about__block__title О клиниках
+                    span Безусловный приоритет работы нашей клиники - оказание всесторонней высококвалифицированной стоматологической помощи взрослым и детям. Используя новейшие технологии мировой стоматологии , мы уверены в их качестве, пользе , безопасности.
+              .row
+                .col-sm-12.text-xs-center
+                  .scroll-down.scroll-down--gray
+                    i.ico.ico-scroll-down--gray
+                    span Переходите <br> ниже
+
+          //SERVICES::START
+          section.services.services--mainpage
+            .container
+              .row

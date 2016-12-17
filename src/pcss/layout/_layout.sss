@@ -51,14 +51,16 @@ body, html
   font-family: 'HarmoniaBlack'
   color: white
   font-size: 12px
+  transition: top .4s ease-in-out
   &--transparent
-    position: absolute
+    position: fixed
     left: 0
     top: 120px
     width: 100%
     z-index: 9
   &--floating
     position: fixed
+    top: 50px
 
 .hero
   height: 100vh
@@ -76,3 +78,10 @@ body, html
     @mixin bgImg main_slide_2.jpg
     background-position: top center
     background-size: 100% 80%
+
+.services
+  height: 100vh
+  min-height: 800px
+  position: relative
+  &--mainpage
+    @mixin bgImg hand_2.jpg
