@@ -1,0 +1,78 @@
+
+// services
+
+.services__title
+  font-family: 'DIN'
+  margin-top: 160px
+  color: white
+  font-size: 89px
+  line-height: 1
+
+.serivces__spiral
+  a
+    font-size: 12px
+    display: inline-block
+    color: $grayColor
+    text-transform: uppercase
+    position: absolute
+    padding: 20px
+    transition: color .4s ease-in-out
+    span
+      display: inline-block
+    &:hover
+      color: $colorPrimary
+      &::before, &::after
+        background: $colorPrimary
+    &::before, &::after
+      size: 18px
+      border-radius: 50%
+      margin-left: 10px
+      margin-right: 10px
+      vertical-align: -5px
+      background: white
+      content: ' '
+      display: none
+      transition: background .4s ease-in-out
+
+  a&__pos-one
+    top: 23.2%
+    right: 14.7%
+    &::before
+      display: inline-block
+  a&__pos-two
+    top: 42.8%
+    right: 0.5%
+    &::after
+      display: inline-block
+  a&__pos-three
+    top: 62%
+    right: 13.1%
+    &::before
+      display: inline-block
+      vertical-align: 10px
+  a&__pos-four
+    top: 87%
+    right: 14.6%
+    &::after
+      display: inline-block
+  a&__pos-five
+    top: 48.9%
+    left: 18.5%
+    &::before
+      display: inline-block
+  a&__pos-six
+    top: 62%
+    left: 3.8%
+    &::before
+      display: inline-block
+  a&__pos-seven
+    top: 67%
+    left: 26%
+    &::before
+      display: inline-block
+  a&__pos-eight
+    top: 80.6%
+    left: 14%
+    &::before
+      display: inline-block
+      vertical-align: -10px

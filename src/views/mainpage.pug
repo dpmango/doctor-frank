@@ -30,7 +30,7 @@ body
 
 
       .st-content
-        .st-content-inner
+        .st-content-inner#fullpage
           #st-trigger-effects
             button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
               span.hamburger-box
@@ -71,7 +71,7 @@ body
                           i.ico.ico-social-insta
 
           //HERO::START
-          .hero.hero--mainpage
+          .hero.hero--mainpage.section
             .container
               .row
                 .col-sm-12.text-sm-center
@@ -88,7 +88,7 @@ body
                     span Переходите <br> ниже
 
           //ABOUT::START
-          section.about.about--mainpage
+          section.about.about--mainpage.section
             .container
               .row
                 .col-sm-5.offset-sm-1
@@ -106,6 +106,19 @@ body
                     span Переходите <br> ниже
 
           //SERVICES::START
-          section.services.services--mainpage
+          section.services.services--mainpage.section
             .container
               .row
+                .col-sm-12.h100
+                  .services__title УСЛУГИ <br> КЛИНИКИ
+                  .serivces__spiral
+                    a.serivces__spiral__pos-one(href="#") Диагностика
+                    a.serivces__spiral__pos-two(href="#") Ортодония
+                    a.serivces__spiral__pos-three(href="#")
+                      span Детская <br> стоматология
+                    a.serivces__spiral__pos-four(href="#") Пародонтология
+                    a.serivces__spiral__pos-five(href="#") Имплантация
+                    a.serivces__spiral__pos-six(href="#") Протезирование
+                    a.serivces__spiral__pos-seven(href="#") Терапия
+                    a.serivces__spiral__pos-eight(href="#")
+                      span Эстетическая <br> стоматология
