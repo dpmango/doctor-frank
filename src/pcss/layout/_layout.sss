@@ -53,13 +53,12 @@ body, html
   font-size: 12px
   &--transparent
     position: absolute
+    left: 0
     top: 120px
     width: 100%
     z-index: 9
   &--floating
     position: fixed
-
-
 
 .hero
   height: 100vh
@@ -72,5 +71,8 @@ body, html
 .about
   height: 100vh
   min-height: 800px
+  position: relative
   &--mainpage
     @mixin bgImg main_slide_2.jpg
+    background-position: top center
+    background-size: 100% 80%

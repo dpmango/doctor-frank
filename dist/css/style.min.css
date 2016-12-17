@@ -2881,6 +2881,26 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 @font-face {
     font-weight: 400;
     font-style: normal;
+    font-family: 'Muller';
+    src: url('../fonts/MullerRegular.eot');
+    src: url('../fonts/MullerRegular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MullerRegular.woff2') format('woff2'),
+		url('../fonts/MullerRegular.woff') format('woff'),
+		url('../fonts/MullerRegular.ttf') format('truetype');
+}
+@font-face {
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'MullerBold';
+    src: url('../fonts/MullerBold.eot');
+    src: url('../fonts/MullerBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MullerBold.woff2') format('woff2'),
+		url('../fonts/MullerBold.woff') format('woff'),
+		url('../fonts/MullerBold.ttf') format('truetype');
+}
+@font-face {
+    font-weight: 400;
+    font-style: normal;
     font-family: 'DIN';
     src: url('../fonts/DINCondensedC.eot');
     src: url('../fonts/DINCondensedC.eot?#iefix') format('embedded-opentype'),
@@ -2922,6 +2942,7 @@ body, html {
 .header--transparent {
     position: absolute;
     top: 120px;
+    left: 0;
     z-index: 9;
     width: 100%;
 }
@@ -2939,12 +2960,15 @@ body, html {
     background-size: cover;
 }
 .about {
+    position: relative;
     min-height: 800px;
     height: 100vh;
 }
 .about--mainpage {
     background: url('../images/main_slide_2.jpg') no-repeat center;
+    background-position: top center;
     background-size: cover;
+    background-size: 100% 80%;
 }
 /* Helpers */
 .flex {
@@ -3088,7 +3112,9 @@ body, html {
     font-size: 15px;
     line-height: 1;
 }
-.scroll-down--gray {}
+.scroll-down--gray span {
+    color: #4b4b4b;
+}
 /* header */
 .header__wrapper {
     border: 2px solid white;
@@ -3178,6 +3204,45 @@ body, html {
     font-size: 18px;
     line-height: 1.1em;
 }
+/* About mainpage */
+.about .absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.about__block {
+    padding: 45px 40px;
+}
+.about__block span {
+    display: inline-block;
+    font-size: 15px;
+    font-family: 'Muller';
+    line-height: 2em;
+}
+.about__block .btn {
+    margin-top: 30px;
+}
+.about__block__title {
+    margin-bottom: 20px;
+    color: #4b4b4b;
+    text-transform: uppercase;
+    font-size: 95px;
+    font-family: 'DIN';
+    line-height: 1.1em;
+}
+.about__block--light {
+    margin-top: 400px;
+    background: #f3f3f3;
+}
+.about__block--light span {
+    color: #4b4b4b;
+}
+.about__block--primary {
+    margin-top: 500px;
+    padding-right: 80px;
+    background: #39908f;
+    color: white;
+}
 
 /* 3. Elements */
 /* ICONS */
@@ -3212,18 +3277,32 @@ body, html {
     background-size: 100%;
 }
 /* buttons */
-.btn {}
+.btn {
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
 .btn:focus, .btn:active {
     outline: none;
 }
 /* generic modifiers */
 .btn--rounded {
-    border-radius: 50%;
+    border-radius: 2em;
+}
+.btn--huge {
+    padding: 20px 25px 15px 25px;
+    font-family: 'MullerBold';
 }
 .btn--outline {
-    border: 1px solid transparent;
+    border: 2px solid transparent;
 }
 .btn--outline:hover {}
+.btn--white {
+    border-color: white;
+}
+.btn--white:hover {
+    background: white;
+    color: #39908f;
+}
 .btn--abosulte-ico .ico {
     position: absolute;
     top: 50%;
