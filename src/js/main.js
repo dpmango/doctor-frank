@@ -46,7 +46,7 @@ $(document).ready(function(){
       //Navigation
       menu: '#menu',
       lockAnchors: false,
-      anchors:['firstPage', 'secondPage'],
+      anchors:['firstPage', 'secondPage', 'thirdPage'],
       navigation: false,
       navigationPosition: 'right',
       navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -79,7 +79,7 @@ $(document).ready(function(){
       scrollOverflowOptions: null,
       touchSensitivity: 15,
       normalScrollElementTouchThreshold: 5,
-      bigSectionsDestination: null,
+      bigSectionsDestination: top,
 
       //Accessibility
       keyboardScrolling: true,
@@ -88,11 +88,11 @@ $(document).ready(function(){
 
       //Design
       controlArrows: true,
-      verticalCentered: true,
-      sectionsColor : ['#ccc', '#fff'],
-      paddingTop: '3em',
-      paddingBottom: '10px',
-      fixedElements: '#header, .footer',
+      verticalCentered: false,
+      sectionsColor : ['transparent', 'transparent'],
+      paddingTop: '15px',
+      paddingBottom: '0px',
+      fixedElements: '.header, .hamburger',
       responsiveWidth: 0,
       responsiveHeight: 0,
       responsiveSlides: false,
@@ -104,7 +104,13 @@ $(document).ready(function(){
       lazyLoading: true,
 
       //events
-      onLeave: function(index, nextIndex, direction){},
+      onLeave: function(index, nextIndex, direction){
+        if(index == 1 && direction =='down'){
+            $('.header').addClass('header--floating');
+        } else if (index == 2 && direction =='up'){
+          $('.header').removeClass('header--floating');
+        }
+      },
       afterLoad: function(anchorLink, index){},
       afterRender: function(){},
       afterResize: function(){},
