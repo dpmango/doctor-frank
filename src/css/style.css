@@ -140,6 +140,10 @@ body, html {
     background: url('../images/hero_testimonials.jpg') no-repeat center;
     background-size: cover;
 }
+.hero--partners {
+    background: url('../images/hero_partner.jpg') no-repeat center;
+    background-size: cover;
+}
 .about {
     position: relative;
     min-height: 800px;
@@ -164,7 +168,13 @@ body, html {
 /* inner pages */
 .faq
 
-.kliniki {}
+.testimonials
+
+.contact
+
+.kliniki
+
+.partners {}
 /* Helpers */
 .flex {
     display: -webkit-box;
@@ -705,6 +715,22 @@ a.serivces__spiral__pos-eight::before {
 }
 .content__tabs a.active {
     color: #333;
+}
+/* partners */
+.partner__item {
+    margin: 60px 0;
+}
+.partner__item__name {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'HarmoniaBlack';
+}
+.partner__item__content {
+    font-size: 18px;
+    line-height: 1.6em;
+}
+.partner__item__content a {
+    color: #39908f;
 }
 
 /* 3. Elements */

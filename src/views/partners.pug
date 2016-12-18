@@ -1,0 +1,103 @@
+doctype html
+html
+  include shared/head.pug
+
+body
+  .st-container#st-container
+    .st-pusher
+      include shared/sidebar-menu.pug
+
+      .st-content
+        .st-content-inner
+          #st-trigger-effects
+            button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
+              span.hamburger-box
+                span.hamburger-inner
+
+          //TRANPARENT HEADER:: START
+          header.header.header--static.header--transparent
+            .container
+              .row
+                .col-sm-12
+                  .header__wrapper
+                    ul.header__navi
+                      li.header__navi__btn
+                        a(href="#") Записаться на прием
+                      .header__navi__sections
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") ПЕРСОНАЛ
+                        li
+                          a(href="#") УСЛУГИ
+                        li
+                          a(href="#") ПОРТФОЛИО
+                        li
+                          a(href="#") КОНТАКТЫ
+
+                      li.header__navi__lang-switcher
+                        a(href="#") RU
+                      li.header__navi__lang-switcher
+                        a(href="#") EN
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-fb
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-insta
+
+          //HERO::START
+          .hero.hero--short.hero--partners
+            .container
+              .row
+                .col-sm-12.text-sm-center
+                  .hero__logo.img-fluid.hero__logo--white
+
+          //PARTNERS::START
+          section.partners
+            .container
+              .row
+                .col-sm-8
+                  .heading
+                    .heading__crumbs
+                      a.heading__crumbs__home(href="#") Главная
+                      span /
+                      a(href="#") Партнеры
+                    h1.heading__name Партнеры
+                    .heading__desc По сути это те же пломбы, но изготовленные в лаборатории по индивидуальным слепкам, как правило, из керамики. Обладают максимальной точностью прилегания и высокой эстетикой.
+              .row
+                // item
+                .col-sm-6.partner__item
+                  .row
+                    .col-sm-4
+                      img(src="/images/partner_4.jpg").img-fluid
+                    .col-sm-8
+                      .partner__item__name SPLAT
+                      .partner__item__content SPLAT — ведущий разработчик и производитель профессиональных решений в категориях ухода за полостью рта, бытовой не химии и детской косметики. Специализация SPLAT – создание качественных продуктов, не имеющих аналогов в мире
+                // item
+                .col-sm-6.partner__item
+                  .row
+                    .col-sm-4
+                      img(src="/images/partner_3.jpg").img-fluid
+                    .col-sm-8
+                      .partner__item__name R.O.C.S.
+                      .partner__item__content Группа компаний DRC – это торгово-промышленная группа компаний - является ведущим разработчиком, производителем и поставщиком высококачественных средств по уходу за полостью рта. Представляет такие бренды, как R.O.C.S.
+                // item
+                .col-sm-6.partner__item
+                  .row
+                    .col-sm-4
+                      img(src="/images/partner_1.jpg").img-fluid
+                    .col-sm-8
+                      .partner__item__name АВТОПЛЮС
+                      .partner__item__content Группа компаний «Автоплюс» является одной из крупнейших и наиболее динамично развивающихся компаний автомобильного рынка Урало-Сибирского региона. Это 12 дилерских центров в 4 городах России – Екатеринбурге, Омске, Нижнем Тагиле и Каменске-Уральском
+                // item
+                .col-sm-6.partner__item
+                  .row
+                    .col-sm-4
+                      img(src="/images/partner_2.jpg").img-fluid
+                    .col-sm-8
+                      .partner__item__name ULTRA Family Fitness
+                      .partner__item__content ULTRA Family Fitness - это один из лучших фитнес-клубов города с бассейном, сквош-кортом, детским клубом, залами групповых программ и боевых искусств, двухуровневым тренажёрным залом, салоном красоты и фитнес-баром! <br> Адрес в Екатеринбурге: проспект Космонавтов, 29г <br> <a href="#"> www.ultr-ff.ru</a>
+          include shared/footer.pug
