@@ -1,0 +1,102 @@
+doctype html
+html
+  include shared/head.pug
+
+body
+  .st-container#st-container
+    .st-pusher
+      include shared/sidebar-menu.pug
+
+      .st-content
+        .st-content-inner
+          #st-trigger-effects
+            button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
+              span.hamburger-box
+                span.hamburger-inner
+
+          //TRANPARENT HEADER:: START
+          header.header.header--static.header--transparent
+            .container
+              .row
+                .col-sm-12
+                  .header__wrapper
+                    ul.header__navi
+                      li.header__navi__btn
+                        a(href="#") Записаться на прием
+                      .header__navi__sections
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") ПЕРСОНАЛ
+                        li
+                          a(href="#") УСЛУГИ
+                        li
+                          a(href="#") ПОРТФОЛИО
+                        li
+                          a(href="#") КОНТАКТЫ
+
+                      li.header__navi__lang-switcher
+                        a(href="#") RU
+                      li.header__navi__lang-switcher
+                        a(href="#") EN
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-fb
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-insta
+
+          //HERO::START
+          .hero.hero--short.hero--personal
+            .container
+              .row
+                .col-sm-12.text-sm-center
+                  .hero__logo.img-fluid.hero__logo--white
+
+          //PERSONAL::START
+          section.personal
+            .container
+              .row
+                .col-sm-12
+                  .heading
+                    .heading__crumbs
+                      a.heading__crumbs__home(href="#") Главная
+                      span /
+                      a(href="#") Персонал
+                  .row
+                    .col-sm-6
+                      h1.heading__name.heading__name__condenced ПЕРСОНАЛ <br> СЕТИ КЛИНИК <br> ДОКТОР ФРАНК
+                    .col-sm-6
+                      .heading__paragraph
+                        .heading__paragraph__name Коллектив - наше преимущество!
+                        .heading__desc Специалисты Doctor Frank — это не только профессионалы в своей области, обладающие глубокими научными знаниями и мастерством, но и люди, способные мыслить творчески, постоянно ищущие более эффективные и удобные для пациента пути решения проблем.
+
+              // ITEMS
+              .row
+                .col-sm-6
+                  a(href="#").personal__card.personal__card--huge
+                    .personal__card__name Франк
+                    .personal__card__status должность
+                    img(src="/images/people/frank_1.jpg").img-fluid
+                .col-sm-6
+                  .row
+                    .col-sm-6
+                      a(href="#").personal__card.personal__card--no-hover
+                        img(src="/images/personal_1.jpg").img-fluid
+                    .col-sm-6
+                      a(href="#").personal__card
+                        .personal__card__name Франк
+                        .personal__card__status должность
+                        img(src="/images/people/13.jpg").img-fluid
+                  .row.mt30
+                    .col-sm-12
+                      a(href="#").personal__card.personal__card--wide
+                        .personal__card__name Франк
+                        .personal__card__status должность
+                        img(src="/images/people/4.jpg").img-fluid
+              //second row
+              .row
+
+          include shared/footer.pug

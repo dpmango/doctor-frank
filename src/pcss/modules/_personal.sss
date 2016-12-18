@@ -1,0 +1,58 @@
+// Personal
+.personal__card
+  display: block
+  position: relative
+  &::after
+    display: block
+    position: absolute 0 0 0 0
+    content: ' '
+    opacity: 0
+    z-index: 1
+    transition: opacity .4s ease-in-out
+    background: color($colorPrimaryLight a(60%))
+  &:hover
+    &::after
+      opacity: 1
+    .personal__card__name
+      opacity: 1
+    .personal__card__status
+      opacity: 1
+  //modifiers
+  &--no-hover
+    cursor: default
+    &:hover
+      &::after
+        opacity: 0
+      .personal__card__name
+        opacity: 0
+      .personal__card__status
+        opacity: 0
+  &--huge
+    .personal__card__name
+      top: 40%
+  &--long
+    .personal__card__name
+      top: 30%
+  &--wide
+    .personal__card__name
+      top: 30%
+
+  &__name
+    color: #003733
+    text-transform: uppercase
+    font-size: 18px
+    font-family: 'HarmoniaSemiBold'
+    margin-bottom: 10px
+    position: absolute 30% 10%
+    opacity: 0
+    z-index: 2
+    transition: opacity .3s ease-in
+  &__status
+    color: white
+    font-size: 18px
+    font-family: 'HarmoniaItalic'
+    margin-bottom: 10px
+    position: absolute 50% 10%
+    opacity: 0
+    z-index: 2
+    transition: opacity .3s ease-in

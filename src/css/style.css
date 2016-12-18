@@ -32,6 +32,16 @@
 }
 @font-face {
     font-weight: 400;
+    font-style: italic;
+    font-family: 'HarmoniaItalic';
+    src: url('../fonts/HarmoniaSansProCyr-Italic.eot');
+    src: url('../fonts/HarmoniaSansProCyr-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HarmoniaSansProCyr-Italic.woff2') format('woff2'),
+		url('../fonts/HarmoniaSansProCyr-Italic.woff') format('woff'),
+		url('../fonts/HarmoniaSansProCyr-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-weight: 400;
     font-style: normal;
     font-family: 'Muller';
     src: url('../fonts/MullerRegular.eot');
@@ -144,6 +154,10 @@ body, html {
     background: url('../images/hero_partner.jpg') no-repeat center;
     background-size: cover;
 }
+.hero--personal {
+    background: url('../images/hero_personal.jpg') no-repeat center;
+    background-size: cover;
+}
 .about {
     position: relative;
     min-height: 800px;
@@ -174,7 +188,9 @@ body, html {
 
 .kliniki
 
-.partners {}
+.partners
+
+.personal {}
 /* Helpers */
 .flex {
     display: -webkit-box;
@@ -215,6 +231,12 @@ body, html {
 /* margins */
 .mb50 {
     margin-bottom: 50px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.mt30 {
+    margin-top: 30px;
 }
 
 /* 2. Modules */
@@ -291,10 +313,23 @@ a.heading__crumbs__home {
     font-family: 'DIN';
     line-height: 1.1em;
 }
+.heading__name__condenced {
+    line-height: .9em;
+}
 .heading__desc {
     color: #4b4b4b;
     font-size: 18px;
     line-height: 1.6em;
+}
+.heading__paragraph {
+    margin-top: 23px;
+}
+.heading__paragraph__name {
+    margin-bottom: 5px;
+    color: #3db4b2;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'HarmoniaSemiBold';
 }
 /*footer */
 .footer__copy {
@@ -731,6 +766,86 @@ a.serivces__spiral__pos-eight::before {
 }
 .partner__item__content a {
     color: #39908f;
+}
+/* Personal */
+.personal__card {
+    position: relative;
+    display: block;/*modifiers */
+}
+.personal__card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    background: rgba(61, 180, 178, 0.6);
+    content: ' ';
+    opacity: 0;
+    -webkit-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+}
+.personal__card:hover .personal__card__name {
+    opacity: 1;
+}
+.personal__card:hover .personal__card__status {
+    opacity: 1;
+}
+.personal__card:hover::after {
+    opacity: 1;
+}
+.personal__card--no-hover {
+    cursor: default;
+}
+.personal__card--no-hover:hover .personal__card__name {
+    opacity: 0;
+}
+.personal__card--no-hover:hover .personal__card__status {
+    opacity: 0;
+}
+.personal__card--no-hover:hover::after {
+    opacity: 0;
+}
+.personal__card--huge .personal__card__name {
+    top: 40%;
+}
+.personal__card--long .personal__card__name {
+    top: 30%;
+}
+.personal__card--wide .personal__card__name {
+    top: 30%;
+}
+.personal__card__name {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    bottom: 30%;
+    left: 10%;
+    z-index: 2;
+    margin-bottom: 10px;
+    color: #003733;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'HarmoniaSemiBold';
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in;
+    transition: opacity .3s ease-in;
+}
+.personal__card__status {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    bottom: 50%;
+    left: 10%;
+    z-index: 2;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 18px;
+    font-family: 'HarmoniaItalic';
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in;
+    transition: opacity .3s ease-in;
 }
 
 /* 3. Elements */
