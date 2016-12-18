@@ -136,6 +136,10 @@ body, html {
     background: url('../images/hero_kliniki.jpg') no-repeat center;
     background-size: cover;
 }
+.hero--testimonials {
+    background: url('../images/hero_testimonials.jpg') no-repeat center;
+    background-size: cover;
+}
 .about {
     position: relative;
     min-height: 800px;
@@ -259,6 +263,7 @@ body, html {
 .heading {}
 .heading__crumbs {
     padding-top: 40px;
+    text-transform: uppercase;
     font-size: 12px;
     font-family: 'HarmoniaSemiBold';
 }
@@ -543,11 +548,11 @@ a.serivces__spiral__pos-eight::before {
     display: inline-block;
     vertical-align: -10px;
 }
-/* faq */
+/* faq && testimonials */
 .faq__item {
     position: relative;
     padding: 50px 0;
-    border-bottom: 2px dotted #c6c6c6;
+    border-bottom: 2px dotted #c6c6c6;/* testimonial */
 }
 .faq__item:last-child {
     border-bottom: none;
@@ -614,6 +619,22 @@ a.serivces__spiral__pos-eight::before {
 .faq__item__answer .faq__item__content {}
 .faq__item__answer .faq__item__content::after, .faq__item__answer .faq__item__content::before {
     color: #3db4b2;
+}
+.faq__item--testimonial {
+    border-bottom: none;
+}
+.faq__item--testimonial .faq__item__answer .img-fluid {
+    max-width: 100%;
+}
+.faq__item--testimonial .faq__item__content {}
+.faq__item--testimonial .faq__item__content::before, .faq__item--testimonial .faq__item__content::after {
+    color: #3db4b2;
+}
+.faq__item--testimonial .testimonial__item {
+    margin-top: 80px;
+}
+.faq__item--testimonial::before {
+    display: none;
 }
 /*Contacts */
 .contact__item {

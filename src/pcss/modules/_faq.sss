@@ -1,4 +1,4 @@
-// faq
+// faq && testimonials
 
 .faq__item
   border-bottom: 2px dotted #c6c6c6
@@ -57,3 +57,18 @@
     .faq__item__content
       &::after, &::before
         color: $colorPrimaryLight
+
+  // testimonial
+  &--testimonial
+    border-bottom: none
+    &::before
+      display: none
+    .faq__item__answer
+      .img-fluid
+        max-width: 100%
+    .faq__item__content
+      &::before, &::after
+        color: $colorPrimaryLight
+
+    .testimonial__item
+      margin-top: 80px
