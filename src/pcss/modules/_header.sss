@@ -46,3 +46,18 @@
     a
       &:hover
         opacity: .8
+
+$blackHeaderColor: #8b8b8a
+
+.header--black
+  color: $blackHeaderColor
+  .header__wrapper
+    border-color: $blackHeaderColor
+  .header__navi
+    li.header__navi__btn
+      a
+        border-color: $blackHeaderColor
+    li.header__navi__lang-switcher
+      border-color: $blackHeaderColor
+      &:hover
+        background: $colorPrimary

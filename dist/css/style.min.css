@@ -3842,6 +3842,10 @@ body, html {
     background: url('../images/faq_hero.jpg') no-repeat center;
     background-size: cover;
 }
+.hero--no-img {
+    min-height: 200px;
+    height: 200px;
+}
 .about {
     position: relative;
     min-height: 800px;
@@ -3873,6 +3877,11 @@ body, html {
             justify-content: space-between;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
+}
+.flex--center {
+            align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
 }
 .fl-r {
     float: right;
@@ -4012,6 +4021,21 @@ a.heading__crumbs__home {
 .header__navi__sections a {}
 .header__navi__sections a:hover {
     opacity: .8;
+}
+.header--black {
+    color: #8b8b8a;
+}
+.header--black .header__wrapper {
+    border-color: #8b8b8a;
+}
+.header--black .header__navi li.header__navi__btn a {
+    border-color: #8b8b8a;
+}
+.header--black .header__navi li.header__navi__lang-switcher {
+    border-color: #8b8b8a;
+}
+.header--black .header__navi li.header__navi__lang-switcher:hover {
+    background: #39908f;
 }
 /* HERO */
 .hero__logo {
@@ -4252,6 +4276,34 @@ a.serivces__spiral__pos-eight::before {
 .faq__item__answer .faq__item__content::after, .faq__item__answer .faq__item__content::before {
     color: #3db4b2;
 }
+/*Contacts */
+.contact__item {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.contact__map {
+    width: 100%;
+    height: 350px;
+}
+.contact .img-fluid {
+    height: 350px !important;
+}
+.contact__details {
+    margin-top: 60px;
+}
+.contact__details__name {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'HarmoniaBlack';
+}
+.contact__details__content {
+    font-size: 18px;
+    line-height: 1.6em;
+}
+.contact__details__content a {
+    display: block;
+    color: #39908f;
+}
 
 /* 3. Elements */
 /* ICONS */
@@ -4310,6 +4362,15 @@ a.serivces__spiral__pos-eight::before {
 }
 .btn--white:hover {
     background: white;
+    color: #39908f;
+}
+.btn--primary {
+    border-color: #39908f;
+    background: #39908f;
+    color: white;
+}
+.btn--primary:hover {
+    background: transparent;
     color: #39908f;
 }
 .btn--abosulte-ico .ico {

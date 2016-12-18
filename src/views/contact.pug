@@ -1,0 +1,141 @@
+doctype html
+html
+  include shared/head.pug
+
+body
+  .st-container#st-container
+    .st-pusher
+      include shared/sidebar-menu.pug
+
+      .st-content
+        .st-content-inner
+          #st-trigger-effects
+            button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
+              span.hamburger-box
+                span.hamburger-inner
+
+          //TRANPARENT HEADER:: START
+          header.header.header--static.header--transparent.header--black
+            .container
+              .row
+                .col-sm-12
+                  .header__wrapper
+                    ul.header__navi
+                      li.header__navi__btn
+                        a(href="#") Записаться на прием
+                      .header__navi__sections
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") ПЕРСОНАЛ
+                        li
+                          a(href="#") УСЛУГИ
+                        li
+                          a(href="#") ПОРТФОЛИО
+                        li
+                          a(href="#") КОНТАКТЫ
+
+                      li.header__navi__lang-switcher
+                        a(href="#") RU
+                      li.header__navi__lang-switcher
+                        a(href="#") EN
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-fb
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-insta
+
+          //HERO::START
+          .hero.hero--no-img
+            .container
+              .row
+                .col-sm-12.text-sm-center
+                  .hero__logo.img-fluid
+
+          //CONTACT::START
+          section.contact
+            .container
+              .row
+                .col-sm-8
+                  .heading
+                    .heading__crumbs
+                      a.heading__crumbs__home(href="#") Главная
+                      span /
+                      a(href="#") Контакты
+                    h1.heading__name Контакты
+              script(src="https://api-maps.yandex.ru/2.1/?lang=tr_TR")
+              script(src="js/ya-map.js")
+
+              .row.contact__item
+                .col-sm-6
+                  .contact__map#contact__map__first
+                  .contact__details
+                    .row
+                      .col-sm-6
+                        .contact__details__name Адрес:
+                        .contact__details__content г. Екатеринбург, ул.Шейнкмана, 90, <br /> т. 223-04-73, 223-04-74;:
+                      .col-sm-6
+                        .contact__details__name Часы работы:
+                        .contact__details__content Пн - Пт: с 8.00—21.00 ч. <br /> Сб - Вс: с 10.00—18.00 ч.
+                .col-sm-6
+                  img(src="images/amundsena.jpg").img-fluid
+                  .contact__details
+                    .row.flex--center
+                      .col-sm-6
+                        .contact__details__name Почта:
+                        .contact__details__content
+                          a(href="#") mail@doctorfrank.ru
+                          a(href="#") Info@doctorfrank.ru
+                      .col-sm-6
+                        a(href="#").btn.btn--huge.btn--rounded.btn--primary ЗАПИСАТЬСЯ НА ПРИЕМ →
+              //next item
+              .row.contact__item
+                .col-sm-6
+                  .contact__map#contact__map__second
+                  .contact__details
+                    .row
+                      .col-sm-6
+                        .contact__details__name Адрес:
+                        .contact__details__content г. Екатеринбург, ул.Шейнкмана, 90, <br /> т. 223-04-73, 223-04-74;:
+                      .col-sm-6
+                        .contact__details__name Часы работы:
+                        .contact__details__content Пн - Пт: с 8.00—21.00 ч. <br /> Сб - Вс: с 10.00—18.00 ч.
+                .col-sm-6
+                  img(src="images/amundsena.jpg").img-fluid
+                  .contact__details
+                    .row.flex--center
+                      .col-sm-6
+                        .contact__details__name Почта:
+                        .contact__details__content
+                          a(href="#") mail@doctorfrank.ru
+                          a(href="#") Info@doctorfrank.ru
+                      .col-sm-6
+                        a(href="#").btn.btn--huge.btn--rounded.btn--primary ЗАПИСАТЬСЯ НА ПРИЕМ →
+              //next item
+              .row.contact__item
+                .col-sm-6
+                  .contact__map#contact__map__thrid
+                  .contact__details
+                    .row
+                      .col-sm-6
+                        .contact__details__name Адрес:
+                        .contact__details__content г. Екатеринбург, ул.Шейнкмана, 90, <br /> т. 223-04-73, 223-04-74;:
+                      .col-sm-6
+                        .contact__details__name Часы работы:
+                        .contact__details__content Пн - Пт: с 8.00—21.00 ч. <br /> Сб - Вс: с 10.00—18.00 ч.
+                .col-sm-6
+                  img(src="images/amundsena.jpg").img-fluid
+                  .contact__details
+                    .row.flex--center
+                      .col-sm-6
+                        .contact__details__name Почта:
+                        .contact__details__content
+                          a(href="#") mail@doctorfrank.ru
+                          a(href="#") Info@doctorfrank.ru
+                      .col-sm-6
+                        a(href="#").btn.btn--huge.btn--rounded.btn--primary ЗАПИСАТЬСЯ НА ПРИЕМ →
+
+          include shared/footer.pug
