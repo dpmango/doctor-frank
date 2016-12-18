@@ -1,0 +1,90 @@
+doctype html
+html
+  include shared/head.pug
+
+body
+  .st-container#st-container
+    .st-pusher
+      include shared/sidebar-menu.pug
+
+      .st-content
+        .st-content-inner
+          #st-trigger-effects
+            button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
+              span.hamburger-box
+                span.hamburger-inner
+
+          //TRANPARENT HEADER:: START
+          header.header.header--static.header--transparent
+            .container
+              .row
+                .col-sm-12
+                  .header__wrapper
+                    ul.header__navi
+                      li.header__navi__btn
+                        a(href="#") Записаться на прием
+                      .header__navi__sections
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") НАШИ КЛИНИКИ
+                        li
+                          a(href="#") ПЕРСОНАЛ
+                        li
+                          a(href="#") УСЛУГИ
+                        li
+                          a(href="#") ПОРТФОЛИО
+                        li
+                          a(href="#") КОНТАКТЫ
+
+                      li.header__navi__lang-switcher
+                        a(href="#") RU
+                      li.header__navi__lang-switcher
+                        a(href="#") EN
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-fb
+                      li.fl-r
+                        a(href="#")
+                          i.ico.ico-social-insta
+
+          //HERO::START
+          .hero.hero--short.hero--portfolio
+            .container
+              .row
+                .col-sm-12.text-sm-center
+                  .hero__logo.img-fluid.hero__logo--white
+
+          //PORTFOLIO::START
+          section.portfolio
+            .container
+              .row
+                .col-sm-12
+                  .heading
+                    .heading__crumbs
+                      a.heading__crumbs__home(href="#") Главная
+                      span /
+                      a(href="#") Портфолио
+                .col-sm-6.offset-sm-3.no-pad
+                  h1.heading__name Портфолио
+
+              // START
+              .row.portfolio__item
+                .col-sm-3.big-pad-r
+                  .portfolio__item__name Реставрация зубов
+                .col-sm-6.no-pad
+                  .portfolio__item__desc По сути это те же пломбы, но изготовленные в лаборатории по индивидуальным слепкам, как правило, из керамики. Обладают максимальной точностью прилегания и высокой эстетикой. В отличие от обычной пломбы, керамическая вкладка, более долговечна, полностью восстанавливает анатомию зуба и защищает его от глубоких трещин и переломов стенок, которые зачастую являются причиной последующего удаления.
+                  .portfolio__item__image
+                    img(src="/images/demo_teeth_1.jpg").img-fluid
+                    img(src="/images/demo_teeth_2.jpg").img-fluid
+
+              .row.portfolio__item
+                .col-sm-3.big-pad-r
+                  .portfolio__item__name Отбеливание зубов
+                .col-sm-6.no-pad
+                  .portfolio__item__desc По сути это те же пломбы, но изготовленные в лаборатории по индивидуальным слепкам, как правило, из керамики. Обладают максимальной точностью прилегания и высокой эстетикой. В отличие от обычной пломбы, керамическая вкладка, более долговечна, полностью восстанавливает анатомию зуба и защищает его от глубоких трещин и переломов стенок, которые зачастую являются причиной последующего удаления.
+                  .portfolio__item__image
+                    img(src="/images/demo_teeth_1.jpg").img-fluid
+                    img(src="/images/demo_teeth_2.jpg").img-fluid
+
+          include shared/footer.pug

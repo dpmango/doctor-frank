@@ -158,6 +158,14 @@ body, html {
     background: url('../images/hero_personal.jpg') no-repeat center;
     background-size: cover;
 }
+.hero--portfolio {
+    background: url('../images/hero_portfolio.jpg') no-repeat center;
+    background-size: cover;
+}
+.hero--services {
+    background: url('../images/hero_services.jpg') no-repeat center;
+    background-size: cover;
+}
 .about {
     position: relative;
     min-height: 800px;
@@ -190,7 +198,11 @@ body, html {
 
 .partners
 
-.personal {}
+.personal
+
+.portfolio
+
+.services-inner {}
 /* Helpers */
 .flex {
     display: -webkit-box;
@@ -227,6 +239,13 @@ body, html {
 }
 .half-pad-r {
     padding-right: 7px;
+}
+.big-pad-r {
+    padding-right: 50px;
+}
+.no-pad {
+    padding-right: 0;
+    padding-left: 0;
 }
 /* margins */
 .mb50 {
@@ -593,6 +612,7 @@ a.serivces__spiral__pos-eight::before {
     display: inline-block;
     vertical-align: -10px;
 }
+/* Services inner */
 /* faq && testimonials */
 .faq__item {
     position: relative;
@@ -847,6 +867,23 @@ a.serivces__spiral__pos-eight::before {
     -webkit-transition: opacity .3s ease-in;
     transition: opacity .3s ease-in;
 }
+/*Portfolio */
+.portfolio__item {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+.portfolio__item__name {
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'HarmoniaSemiBold';
+}
+.portfolio__item__desc {
+    color: #4b4b4b;
+    font-size: 18px;
+    line-height: 1.6em;
+}
+.portfolio__item__image {}
 
 /* 3. Elements */
 /* ICONS */
@@ -1093,5 +1130,12 @@ a.serivces__spiral__pos-eight::before {
     }
     .half-pad-r {
         padding-right: 15px;
+    }
+    .big-pad-r {
+        padding-right: 15px;
+    }
+    .no-pad {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }

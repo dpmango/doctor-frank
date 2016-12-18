@@ -127,3 +127,7 @@ $(document).ready(function(){
   });
 
 });
+
+$(window).load(function() {
+  $(".portfolio__item__image").twentytwenty();
+});
