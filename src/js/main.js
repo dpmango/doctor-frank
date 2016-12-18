@@ -99,7 +99,7 @@ $(document).ready(function(){
       sectionsColor : ['transparent', 'transparent'],
       paddingTop: '15px',
       paddingBottom: '0px',
-      fixedElements: '.header, .hamburger',
+      fixedElements: '.header, .hamburger, .scroll-up',
       responsiveWidth: 0,
       responsiveHeight: 0,
       responsiveSlides: false,
@@ -116,6 +116,12 @@ $(document).ready(function(){
             $('.header').addClass('header--floating');
         } else if (index == 2 && direction =='up'){
           $('.header').removeClass('header--floating');
+        }
+
+        if(index == 2 && direction == 'down' ){
+          $('.scroll-up').addClass('visible');
+        } else {
+          $('.scroll-up').removeClass('visible');
         }
       },
       afterLoad: function(anchorLink, index){},

@@ -1,11 +1,33 @@
-// HEADER::START
-- var list = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
-
-header.header
-  .section
+//TRANSPARENT HEADER:: START
+header.header.header--transparent
+  .container
     .row
       .col-sm-12
-        each item in list
-          li= item
+        .header__wrapper
+          ul.header__navi
+            li.header__navi__btn
+              a(href="#") Записаться на прием
+            .header__navi__sections
+              li
+                a(href="#") НАШИ КЛИНИКИ
+              li
+                a(href="#") НАШИ КЛИНИКИ
+              li
+                a(href="#") ПЕРСОНАЛ
+              li
+                a(href="#") УСЛУГИ
+              li
+                a(href="#") ПОРТФОЛИО
+              li
+                a(href="#") КОНТАКТЫ
 
-//HEADER::END
+            li.header__navi__lang-switcher
+              a(href="#") RU
+            li.header__navi__lang-switcher
+              a(href="#") EN
+            li.fl-r
+              a(href="#")
+                i.ico.ico-social-fb
+            li.fl-r
+              a(href="#")
+                i.ico.ico-social-insta

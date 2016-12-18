@@ -6,47 +6,15 @@ body
   .st-container#st-container
     .st-pusher
       include shared/sidebar-menu.pug
-      
-      .st-content
+
+      .st-content#section-top
         .st-content-inner#fullpage
           #st-trigger-effects
             button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
               span.hamburger-box
                 span.hamburger-inner
 
-          //TRANPARENT HEADER:: START
-          header.header.header--transparent
-            .container
-              .row
-                .col-sm-12
-                  .header__wrapper
-                    ul.header__navi
-                      li.header__navi__btn
-                        a(href="#") Записаться на прием
-                      .header__navi__sections
-                        li
-                          a(href="#") НАШИ КЛИНИКИ
-                        li
-                          a(href="#") НАШИ КЛИНИКИ
-                        li
-                          a(href="#") ПЕРСОНАЛ
-                        li
-                          a(href="#") УСЛУГИ
-                        li
-                          a(href="#") ПОРТФОЛИО
-                        li
-                          a(href="#") КОНТАКТЫ
-
-                      li.header__navi__lang-switcher
-                        a(href="#") RU
-                      li.header__navi__lang-switcher
-                        a(href="#") EN
-                      li.fl-r
-                        a(href="#")
-                          i.ico.ico-social-fb
-                      li.fl-r
-                        a(href="#")
-                          i.ico.ico-social-insta
+          include shared/header.pug
 
           //HERO::START
           .hero.hero--mainpage.section.fp-auto-height
@@ -100,3 +68,5 @@ body
                     a.serivces__spiral__pos-seven(href="#") Терапия
                     a.serivces__spiral__pos-eight(href="#")
                       span Эстетическая <br> стоматология
+          //top
+          a(href="#section-top").scroll-up
