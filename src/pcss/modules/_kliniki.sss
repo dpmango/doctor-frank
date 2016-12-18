@@ -4,12 +4,25 @@
   p
     font-size: 18px
     line-height: 1.6em
+    @media($desktop)
+      font-size: 16px
+      line-height: 1.4em
+
+    @media($mobile)
+      font-size: 14px
+      line-height: 1.3em
   a
     color: $colorPrimary
     display: block
     font-size: 18px
     text-decoration: underline
     transition: all .3s ease-in-out
+    @media($desktop)
+      font-size: 16px
+    @media($mobile)
+      font-size: 14px
+      margin-bottom: 5px
+
     &:hover
       opacity: .7
       text-decoration: none
@@ -19,6 +32,11 @@
     font-size: 24px
     font-family: 'HarmoniaBlack'
     text-transform: uppercase
+    @media($desktop)
+      font-size: 20px
+    @media($mobile)
+      font-size: 18px
+      margin-top: 30px
     &--no-pad
       margin-top: 0
 
@@ -30,6 +48,12 @@
   font-size: 18px
   display: flex
   justify-content: space-between
+  @media($desktop)
+    font-size: 16px
+  @media($tablet)
+    font-size: 14px
+  @media($mobile)
+    flex-direction: column
   a
     color: $colorPrimaryLight
   a.active

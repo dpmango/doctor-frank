@@ -1,15 +1,23 @@
 // layout
 
+// $mobile: 0 <= width <= 576px
+// $mobile-from: width >= 576px
+// $tablet: 576px <= width <= 768px
+// $tablet-from: width <= 768px
+// $desktop: 768px <= width <= 992px
+// $desktop-from: width >= 992px
+// $wide: 1200px <= width <= 1680px
+// $wide-from: width >= 1200px
+// $hd: 1680px <= width <= 3000px
+// $hd-from: width >= 1680px
+
 $mobile: width <= 576px
 $mobile-from: width >= 576px
 $tablet: width <= 768px
-$tablet-from: width <= 768px
 $desktop: width <= 992px
 $desktop-from: width >= 992px
 $wide: width <= 1200px
-$wide-from: width >= 1200px
 $hd: width <= 1680px
-$hd-from: width >= 1680px
 
 // variables
 $fontColor: #333
@@ -88,23 +96,43 @@ body, html
   &--short
     min-height: 500px
     height: 500px
+    @media($mobile)
+      height: 320px
+      min-height: 320px
   &--faq
     @mixin bgImg faq_hero.jpg
+    @media($mobile)
+      @mixin bgImg mobile/hero_faq.jpg
   &--no-img
     height: 200px
     min-height: 200px
+    @media($mobile)
+      height: 150px
+      min-height: 150px
   &--kliniki
     @mixin bgImg hero_kliniki.jpg
+    @media($mobile)
+      @mixin bgImg mobile/hero_clinics.jpg
   &--testimonials
     @mixin bgImg hero_testimonials.jpg
+    @media($mobile)
+      @mixin bgImg mobile/hero_testimonials.jpg
   &--partners
     @mixin bgImg hero_partner.jpg
+    @media($mobile)
+      @mixin bgImg mobile/hero_partners.jpg
   &--personal
     @mixin bgImg hero_personal.jpg
+    @media($mobile)
+      @mixin bgImg mobile/hero_personal.jpg
   &--portfolio
     @mixin bgImg hero_portfolio.jpg
+    @media($mobile)
+      @mixin bgImg mobile/hero_portfolio.jpg
   &--services
     @mixin bgImg hero_services.jpg
+    @media($mobile)
+      @mixin bgImg mobile/hero_estitic.jpg
 
 .about
   height: 100vh
@@ -132,17 +160,32 @@ body, html
 
 // inner pages
 .faq
+  display: block
 
 .testimonials
+  display: block
 
 .contact
+  display: block
 
 .kliniki
+  display: block
 
 .partners
+  display: block
 
 .personal
+  .mt30
+    @media($mobile)
+      margin: 0
 
 .portfolio
+  display: block
 
 .services-inner
+  .img-fluid
+    @media($mobile)
+      margin-bottom: 15px
+      max-width: 50%
+      margin-left: 25%
+      display: block

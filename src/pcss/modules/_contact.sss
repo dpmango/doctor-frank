@@ -3,9 +3,16 @@
 .contact__item
   padding-top: 20px
   padding-bottom: 40px
+  @media($desktop)
+    margin-top: 30px
+  @media($mobile)
+    margin-bottom: 20px
+    margin-top: 0
 .contact__map
   width: 100%
   height: 350px
+  @media($mobile)
+    display: none
 
 .contact
   .img-fluid
@@ -13,13 +20,22 @@
 
 .contact__details
   margin-top: 60px
+  @media($mobile)
+    margin-top: 30px
   &__name
     font-size: 24px
     font-family: 'HarmoniaBlack'
     text-transform: uppercase
+    @media($mobile)
+      font-size: 18px
   &__content
     font-size: 18px
     line-height: 1.6em
+    @media($mobile)
+      font-size: 14px
+      line-height: 1.3em
+      margin-bottom: 10px
+
     a
       color: $colorPrimary
       display: block

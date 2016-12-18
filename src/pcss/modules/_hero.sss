@@ -8,7 +8,11 @@
   width: width('logo_gray.png', 2)
   &--white
     background-image: url('../images/Logo_white.png')
-
+    @media($mobile)
+      background-image: url('../images/logo_gray.png')
+  @media($mobile)
+    transform: scale(.75)
+    margin-top: -10px
 .hero__title
   font-family: 'DIN'
   margin-top: 260px

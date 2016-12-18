@@ -3,14 +3,29 @@
 .portfolio__item
   margin-top: 20px
   margin-bottom: 80px
+  @media($desktop)
+    margin-bottom: 50px
+  @media($mobile)
+    margin-bottom: 30px
   &__name
     text-transform: uppercase
     text-align: right
     font-size: 24px
     font-family: 'HarmoniaSemiBold'
+    @media($desktop)
+      font-size: 20px
+    @media($mobile)
+      font-size: 18px
+      text-align: left
   &__desc
     font-size: 18px
     color: $grayColor
     line-height: 1.6em
     margin-bottom: 20px
+    @media($desktop)
+      font-size: 16px
+      line-height: 1.5em
+    @media($mobile)
+      font-size: 14px
+      line-height: 1.4em
   &__image
