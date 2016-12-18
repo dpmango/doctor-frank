@@ -15,14 +15,26 @@
   color: $colorPrimary
   font-size: 89px
   line-height: 1
+  @media($desktop)
+    font-size: 70px
+  @media($tablet)
+    font-size: 50px
+  @media($mobile)
+    margin-top: 100px
+    font-size: 35px
 
 .hero__signature
   color: $colorPrimary
   font-size: 24px
   margin-top: 50px
+  @media($mobile)
+    font-size: 17px
+    margin-bottom: 200px
   span
     font-size: 18px
     line-height: 1.1em
     margin-top: .5em
     color: $grayColor
     display: block
+    @media($mobile)
+      font-size: 12px

@@ -228,7 +228,7 @@ $(document).ready(function(){
       paddingTop: '15px',
       paddingBottom: '0px',
       fixedElements: '.header, .hamburger, .scroll-up',
-      responsiveWidth: 0,
+      responsiveWidth: 576,
       responsiveHeight: 0,
       responsiveSlides: false,
 
@@ -259,6 +259,27 @@ $(document).ready(function(){
       afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
       onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
   });
+
+  $('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+		fixedContentPos: false,
+		fixedBgPos: true,
+		overflowY: 'auto',
+		closeBtnInside: true,
+		preloader: false,
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
+
+  // Custom form click handler
+  $('.modal__form__input label').click(function(event){
+	    $(this).parent('.modal__form__input').find('input').focus();
+	    $(this).parent('.modal__form__input').find('textarea').focus();
+	});
+
+  //masked input
+  $("input[name=phone]").mask("+7 (999) 999-9999");
 
 });
 

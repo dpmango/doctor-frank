@@ -38,7 +38,7 @@
                 <div class="col-sm-12">
                   <div class="header__wrapper">
                     <ul class="header__navi">
-                      <li class="header__navi__btn"><a href="#">Записаться на прием</a></li>
+                      <li class="header__navi__btn"><a class="popup-with-zoom-anim" href="#modalCallback">Записаться на прием</a></li>
                       <div class="header__navi__sections">
                         <li><a href="#">НАШИ КЛИНИКИ</a></li>
                         <li><a href="#">НАШИ КЛИНИКИ</a></li>
@@ -61,7 +61,7 @@
           <div class="hero hero--mainpage section fp-auto-height">
             <div class="container">
               <div class="row">
-                <div class="col-sm-12 text-sm-center">
+                <div class="col-sm-12 text-xs-center">
                   <div class="hero__logo img-fluid"></div>
                 </div>
               </div>
@@ -82,10 +82,10 @@
           <section class="about about--mainpage section fp-auto-height">
             <div class="container">
               <div class="row">
-                <div class="col-sm-5 offset-sm-1">
+                <div class="col-sm-5 offset-sm-1 no-pad-xs">
                   <div class="about__block about__block--primary"><span>В своих решениях мы опираемся на знания и многолетний собственный опыт и опыт наших зарубежных коллег. Наш пациент знает, что получает лучшее.</span><a class="btn btn--huge btn--rounded btn--outline btn--white" href="#">ПОЛНАЯ ИНФОРМАЦИЯ →</a></div>
                 </div>
-                <div class="col-sm-7 pull-sm-1 absolute">
+                <div class="col-sm-7 pull-sm-1 absolute no-pad-xs">
                   <div class="about__block about__block--light">
                     <div class="about__block__title">О клиниках</div><span>Безусловный приоритет работы нашей клиники - оказание всесторонней высококвалифицированной стоматологической помощи взрослым и детям. Используя новейшие технологии мировой стоматологии , мы уверены в их качестве, пользе , безопасности.</span>
                   </div>
@@ -110,6 +110,55 @@
             </div>
           </section>
           <!--top--><a class="scroll-up" href="#section-top"></a>
+          <!-- MODAL-->
+          <div class="zoom-anim-dialog mfp-hide modal" id="modalCallback">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="modal__heading">ЗАПИШИТЕСЬ <br /> НА ПРИЕМ</div>
+                  <div class="modal__desc">МЫ С РАДОСТЬЮ ВАМ ПЕРЕЗВОНИМ</div>
+                  <form class="modal__form">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="modal__form__input">
+                          <input type="text" id="firstName" name="firstName" autocomplete="off" required>
+                          <label>Ф.И.О <span>*</span></label>
+                        </div>
+                        <div class="modal__form__input">
+                          <input type="text" id="phone" name="phone" autocomplete="off" required>
+                          <label>Ваш телефон <span>*</span></label>
+                        </div>
+                        <div class="modal__form__input">
+                          <input type="text" id="type" name="type" autocomplete="off" required>
+                          <label>Причина обращения</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="modal__form__input">
+                              <input type="text" id="date" name="date" autocomplete="off" required>
+                              <label>Дата приема</label>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="modal__form__input">
+                              <input type="text" id="time" name="time" autocomplete="off" required>
+                              <label>Время</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal__form__input">
+                          <input type="text" id="time" name="time" autocomplete="off" required>
+                          <label>Врач</label>
+                        </div><a class="mt50 btn btn--outline btn--huge btn--white btn--rounded btn--fill btn--right" href="#">ПЕРЕЗВОНИТЕ МНЕ →</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

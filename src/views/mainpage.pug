@@ -22,7 +22,7 @@ body
                   .header__wrapper
                     ul.header__navi
                       li.header__navi__btn
-                        a(href="#") Записаться на прием
+                        a(href="#modalCallback").popup-with-zoom-anim Записаться на прием
                       .header__navi__sections
                         li
                           a(href="#") НАШИ КЛИНИКИ
@@ -53,7 +53,7 @@ body
           .hero.hero--mainpage.section.fp-auto-height
             .container
               .row
-                .col-sm-12.text-sm-center
+                .col-sm-12.text-xs-center
                   .hero__logo.img-fluid
               .row
                 .col-sm-12
@@ -70,11 +70,11 @@ body
           section.about.about--mainpage.section.fp-auto-height
             .container
               .row
-                .col-sm-5.offset-sm-1
+                .col-sm-5.offset-sm-1.no-pad-xs
                   .about__block.about__block--primary
                     span В своих решениях мы опираемся на знания и многолетний собственный опыт и опыт наших зарубежных коллег. Наш пациент знает, что получает лучшее.
                     a.btn.btn--huge.btn--rounded.btn--outline.btn--white(href="#") ПОЛНАЯ ИНФОРМАЦИЯ →
-                .col-sm-7.pull-sm-1.absolute
+                .col-sm-7.pull-sm-1.absolute.no-pad-xs
                   .about__block.about__block--light
                     .about__block__title О клиниках
                     span Безусловный приоритет работы нашей клиники - оказание всесторонней высококвалифицированной стоматологической помощи взрослым и детям. Используя новейшие технологии мировой стоматологии , мы уверены в их качестве, пользе , безопасности.
@@ -103,3 +103,5 @@ body
                       span Эстетическая <br> стоматология
           //top
           a(href="#section-top").scroll-up
+
+          include shared/modal.pug

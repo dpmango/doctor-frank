@@ -37,12 +37,19 @@
   li.header__navi__lang-switcher
     border-left: 2px solid white
     float: right
+    @media($mobile)
+      display: none
     &:hover
       background: white
       color: $fontColor
+  li .ico
+    @media($mobile)
+      display: none
   &__sections
     display: inline-flex
     justify-content: space-between
+    @media($mobile)
+      display: none
     a
       &:hover
         opacity: .8

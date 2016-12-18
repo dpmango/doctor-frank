@@ -5,14 +5,21 @@
     position: absolute
     right: 0
     top: 0
+    @media($mobile)
+      position: relative
 
 .about__block
   padding: 45px 40px
+  @media($mobile)
+    padding: 30px 15px
   span
     display: inline-block
     font-family: 'Muller'
     font-size: 15px
     line-height: 2em
+    @media($mobile)
+      font-size: 12px
+      line-height: 1.4em
   &__title
     color: $grayColor
     font-size: 95px
@@ -20,11 +27,15 @@
     font-family: 'DIN'
     text-transform: uppercase
     line-height: 1.1em
+    @media($mobile)
+      font-size: 35px
   .btn
     margin-top: 30px
   &--light
     margin-top: 310px
     background: #f3f3f3
+    @media($mobile)
+      margin-top: 0
     span
       color: $grayColor
   &--primary
@@ -32,3 +43,6 @@
     color: white
     margin-top: 380px
     padding-right: 80px
+    @media($mobile)
+      margin-top: 350px
+      padding-right: 0

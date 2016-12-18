@@ -1,0 +1,170 @@
+// modal
+
+.modal
+  background: url('../images/form_pop_up.jpg') no-repeat center
+  background-size: cover
+  color: white
+  width: 100%
+  max-width: 100%
+  height: 100vh
+  .mfp-close
+    background: url('../images/modal_close.png') no-repeat center
+    background-size: cover
+    top: 30px
+    right: 30px
+    font-size: 0
+    transition-property: all
+    transition-duration: .4s
+  &__heading
+    font-size: 100px
+    font-family: 'DIN'
+    line-height: 1
+    margin-top: 10vh
+  &__desc
+    font-size: 24px
+    margin-top: 10px
+  &__form
+    margin-top: 10vh
+    &__input
+      position: relative
+      margin-bottom: 15px
+      transition: all .4s ease-in-out
+      &:after
+        width: 0px
+        height: 2px
+        background: $colorOrange
+        content: ' '
+        display: block
+        position: absolute
+        bottom: 0px
+        left: 0
+        transition: all .4s ease-in-out
+        z-index: 10
+      &:valid:after, &:hover:after
+        width: 100%
+      label
+        position: absolute
+        top: 30px
+        left: 0px
+        font-size: 18px
+        color: white
+        font-family: 'Harmonia'
+        transform: translate3d(0, 0, 0)
+        transition: all 0.2s ease-in-out
+        span
+          color: #e589ca
+      input, textarea
+        display: block
+        background: transparent
+        outline: none
+        border: 1px solid transparent
+        border-bottom: 2px solid white
+        color: white
+        font-size: 18px
+        height: 70px
+        padding: 30px 15px 7px 0px
+        width: 100%
+        line-height: 1em
+        cursor: pointer
+        position: relative
+        transition: all .4s ease-in-out
+        &:valid, &:focus
+          outline: 0
+          border-bottom: 2px solid white
+          transition: all .4s ease-in-out
+
+        &:valid + label, &:focus + label
+          font-size: 14px
+          transform: translate3d(0, -20px, 0)
+          opacity: .7
+          display: inline-block
+          @media($mobile)
+            display: none
+      textarea
+        height: 85px
+
+      ::-webkit-input-placeholder
+        color: $fontColor
+      ::-moz-placeholder
+        color: $fontColor
+      :-moz-placeholder
+        color: $fontColor
+      :-ms-input-placeholder
+        color: $fontColor
+
+//Animation effects from magnificPopup
+
+.my-mfp-zoom-in
+  .zoom-anim-dialog
+    opacity: 0
+    -webkit-transition: all 0.2s ease-in-out
+    -moz-transition: all 0.2s ease-in-out
+    -o-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+    -webkit-transform: scale(0.8)
+    -moz-transform: scale(0.8)
+    -ms-transform: scale(0.8)
+    -o-transform: scale(0.8)
+    transform: scale(0.8)
+  &.mfp-ready .zoom-anim-dialog
+    opacity: 1
+    -webkit-transform: scale(1)
+    -moz-transform: scale(1)
+    -ms-transform: scale(1)
+    -o-transform: scale(1)
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog
+    -webkit-transform: scale(0.8)
+    -moz-transform: scale(0.8)
+    -ms-transform: scale(0.8)
+    -o-transform: scale(0.8)
+    transform: scale(0.8)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    -webkit-transition: opacity 0.3s ease-out
+    -moz-transition: opacity 0.3s ease-out
+    -o-transition: opacity 0.3s ease-out
+    transition: opacity 0.3s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: 0.8
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
+.my-mfp-slide-bottom
+  .zoom-anim-dialog
+    opacity: 0
+    -webkit-transition: all 0.2s ease-out
+    -moz-transition: all 0.2s ease-out
+    -o-transition: all 0.2s ease-out
+    transition: all 0.2s ease-out
+    -webkit-transform: translateY(-20px) perspective(600px) rotateX(10deg)
+    -moz-transform: translateY(-20px) perspective(600px) rotateX(10deg)
+    -ms-transform: translateY(-20px) perspective(600px) rotateX(10deg)
+    -o-transform: translateY(-20px) perspective(600px) rotateX(10deg)
+    transform: translateY(-20px) perspective(600px) rotateX(10deg)
+  &.mfp-ready .zoom-anim-dialog
+    opacity: 1
+    -webkit-transform: translateY(0) perspective(600px) rotateX(0)
+    -moz-transform: translateY(0) perspective(600px) rotateX(0)
+    -ms-transform: translateY(0) perspective(600px) rotateX(0)
+    -o-transform: translateY(0) perspective(600px) rotateX(0)
+    transform: translateY(0) perspective(600px) rotateX(0)
+  &.mfp-removing .zoom-anim-dialog
+    opacity: 0
+    -webkit-transform: translateY(-10px) perspective(600px) rotateX(10deg)
+    -moz-transform: translateY(-10px) perspective(600px) rotateX(10deg)
+    -ms-transform: translateY(-10px) perspective(600px) rotateX(10deg)
+    -o-transform: translateY(-10px) perspective(600px) rotateX(10deg)
+    transform: translateY(-10px) perspective(600px) rotateX(10deg)
+  &.mfp-bg
+    opacity: 0
+    -webkit-transition: opacity 0.3s ease-out
+    -moz-transition: opacity 0.3s ease-out
+    -o-transition: opacity 0.3s ease-out
+    transition: opacity 0.3s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: 0.8
+  &.mfp-removing.mfp-bg
+    opacity: 0

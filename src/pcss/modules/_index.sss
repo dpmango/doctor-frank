@@ -2,6 +2,8 @@
 
 .scroll-down
   padding: 40px 0
+  @media($mobile)
+    display: none
   span
     font-size: 15px
     display: block
@@ -25,6 +27,8 @@
   bottom: 10px
   cursor: pointer
   transition: all .3s ease-in-out
+  @media($mobile)
+    display: none
   &.visible
     opacity: 1
   &:hover

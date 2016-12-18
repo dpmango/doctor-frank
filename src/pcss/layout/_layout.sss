@@ -59,6 +59,8 @@ body, html
     top: 120px
     width: 100%
     z-index: 99
+    @media($mobile)
+      top: 90px
   &--floating
     position: fixed
     top: 50px
@@ -76,8 +78,13 @@ body, html
   min-height: 800px
   padding-top: 1.3em
   position: relative
+  @media($mobile)
+    height: auto
+    min-height: auto
   &--mainpage
     @mixin bgImg main_slide_1.jpg
+    @media($mobile)
+      background-position: 80% center
   &--short
     min-height: 500px
     height: 500px
@@ -107,6 +114,11 @@ body, html
     @mixin bgImg main_slide_2.jpg
     background-position: top center
     background-size: 100% 80%
+    @media($mobile)
+      height: auto
+      min-height: auto
+      background-position: 20% center
+      background-size: cover
 
 .services
   height: 100vh
@@ -115,6 +127,8 @@ body, html
   &--mainpage
     @mixin bgImg hand_2.jpg
     background-size: cover
+    @media($mobile)
+      display: none
 
 // inner pages
 .faq
