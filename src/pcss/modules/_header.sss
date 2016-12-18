@@ -57,6 +57,12 @@ $blackHeaderColor: #8b8b8a
     li.header__navi__btn
       a
         border-color: $blackHeaderColor
+        &::after
+          color: $blackHeaderColor
+        &:hover
+          color: white
+          &::after
+            color: white
     li.header__navi__lang-switcher
       border-color: $blackHeaderColor
       &:hover

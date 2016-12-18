@@ -20,12 +20,19 @@ $(document).ready(function(){
   $(window).scroll(function(){
     var headerTop = $('.header').offset().top;
     var scrollTop = $(window).scrollTop();
+    var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
 
     if( scrollTop >= 500 ){
       $('.header').addClass('header--floating');
     } else {
       $('.header').removeClass('header--floating');
     }
+    if( scrollBottom <= 300 ){
+      $('.scroll-up').addClass('visible');
+    } else {
+      $('.scroll-up').removeClass('visible');
+    }
+
   });
 
 
