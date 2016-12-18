@@ -4020,8 +4020,10 @@ body, html {
     color: white;
     font-size: 12px;
     font-family: 'HarmoniaBlack';
-    -webkit-transition: top .4s ease-in-out;
-    transition: top .4s ease-in-out;
+    -webkit-transition: top .4s ease-in, -webkit-transform .4s ease-in-out;
+    transition: top .4s ease-in, -webkit-transform .4s ease-in-out;
+    transition: top .4s ease-in, transform .4s ease-in-out;
+    transition: top .4s ease-in, transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
 }
 .header--transparent {
     position: fixed;
@@ -4036,6 +4038,10 @@ body, html {
 }
 .header--static {
     position: absolute;
+}
+.header--move {
+    -webkit-transform: translate3d(-45%, 0, 0);
+            transform: translate3d(-45%, 0, 0);
 }
 .footer {
     font-size: 18px;
@@ -4197,6 +4203,12 @@ body, html {
 }
 .hamburger-inner:before, .hamburger-inner:after {
     background-color: black;
+}
+.hamburger.is-active .hamburger-inner {
+    background-color: white;
+}
+.hamburger.is-active .hamburger-inner:before, .hamburger.is-active .hamburger-inner:after {
+    background-color: white;
 }
 /* Common Elements */
 .scroll-down {
@@ -4964,12 +4976,12 @@ a.btn {
 .st-menu {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 100;
     visibility: hidden;
-    width: 300px;
+    width: 400px;
     height: 100%;
-    background: #39908f;
+    background: #3db4b2;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
@@ -4993,44 +5005,43 @@ a.btn {
     transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 .st-menu ul {
-    margin: 0;
+    margin: 10vh 0 3vh 50px;
     padding: 0;
     list-style: none;
 }
-.st-menu h2 {
-    margin: 0;
-    padding: 1em;
-    color: rgba(0, 0, 0, 0.4);
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-    font-weight: 300;
-    font-size: 2em;
-}
-.st-menu ul li a {
+.st-menu ul li {
     display: block;
-    padding: 1em 1em 1em 1.2em;
+}
+.st-menu ul a {
+    position: relative;
+    display: inline-block;
+    padding: 7px 0;
     outline: none;
-    -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
-    color: #f3efe0;
+    color: white;
     text-transform: uppercase;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
     letter-spacing: 1px;
     font-weight: 400;
-    -webkit-transition: background 0.3s, box-shadow 0.3s;
-    -webkit-transition: background 0.3s, -webkit-box-shadow 0.3s;
-    transition: background 0.3s, -webkit-box-shadow 0.3s;
-    transition: background 0.3s, box-shadow 0.3s;
-    transition: background 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+    font-size: 27px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
 }
-.st-menu ul li a:hover {
-    background: rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0);
-            box-shadow: inset 0 -1px rgba(0, 0, 0, 0);
+.st-menu ul a::after {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #018280;
+    content: ' ';
+    -webkit-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+}
+.st-menu ul a:hover {
     color: #fff;
 }
-.st-menu ul li:first-child a {
-    -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.2);
+.st-menu ul a:hover::after {
+    width: 100%;
 }
 .st-effect-8 .st-pusher {
     -webkit-transform-style: preserve-3d;
@@ -5043,12 +5054,12 @@ a.btn {
     perspective-origin: 0% 50%;
 }
 .st-effect-8.st-menu-open .st-pusher {
-    -webkit-transform: translate3d(300px, 0, 0);
-    transform: translate3d(300px, 0, 0);
+    -webkit-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0);
 }
 .st-effect-8.st-menu {
-    -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg);
-    transform: translate3d(-100%, 0, 0) rotateY(90deg);
+    -webkit-transform: translate3d(100%, 0, 0) rotateY(90deg);
+    transform: translate3d(100%, 0, 0) rotateY(90deg);
     -webkit-transform-origin: 100% 50%;
     -ms-transform-origin: 100% 50%;
         transform-origin: 100% 50%;
@@ -5061,14 +5072,14 @@ a.btn {
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
     transition: transform 0.5s, -webkit-transform 0.5s;
-    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-    transform: translate3d(-100%, 0, 0) rotateY(0deg);
+    -webkit-transform: translate3d(100%, 0, 0) rotateY(0deg);
+    transform: translate3d(100%, 0, 0) rotateY(0deg);
 }
 .st-effect-8.st-menu::after {
     display: none;
 }
 .no-csstransforms3d .st-pusher, .no-js .st-pusher {
-    padding-left: 300px;
+    padding-left: 400px;
 }
 @media(max-width: 576px) {
     .no-pad-l {

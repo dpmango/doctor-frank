@@ -52,7 +52,7 @@ body, html
   font-family: 'HarmoniaBlack'
   color: white
   font-size: 12px
-  transition: top .4s ease-in-out
+  transition: top .4s ease-in, transform .4s ease-in-out
   &--transparent
     position: fixed
     left: 0
@@ -64,6 +64,8 @@ body, html
     top: 50px
   &--static
     position: absolute
+  &--move
+    transform: translate3d(-45%, 0, 0)
 
 
 .footer
