@@ -10,6 +10,8 @@
 
 .about__block
   padding: 45px 40px
+  @media($desktop)
+    padding: 40px 30px
   @media($mobile)
     padding: 30px 15px
   span
@@ -17,6 +19,9 @@
     font-family: 'Muller'
     font-size: 15px
     line-height: 2em
+    @media($desktop)
+      font-size: 14px
+      line-height: 1.7em
     @media($mobile)
       font-size: 12px
       line-height: 1.4em
@@ -27,6 +32,11 @@
     font-family: 'DIN'
     text-transform: uppercase
     line-height: 1.1em
+    @media($desktop)
+      font-size: 70px
+      margin-bottom: 10px
+    @media($tablet)
+      font-size: 55px
     @media($mobile)
       font-size: 35px
   .btn

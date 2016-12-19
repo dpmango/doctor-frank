@@ -82,6 +82,7 @@ body, html
 
 
 .footer
+  margin-top: 15px
   font-size: 18px
 
 .hero
@@ -107,11 +108,11 @@ body, html
     @media($mobile)
       @mixin bgImg mobile/hero_faq.jpg
   &--no-img
-    height: 200px
-    min-height: 200px
+    height: 150px
+    min-height: 150px
     @media($mobile)
-      height: 150px
-      min-height: 150px
+      height: 120px
+      min-height: 120px
   &--kliniki
     @mixin bgImg hero_kliniki.jpg
     @media($mobile)
@@ -148,6 +149,9 @@ body, html
     @mixin bgImg main_slide_2.jpg
     background-position: top center
     background-size: 100% 80%
+    @media($desktop)
+      background-size: cover
+
     @media($mobile)
       height: auto
       min-height: auto
