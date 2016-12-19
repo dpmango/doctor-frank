@@ -37,6 +37,7 @@
   li.header__navi__lang-switcher
     border-left: 2px solid white
     float: right
+    transition: all .3s ease-in-out
     &.locale--ru
       @media($bp880)
         display: none
@@ -45,13 +46,14 @@
     @media($mobile)
       display: none
     &:hover
-      background: white
-      color: $fontColor
+      background: $colorPrimary
   li .ico
     @media($bp880)
       display: none
     &.ico-social-fb
       margin-right: 5px
+    &:hover
+      opacity: .7
   &__sections
     display: inline-block
     padding-left: 30px

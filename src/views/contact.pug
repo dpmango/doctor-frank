@@ -36,8 +36,8 @@ body
                       span /
                       a(href="#") Контакты
                     h1.heading__name.mt20 Контакты
-              script(src="https://api-maps.yandex.ru/2.1/?lang=tr_TR")
-              script(src="js/ya-map.js")
+              script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ7cSH9q3PNktp36f_tvdwXRJYlHTn6TM")
+              script(src="js/map.js")
 
               .row.contact__item
                 .col-sm-6.no-pad-r
@@ -60,7 +60,7 @@ body
                           a(href="#") mail@doctorfrank.ru
                           a(href="#") Info@doctorfrank.ru
                       .col-sm-6
-                        a(href="#").btn.btn--huge.btn--rounded.btn--primary ЗАПИСАТЬСЯ НА ПРИЕМ →
+                        a(href="#modalCallback").popup-with-zoom-anim.btn.btn--huge.btn--rounded.btn--primary ЗАПИСАТЬСЯ НА ПРИЕМ →
               //second
               .row.contact__item
                 .col-sm-6.no-pad-r
@@ -83,7 +83,7 @@ body
                           a(href="#") mail@doctorfrank.ru
                           a(href="#") Info@doctorfrank.ru
                       .col-sm-6
-                        a(href="#").btn.btn--huge.btn--rounded.btn--primary ЗАПИСАТЬСЯ НА ПРИЕМ →
+                        a(href="#modalCallback").popup-with-zoom-anim.btn.btn--huge.btn--rounded.btn--primary ЗАПИСАТЬСЯ НА ПРИЕМ →
 
               //third
               .row.contact__item
@@ -107,7 +107,7 @@ body
                           a(href="#") mail@doctorfrank.ru
                           a(href="#") Info@doctorfrank.ru
                       .col-sm-6
-                        a(href="#").btn.btn--huge.btn--rounded.btn--primary ЗАПИСАТЬСЯ НА ПРИЕМ →
+                        a(href="#modalCallback").popup-with-zoom-anim.btn.btn--huge.btn--rounded.btn--primary ЗАПИСАТЬСЯ НА ПРИЕМ →
 
 
           include shared/footer.pug

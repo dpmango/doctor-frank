@@ -79,9 +79,27 @@
     margin: 10vh 0 3vh 50px
     padding: 0
     list-style: none
+    @media($desktop)
+      margin-left: 35px
   ul
     li
       display: block
+      position: relative
+      &.have-ul
+        &::after
+          background: url('../images/button_top_1.png') no-repeat center
+          size: 20px
+          background-size: 50%
+          transform: rotate(180deg)
+          transition: all .2s ease-in-out
+          display: inline-block
+          margin-left: 0px
+          position: absolute
+          right: 30px
+          top: 10px
+          content: ' '
+        &.active::after
+          transform: rotate(0deg)
     a
       display: inline-block
       padding: 7px 0
@@ -109,6 +127,20 @@
       color: #fff
       &::after
         width: 100%
+  ul.sublvl
+    padding: 0
+    margin: 0 0 0 -50px
+    padding-left: 60px
+    background: color(white a(10%))
+    display: none
+    @media($desktop)
+      margin-left: -35px
+      padding-left: 45px
+    a
+      font-size: 22px
+      text-transform: none
+      @media($desktop)
+        font-size: 18px
 
 .st-effect-8
   &.st-container

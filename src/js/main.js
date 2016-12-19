@@ -287,6 +287,33 @@ $(document).ready(function(){
 		mainClass: 'my-mfp-zoom-in'
 	});
 
+  // sidebar menu 2lvl handler
+  $('.st-menu li > a').click(function(e){
+		if($(this).closest("li").children("ul").length) {
+			e.preventDefault();
+      $(this).closest('.have-ul').toggleClass('active');
+			$(this).closest('li').find('.sublvl').fadeToggle('middle');
+		}
+	});
+
+  //mansory grid
+  $('.mansory-grid').masonry({
+    itemSelector: '.personal__card',
+    columnWidth: 100
+  });
+
+  //tabs
+  $('.content__tabs').on('click', 'a:not(.active)', function() {
+		$(this).addClass('active').siblings().removeClass('active')
+		.closest('.container').find('.content__tabs__content').fadeOut('middle').eq($(this).index()).fadeIn('middle');
+	});
+
+  //modal select handler
+  $('.modal__form__input select').on('change', function(){
+    putVal = $(this).val();
+    $(this).closest('.modal__form__input').find('input').val(putVal);
+  });
+
   // Custom form click handler
   $('.modal__form__input label').click(function(event){
 	    $(this).parent('.modal__form__input').find('input').focus();

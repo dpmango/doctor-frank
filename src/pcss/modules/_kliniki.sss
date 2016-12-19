@@ -4,7 +4,7 @@
   p
     font-size: 18px
     line-height: 1.7em
-    margin-top: 10px
+    margin-top: 15px
     @media($desktop)
       font-size: 16px
       line-height: 1.4em
@@ -40,8 +40,11 @@
     font-size: 24px
     font-family: 'HarmoniaBlack'
     text-transform: uppercase
+    @media($wide)
+      margin-top: 50px
     @media($desktop)
       font-size: 20px
+      margin-top: 40px
     @media($mobile)
       font-size: 18px
       margin-top: 30px
@@ -52,11 +55,16 @@
   .img-fluid
     margin: 7px 0
 
+.content__tabs__content
+  display: none
+  &.active
+    display: block
+
 .content__tabs
   font-size: 18px
   display: flex
   justify-content: space-between
-  margin-bottom: 20px
+  margin-bottom: 30px
   @media($desktop)
     font-size: 16px
   @media($tablet)
