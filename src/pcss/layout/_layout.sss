@@ -14,10 +14,13 @@
 $mobile: width <= 576px
 $mobile-from: width >= 576px
 $tablet: width <= 768px
+$tablet-from: width >= 768px
 $desktop: width <= 992px
 $desktop-from: width >= 992px
 $wide: width <= 1200px
 $hd: width <= 1680px
+$bp920: width <= 920px
+$bp880: width <= 880px
 
 // variables
 $fontColor: #333
@@ -64,7 +67,7 @@ body, html
   &--transparent
     position: fixed
     left: 0
-    top: 120px
+    top: 110px
     width: 100%
     z-index: 99
     @media($mobile)
@@ -84,7 +87,7 @@ body, html
 .hero
   height: 100vh
   min-height: 800px
-  padding-top: 1.3em
+  padding-top: 1em
   position: relative
   @media($mobile)
     height: auto
@@ -133,6 +136,9 @@ body, html
     @mixin bgImg hero_services.jpg
     @media($mobile)
       @mixin bgImg mobile/hero_estitic.jpg
+  &.active-mobile
+    @mixin bgImg mobile_hero_active-menu.png
+    background-position: top center
 
 .about
   height: 100vh

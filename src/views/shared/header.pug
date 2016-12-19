@@ -1,33 +1,66 @@
-//TRANSPARENT HEADER:: START
-header.header.header--transparent
-  .container
-    .row
-      .col-sm-12
-        .header__wrapper
-          ul.header__navi
-            li.header__navi__btn
-              a(href="#") Записаться на прием
-            .header__navi__sections
-              li
-                a(href="#") НАШИ КЛИНИКИ
-              li
-                a(href="#") НАШИ КЛИНИКИ
-              li
-                a(href="#") ПЕРСОНАЛ
-              li
-                a(href="#") УСЛУГИ
-              li
-                a(href="#") ПОРТФОЛИО
-              li
-                a(href="#") КОНТАКТЫ
-
-            li.header__navi__lang-switcher
-              a(href="#") RU
-            li.header__navi__lang-switcher
-              a(href="#") EN
-            li.fl-r
-              a(href="#")
-                i.ico.ico-social-fb
-            li.fl-r
-              a(href="#")
-                i.ico.ico-social-insta
+.container
+  .row
+    .col-sm-12
+      .header__wrapper
+        ul.header__navi
+          li.header__navi__btn
+            a(href="#modalCallback").popup-with-zoom-anim Записаться на прием
+          .header__navi__sections
+            li
+              a(href="#") НАШИ КЛИНИКИ
+            li
+              a(href="#") ПЕРСОНАЛ
+            li
+              a(href="#") УСЛУГИ
+            li
+              a(href="#") ПОРТФОЛИО
+            li
+              a(href="#") КОНТАКТЫ
+          .header__navi__mobile-menu
+            button.hamburger.hamburger--squeeze#show-mobile-menu(type="button" aria-label="Меню")
+              span.hamburger-label Меню
+              span.hamburger-box
+                span.hamburger-inner
+          li.header__navi__lang-switcher.locale--ru
+            a(href="#") RU
+          li.header__navi__lang-switcher.locale--en
+            a(href="#") EN
+          li.fl-r
+            a(href="#")
+              i.ico.ico-social-fb
+          li.fl-r
+            a(href="#")
+              i.ico.ico-social-insta
+      .mobile-menu
+        ul.mobile-menu__list
+          li
+            a(href="#") Hаши клиники
+          li
+            a(href="#") Персонал
+          li
+            a(href="#") Услуги
+          li
+            a(href="#") Портфолио
+          li
+            a(href="#") Новости
+          li
+            a(href="#") Пациентам
+          li
+            a(href="#") Вопрос-ответ
+          li
+            a(href="#") Отзывы
+          li
+            a(href="#") Партнеры
+          li
+            a(href="#") Kонтакты
+        ul.mobile-menu__icons
+          li.header__navi__lang-switcher
+            a(href="#") RU
+          li.header__navi__lang-switcher
+            a(href="#") EN
+          li.fl-r
+            a(href="#")
+              i.ico.ico-social-fb
+          li.fl-r
+            a(href="#")
+              i.ico.ico-social-insta

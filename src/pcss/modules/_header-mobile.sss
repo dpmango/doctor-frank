@@ -1,24 +1,94 @@
 // hamburger overwrite
 
-.hamburger
+.hamburger--spin
   position: fixed
   z-index: 99
   right: 0
   top: 0px
+  &:focus
+    outline: none
+  .hamburger-inner
+    background-color: black
+    &:before, &:after
+      background-color: black
+
+  .hamburger.is-active
+    .hamburger-inner
+      background-color: white
+      &:before, &:after
+        background-color: white
+
+// mobile hamburger
+.hamburger--squeeze
+  padding: 0
+  &:focus
+    outline: none
+  .hamburger-box
+    width: 20px
+    height: 22px
+  .hamburger-inner
+    background-color: white
+    border-radius: 0
+    width: 20px
+    height: 3px
+    &:before, &:after
+      background-color: white
+      border-radius: 0
+      width: 20px
+      height: 3px
+    &:before
+      top: 7px
+    &:after
+      top: 14px
+  &.is-active
+    .hamburger-box
+      height: 10px
+    .hamburger-inner
+      &::after
+        transform: translate3d(0, -14px, 0) rotate(-270deg)
+
+.hamburger-label
+  padding-right: 10px
+  text-transform: uppercase
 
 //this is desktop hamgurger
 .hamburger--spin
   @media($mobile)
     display: none
 
-.hamburger-inner
-  background-color: black
-  &:before, &:after
-    background-color: black
+// menu
 
-
-.hamburger.is-active
-  .hamburger-inner
-    background-color: white
-    &:before, &:after
-      background-color: white
+.mobile-menu
+  border: 2px solid white
+  border-top: none
+  display: none
+  @media($tablet-from)
+    display: none !important
+  ul&__list
+    list-style: none
+    margin: 0
+    padding: 10px 0
+    text-transform: uppercase
+    font-size: 18px
+    text-align: center
+    li a
+      display: inline-block
+      padding-bottom: 5px
+  ul&__icons
+    list-style: none
+    border-top: 2px solid white
+    margin: 0
+    padding: 10px 20px
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    li
+      border-right: 2px solid white
+      width: 25%
+      text-align: center
+      a
+        display: inline-block
+      &:first-child
+        border-left: none
+      &:last-child
+        border-right: none

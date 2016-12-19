@@ -12,12 +12,12 @@
     display: inline-block
     a
       display: inline-block
-      padding: 15px 10px 12px 10px
+      padding: 14px 10px 11px 10px
       transition: all .4s ease-in-out
   li.header__navi__btn
     a
       padding-left: 25px
-      padding-right: 25px
+      padding-right: 35px
       border-right: 2px solid white
       position: relative
       &:hover
@@ -37,22 +37,46 @@
   li.header__navi__lang-switcher
     border-left: 2px solid white
     float: right
+    &.locale--ru
+      @media($bp880)
+        display: none
+    a
+      padding: 14px 13px 11px 13px
     @media($mobile)
       display: none
     &:hover
       background: white
       color: $fontColor
   li .ico
-    @media($mobile)
+    @media($bp880)
       display: none
+    &.ico-social-fb
+      margin-right: 5px
   &__sections
-    display: inline-flex
-    justify-content: space-between
-    @media($mobile)
+    display: inline-block
+    padding-left: 30px
+    @media($desktop)
+      padding-left: 15px
+    @media($tablet)
       display: none
-    a
+    li a
+      padding: 14px 21px 11px 21px
+      @media($desktop)
+        padding-left: 15px
+        padding-right: 15px
+      @media($bp920)
+        padding-left: 10px
+        padding-right: 10px
       &:hover
         opacity: .8
+  &__mobile-menu
+    display: inline-block
+    margin-left: 40px
+    @media($tablet-from)
+      display: none
+    @media($mobile)
+      float: right
+      margin: 5px 20px 0px 10px
 
 $blackHeaderColor: #8b8b8a
 
