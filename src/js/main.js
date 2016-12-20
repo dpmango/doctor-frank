@@ -167,8 +167,10 @@ $(document).ready(function(){
 
     if( scrollTop >= 500 ){
       $('.header').addClass('header--floating');
+      $('.toggleHambColor').removeClass('hamburger--white');
     } else {
       $('.header').removeClass('header--floating');
+      $('.toggleHambColor').addClass('hamburger--white');
     }
     if( scrollBottom <= 300 ){
       $('.scroll-up').addClass('visible');
@@ -322,6 +324,7 @@ $(document).ready(function(){
 
   //masked input
   $("input[name=phone]").mask("+7 (999) 999-9999");
+  $("input[name=time]").mask("99 : 99");
 
 });
 

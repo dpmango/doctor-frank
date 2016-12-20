@@ -9,8 +9,10 @@
   width: 100%
   margin: 0
   height: 100vh
+  min-height: 700px
   &--personal
-    min-height: 800px
+    height: auto
+    min-height: 100vh
   .mfp-close
     background: url('../images/modal_close.png') no-repeat center
     background-size: cover
@@ -24,11 +26,25 @@
     font-family: 'DIN'
     line-height: 1
     margin-top: 10vh
+    @media($desktop)
+      font-size: 75px
+    @media($tablet)
+      font-size: 64px
+    @media($mobile)
+      font-size: 50px
+      margin-top: 30px
   &__desc
     font-size: 24px
     margin-top: 10px
+    @media($desktop)
+      font-size: 18px
+
+    @media($mobile)
+      font-size: 12px
   &__form
     margin-top: 10vh
+    @media($mobile)
+      margin-top: 25px
     &__input
       position: relative
       margin-bottom: 15px
@@ -55,6 +71,10 @@
         font-family: 'Harmonia'
         transform: translate3d(0, 0, 0)
         transition: all 0.2s ease-in-out
+        @media($mobile)
+          top: 8px
+          text-transform: uppercase
+          font-size: 15px
         span
           color: #e589ca
       input, textarea
@@ -72,6 +92,10 @@
         cursor: pointer
         position: relative
         transition: all .4s ease-in-out
+        @media($mobile)
+          height: 40px
+          font-size: 15px
+          padding-top: 10px
         &:valid, &:focus
           outline: 0
           border-bottom: 2px solid white
@@ -117,16 +141,40 @@
     line-height: 0.9em
     text-transform: uppercase
     margin-top: 50px
+    @media($desktop)
+      font-size: 45px
+      margin-top: 40px
+    @media($tablet)
+      font-size: 38px
+      line-height: 1
+      margin-top: 30px
+    @media($mobile)
+      font-size: 30px
+      margin-top: 20px
 
   &__personal__status
     color: #003733
     font-size: 15px
     font-family: 'HarmoniaSemiBold'
     margin-top: 20px
+    @media($desktop)
+      font-size: 14px
+      margin-top: 15px
+    @media($tablet)
+      font-size: 13px
+      margin-top: 10px
+    @media($mobile)
+      font-size: 12px
 
   &__personal__biography
     font-size: 14px
     margin-top: 50px
+    margin-bottom: 30px
+    @media($desktop)
+      margin-top: 30px
+
+    @media($mobile)
+      font-size: 12px
     span
       color: #005756
 

@@ -21,6 +21,7 @@ $wide: width <= 1200px
 $hd: width <= 1680px
 $bp920: width <= 920px
 $bp880: width <= 880px
+$bp1110: width <= 1110px
 
 // variables
 $fontColor: #333
@@ -41,6 +42,7 @@ a
   &:hover, &:focus, &:visited
     text-decoration: none
     color: inherit
+    outline: none
 
 body, html
   background: white
@@ -111,8 +113,8 @@ body, html
     height: 150px
     min-height: 150px
     @media($mobile)
-      height: 120px
-      min-height: 120px
+      height: 140px
+      min-height: 140px
   &--kliniki
     @mixin bgImg hero_kliniki.jpg
     @media($mobile)
@@ -140,6 +142,7 @@ body, html
   &.active-mobile
     @mixin bgImg mobile_hero_active-menu.png
     background-position: top center
+    min-height: 600px
 
 .about
   height: 100vh
@@ -165,7 +168,10 @@ body, html
   &--mainpage
     @mixin bgImg hand_2.jpg
     background-size: cover
-    @media($mobile)
+    @media($wide)
+      background-size: 100%
+      background-position: top center
+    @media($desktop)
       display: none
 
 // inner pages
@@ -180,6 +186,11 @@ body, html
 
 .kliniki
   display: block
+  .mb50
+    @media($desktop)
+      margin-bottom: 35px
+    @media($mobile)
+      margin-bottom: 20px
 
 .partners
   display: block
@@ -187,10 +198,14 @@ body, html
 .personal
   .mt30
     @media($mobile)
-      margin: 0
+      margin-top: 0
 
 .portfolio
   display: block
+  .no-pad
+    @media($desktop)
+      padding-left: 15px
+      padding-right: 15px
 
 .services-inner
   .img-fluid

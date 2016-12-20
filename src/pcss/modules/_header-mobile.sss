@@ -78,28 +78,48 @@
     display: none !important
   ul&__list
     list-style: none
-    margin: 0
-    padding: 10px 0
+    margin-left: 40px
+    margin-right: 0
+    padding: 20px 0 5px 0
     text-transform: uppercase
     font-size: 18px
     text-align: center
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    li
+      flex: 1
     li a
       display: inline-block
       padding-bottom: 5px
+      transition: opacity .3s ease-in-out
+      &:hover
+        opacity: .8
   ul&__icons
     list-style: none
     border-top: 2px solid white
     margin: 0
-    padding: 10px 20px
+    padding-left: 0
     display: flex
-    align-items: stretch
     justify-content: space-between
+    flex-wrap: nowrap
+    align-items: stretch
     li
       border-right: 2px solid white
-      width: 25%
+      margin: 0
+      padding: 0
       text-align: center
+      flex: 1 1 25%
+      cursor: pointer
+      &:hover
+        background: color(white a(30%))
       a
         display: inline-block
+        width: 25%
+        padding: 10px 30px 8px 30px
+        @media($mobile)
+          padding-left: 15px
+          padding-right: 15px
       &:first-child
         border-left: none
       &:last-child

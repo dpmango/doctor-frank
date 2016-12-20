@@ -64,14 +64,19 @@
   font-size: 18px
   display: flex
   justify-content: space-between
-  margin-bottom: 30px
-  @media($desktop)
+  flex-wrap: wrap
+  margin-bottom: 25px
+  padding-left: 30px
+  @media($bp1110)
     font-size: 16px
   @media($tablet)
     font-size: 14px
+    padding-left: 15px
   @media($mobile)
     flex-direction: column
+    font-size: 18px
   a
     color: $colorPrimaryLight
+    padding: 5px
   a.active
     color: $fontColor

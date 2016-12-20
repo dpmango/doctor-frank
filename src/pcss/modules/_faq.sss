@@ -7,19 +7,22 @@
   @media($desktop)
     padding: 30px 0
   @media($mobile)
-    padding: 20px 0
+    padding: 20px 0 40px 0
   &:last-child
     border-bottom: none
   &::before
     position: absolute
     display: block
-    left: 60px
+    left: 55px
     top: 85px
     content: ' '
     background: url('../images/faq_dots.png') repeat-x left center
     background-size: cover
     height: height('faq_dots.png', 1.2)
     width: width('faq_dots.png', 2)
+    @media($desktop)
+      height: height('faq_dots.png', 1.4)
+      left: 40px
     @media($mobile)
       display: none
   &__question
@@ -27,6 +30,18 @@
     background-size: cover
     height: height('talk_buble.png', 2)
     width: width('talk_buble.png', 2)
+    @media($desktop)
+      transform: scale(.8)
+      margin-left: -10px
+    @media($tablet)
+      transform: scale(.7)
+      margin-left: -15px
+    @media($mobile)
+      transform: scale(1)
+      margin-left: 0
+      max-width: 100%
+      background-size: 100%
+
   &__name
     font-family: 'HarmoniaBlack'
     font-size: 24px
@@ -54,12 +69,19 @@
       font-size: 75px
       font-family: 'HarmoniaBlack'
       position: absolute
+      @media($desktop)
+        font-size: 60px
+      @media($tablet)
+        font-size: 50px
     &::after
       content: '”'
       position: relative
       display: inline-block
       top: 50px
       left: 20px
+      line-height: 0
+      @media($mobile)
+        top: 30px
     &::before
       content: '“'
       top: -5px
@@ -78,11 +100,18 @@
     @media($mobile)
       margin-top: 40px
     .img-fluid
-      max-width: 80%
+      max-width: width('talk_buble.png', 2)
       @media($desktop)
-        max-width: 100%
+        transform: scale(.8)
+        margin-left: -10px
+      @media($tablet)
+        transform: scale(.7)
+        margin-left: -15px
       @media($mobile)
-        max-width: 30%
+        transform: scale(1)
+        margin-left: 0
+        max-width: 100%
+        background-size: 100%
     .faq__item__name
       color: $colorPrimaryLight
     .faq__item__content
@@ -92,15 +121,23 @@
   // testimonial
   &--testimonial
     border-bottom: none
+    @media($mobile)
+      padding-bottom: 20px
     &::before
       display: none
+    .faq__item__name
+      margin-top: 0
     .faq__item__answer
       .img-fluid
         max-width: 100%
     .faq__item__content
       &::before, &::after
         color: $colorPrimaryLight
-
+    .img-fluid
+      @media($mobile)
+        max-width: 50%
+        border-radius: 50%
+        margin-bottom: 15px
     .testimonial__item
       margin-top: 80px
       @media($desktop)
