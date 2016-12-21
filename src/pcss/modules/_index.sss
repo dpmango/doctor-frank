@@ -68,6 +68,15 @@
       margin-top: 50px
     &.mt60
       margin-top: 60px
+    &.abs-fix
+      position: absolute
+      top: 20px
+      @media(width <= 975px)
+        top: 50px
+      @media(width <= 690px)
+        top: -10px
+      @media($mobile)
+        position: static
     &__condenced
       line-height: .9em
     @media($wide)
