@@ -1,7 +1,15 @@
 // Personal
+.mansory-grid
+  &::after
+    display: block
+    clear: both
+    content: ' '
 .personal__card
   display: block
   position: relative
+  // mansory
+  float: left
+  width: 25%
   &::after
     display: block
     position: absolute 0 0 0 0
@@ -28,12 +36,14 @@
       .personal__card__status
         opacity: 0
   &--huge
+    width: 50%
     .personal__card__name
       top: 40%
   &--long
     .personal__card__name
       top: 30%
   &--wide
+    width: 50%
     .personal__card__name
       top: 30%
 

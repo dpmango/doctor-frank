@@ -321,7 +321,8 @@ $(document).ready(function(){
   //mansory grid
   $('.mansory-grid').masonry({
     itemSelector: '.personal__card',
-    columnWidth: 100
+    percentPosition: true
+    //columnWidth: 100
   });
 
   //tabs
