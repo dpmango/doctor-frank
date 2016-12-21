@@ -4417,7 +4417,7 @@ body, html {
 }
 .hero {
     height: 100vh;
-    min-height: 800px;
+    min-height: 700px;
     padding-top: 1em;
     position: relative;
 }
@@ -4534,7 +4534,7 @@ body, html {
 }
 .about {
     height: 100vh;
-    min-height: 800px;
+    min-height: 700px;
     position: relative;
 }
 .about--mainpage {
@@ -4938,7 +4938,7 @@ ul.mobile-menu__icons li:last-child {
 }
 /* Common Elements */
 .scroll-down {
-    padding: 40px 0;
+    padding: 2vh 0;
 }
 .scroll-down span {
     font-size: 15px;
@@ -5377,7 +5377,7 @@ a.heading__crumbs__home {
 }
 .hero__title {
     font-family: 'DIN';
-    margin-top: 40vh;
+    margin-top: 33vh;
     color: #39908f;
     font-size: 89px;
     line-height: .9em;
@@ -5496,7 +5496,7 @@ a.heading__crumbs__home {
     }
 }
 .about__block--light {
-    margin-top: 310px;
+    margin-top: 32vh;
     background: #f3f3f3;
 }
 .about__block--light span {
@@ -5510,7 +5510,7 @@ a.heading__crumbs__home {
 .about__block--primary {
     background: #39908f;
     color: white;
-    margin-top: 380px;
+    margin-top: 40vh;
     padding-right: 80px;
 }
 @media(max-width: 768px) {
