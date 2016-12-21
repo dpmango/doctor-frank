@@ -11,7 +11,6 @@
     font-size: 70px
   @media($tablet)
     font-size: 60px
-
 .serivces__spiral
   a
     font-size: 12px
@@ -37,7 +36,9 @@
       content: ' '
       display: none
       transition: background .4s ease-in-out
-
+  &__wrap
+    position: relative
+    display: inline-block
   a&__pos-one
     top: 23.2%
     right: 14%
@@ -45,12 +46,12 @@
       display: inline-block
   a&__pos-two
     top: 42.8%
-    right: -.4%
+    right: .7%
     &::after
       display: inline-block
   a&__pos-three
     top: 62%
-    right: 13.1%
+    right: 16.1%
     &::before
       display: inline-block
       vertical-align: 10px
@@ -61,22 +62,22 @@
       display: inline-block
   a&__pos-five
     top: 48.9%
-    left: 18.1%
+    left: 19.1%
     &::before
       display: inline-block
   a&__pos-six
     top: 62%
-    left: 3.4%
+    left: 4.8%
     &::before
       display: inline-block
   a&__pos-seven
     top: 67%
-    left: 26.1%
+    left: 28.8%
     &::before
       display: inline-block
   a&__pos-eight
     top: 80.6%
-    left: 14%
+    left: 15%
     &::before
       display: inline-block
       vertical-align: -10px
@@ -97,18 +98,16 @@
 
 .cd-dropdown, .cd-select
   position: relative
-  margin: 20px auto
-  display: block
+  margin: 0px 0
+  display: inline-block
 
 .cd-dropdown
   > span
-    width: 100%
+    width: 80px
     line-height: 20px
-    color: #999
-    font-weight: 700
     font-size: 12px
     display: block
-    padding: 10px
+    padding: 10px 0
     position: relative
     cursor: pointer
     // &:after
@@ -127,12 +126,14 @@
   //   content: '\25B2'
   ul
     list-style-type: none
+    width: 150px !important
     margin: 0
     padding: 0
     display: block
     position: relative
     li
       display: block
+      width: 100%
       span
         width: 100%
         background: #fff

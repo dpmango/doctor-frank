@@ -346,6 +346,47 @@ $(document).ready(function(){
     stack : false,
     slidingIn : 200
   } );
+  $( '#cd-dropdown2' ).dropdown( {
+    gutter : 0,
+    stack : false,
+    slidingIn : 200
+  } );
+  $( '#cd-dropdown3' ).dropdown( {
+    gutter : 0,
+    stack : false,
+    slidingIn : 200
+  } );
+  $( '#cd-dropdown4' ).dropdown( {
+    gutter : 0,
+    stack : false,
+    slidingIn : 200
+  } );
+  $( '#cd-dropdown5' ).dropdown( {
+    gutter : 0,
+    stack : false,
+    slidingIn : 200
+  } );
+  $( '#cd-dropdown6' ).dropdown( {
+    gutter : 0,
+    stack : false,
+    slidingIn : 200
+  } );
+  $( '#cd-dropdown7' ).dropdown( {
+    gutter : 0,
+    stack : false,
+    slidingIn : 200
+  } );
+  $( '#cd-dropdown8' ).dropdown( {
+    gutter : 0,
+    stack : false,
+    slidingIn : 200
+  } );
+  // $('.mansory-grid').masonry({
+  //   itemSelector: '.personal__card',
+  //   percentPosition: true
+  //   columnWidth: 25%,
+  //   // gutter: 10
+  // });
 
 });
 
@@ -354,7 +395,3 @@ $(window).load(function() {
 });
 
 //mansory grid
-$('.mansory-grid').masonry({
-  itemSelector: '.personal__card',
-  percentPosition: true
-});

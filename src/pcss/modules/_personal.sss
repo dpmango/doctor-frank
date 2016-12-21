@@ -1,9 +1,12 @@
 // Personal
 .mansory-grid
+  // display: flex
+  // flex-wrap: wrap
   &::after
     display: block
     clear: both
     content: ' '
+
 .personal__card
   display: block
   position: relative
@@ -13,6 +16,9 @@
   // height: 250px
   margin: 1%
   overflow: hidden
+  @media($mobile)
+    width: 100%
+    margin: 1% 0
   &::after
     display: block
     position: absolute 0 0 0 0
@@ -43,6 +49,9 @@
   &--huge
     width: 48%
     // height: 520px
+    @media($mobile)
+      width: 100%
+      margin: 1% 0
     .personal__card__name
       top: 40%
   &--long
@@ -51,6 +60,9 @@
       top: 30%
   &--wide
     width: 48%
+    @media($mobile)
+      width: 100%
+      margin: 1% 0
     .personal__card__name
       top: 30%
 

@@ -53,13 +53,13 @@
 			var value = this._transformSelect();
 			this.opts = this.listopts.children( 'li' );
 			this.optsCount = this.opts.length;
-			this.size = { width : this.dd.width(), height : this.dd.height() };
-			
+			this.size = { width : 140, height : this.dd.height() };
+
 			var elName = this.$el.attr( 'name' ), elId = this.$el.attr( 'id' ),
 				inputName = elName !== undefined ? elName : elId !== undefined ? elId : 'cd-dropdown-' + ( new Date() ).getTime();
 
 			this.inputEl = $( '<input type="hidden" name="' + inputName + '" value="' + value + '"></input>' ).insertAfter( this.selectlabel );
-			
+
 			this.selectlabel.css( 'z-index', this.minZIndex + this.optsCount );
 			this._positionOpts();
 			if( Modernizr.csstransitions ) {
@@ -79,8 +79,8 @@
 					label = $this.text();
 
 				if( val !== -1 ) {
-					optshtml += 
-						classes !== undefined ? 
+					optshtml +=
+						classes !== undefined ?
 							'<li data-value="' + val + '"><span class="' + classes + '">' + label + '</span></li>' :
 							'<li data-value="' + val + '"><span>' + label + '</span></li>';
 				}
@@ -131,9 +131,9 @@
 
 		},
 		_initEvents : function() {
-			
+
 			var self = this;
-			
+
 			this.selectlabel.on( 'mousedown.dropdown', function( event ) {
 				self.opened ? self.close() : self.open();
 				return false;
@@ -145,7 +145,8 @@
 					var opt = $( this );
 					self.options.onOptionSelect( opt );
 					self.inputEl.val( opt.data( 'value' ) );
-					self.selectlabel.html( opt.html() );
+					//self.selectlabel.html( opt.html() );
+          window.location.href = opt.data( 'value' );
 					self.close();
 				}
 			} );
