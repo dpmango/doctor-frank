@@ -318,13 +318,6 @@ $(document).ready(function(){
 		}
 	});
 
-  //mansory grid
-  $('.mansory-grid').masonry({
-    itemSelector: '.personal__card',
-    percentPosition: true
-    //columnWidth: 100
-  });
-
   //tabs
   $('.content__tabs').on('click', 'a:not(.active)', function() {
 		$(this).addClass('active').siblings().removeClass('active')
@@ -358,4 +351,10 @@ $(document).ready(function(){
 
 $(window).load(function() {
   $(".portfolio__item__image").twentytwenty();
+});
+
+//mansory grid
+$('.mansory-grid').masonry({
+  itemSelector: '.personal__card',
+  percentPosition: true
 });

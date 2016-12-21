@@ -4523,7 +4523,9 @@ a.serivces__spiral__pos-eight::before {
     display: block;
     position: relative;/* mansory */
     float: left;
-    width: 25%;/*modifiers */
+    width: 23%;/* height: 250px */
+    margin: 1%;
+    overflow: hidden;/*modifiers *//* &.mt30 *//*   margin-top: 0 */
 }
 .personal__card::after {
     display: block;
@@ -4561,16 +4563,18 @@ a.serivces__spiral__pos-eight::before {
     opacity: 0;
 }
 .personal__card--huge {
-    width: 50%;
+    width: 48%;
 }
+/* height: 520px */
 .personal__card--huge .personal__card__name {
     top: 40%;
 }
+/* height: 520px */
 .personal__card--long .personal__card__name {
     top: 30%;
 }
 .personal__card--wide {
-    width: 50%;
+    width: 48%;
 }
 .personal__card--wide .personal__card__name {
     top: 30%;
