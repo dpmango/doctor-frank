@@ -326,6 +326,13 @@ $(document).ready(function(){
   $("input[name=phone]").mask("+7 (999) 999-9999");
   $("input[name=time]").mask("99 : 99");
 
+  // 3rd screen fancy dropdowns
+  $( '#cd-dropdown' ).dropdown( {
+    gutter : 0,
+    stack : false,
+    slidingIn : 200
+  } );
+
 });
 
 $(window).load(function() {

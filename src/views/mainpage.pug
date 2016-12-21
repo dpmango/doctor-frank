@@ -60,7 +60,14 @@ body
                 .col-sm-12.h100
                   .services__title УСЛУГИ <br> КЛИНИКИ
                   .serivces__spiral
-                    a.serivces__spiral__pos-one(href="#") Диагностика
+                    a.serivces__spiral__pos-one(href="#")
+                      <select id="cd-dropdown" class="cd-select">
+                        <option value="-1" selected>Диагностика</option>
+                        <option value="1">Услуга</option>
+                        <option value="2">Услуга</option>
+                        <option value="3">Услуга</option>
+                        <option value="4">Услуга</option>
+                      </select>
                     a.serivces__spiral__pos-two(href="#") Ортодония
                     a.serivces__spiral__pos-three(href="#")
                       span Детская <br> стоматология

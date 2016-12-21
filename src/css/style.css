@@ -3852,6 +3852,93 @@ a.serivces__spiral__pos-eight::before {
       a.serivces__spiral__pos-seven
       a.serivces__spiral__pos-eight {}
 }
+.cd-dropdown, .cd-select {
+    position: relative;
+    margin: 20px auto;
+    display: block;
+}
+.cd-dropdown > span {
+    width: 100%;
+    line-height: 20px;
+    color: #999;
+    font-weight: 700;
+    font-size: 12px;
+    display: block;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;/* &:after *//*   content: '\25BC' *//*   position: absolute *//*   right: 0px *//*   top: 15% *//*   width: 50px *//*   text-align: center *//*   font-size: 12px *//*   padding: 10px *//*   height: 70% *//*   line-height: 24px *//*   border-left: 1px solid #ddd */
+}
+/*   content: '\25B2' */
+.cd-dropdown ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+}
+.cd-dropdown ul li {
+    display: block;
+}
+.cd-dropdown ul li span {
+    width: 100%;
+    background: #fff;
+    line-height: 40px;
+    padding: 0 20px 0 20px;
+    display: block;
+    color: #bcbcbc;
+    cursor: pointer;
+    font-weight: 700;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* &.cd-active > span:after */
+.cd-dropdown > span {
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cd-dropdown > span span {}
+.cd-dropdown > span span[class^="icon-"], .cd-dropdown > span span[class*=" icon-"] {
+    padding: 0 30px 0 45px;
+}
+.cd-select {
+    border: 1px solid #ddd;
+}
+.cd-dropdown {/* > span *//*   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) */
+}
+.cd-dropdown ul {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.cd-dropdown ul li {
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+.cd-active.cd-dropdown > span {
+    color: #3db4b2;
+}
+.cd-active.cd-dropdown ul li {
+    pointer-events: auto;
+}
+.cd-active.cd-dropdown ul li span {
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+}
+.cd-active.cd-dropdown ul li span:hover {
+    background: #3db4b2;
+    color: #fff;
+}
 /* Services inner */
 /* faq && testimonials */
 .faq__item {
