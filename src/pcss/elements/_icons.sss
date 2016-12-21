@@ -21,9 +21,43 @@
 
 .ico-scroll-down
   @mixin myIcon mouse_scroll_down.png
+  position: relative
+  &::after
+    display: block
+    content: ' '
+    position: absolute
+    left: 12px
+    top: 10px
+    size: 2px 13px
+    background: white
+    animation-name: scrollmove
+    animation-duration: 3s
+    animation-timing-function: ease-in-out
+    animation-iteration-count: infinite
+
+@keyframes scrollmove
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(0, 10px, 0)
+  100%
+    transform: translate3d(0, 0, 0)
 
 .ico-scroll-down--gray
   @mixin myIcon mouse_scroll_down_gray.png
+  position: relative
+  &::after
+    display: block
+    content: ' '
+    position: absolute
+    left: 12px
+    top: 10px
+    size: 2px 13px
+    background: #767676
+    animation-name: scrollmove
+    animation-duration: 3s
+    animation-timing-function: ease-in-out
+    animation-iteration-count: infinite
 
 .ico-dropdown
   background: url('../images/button_top_1.png') no-repeat center

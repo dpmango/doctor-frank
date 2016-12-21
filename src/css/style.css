@@ -496,7 +496,7 @@ body, html {
 .hamburger--spin {
     position: fixed;
     z-index: 99;
-    right: 0;
+    right: 10px;
     top: 0px;
 }
 .hamburger--spin .hamburger-inner {
@@ -667,6 +667,12 @@ ul.mobile-menu__icons li:last-child {
 /* Common Elements */
 .scroll-down {
     padding: 2vh 0;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 .scroll-down span {
     font-size: 15px;
@@ -1150,6 +1156,9 @@ a.heading__crumbs__home {
     }
 }
 /* About mainpage */
+.about .row {
+    position: relative;
+}
 .about .absolute {
     position: absolute;
     right: 0;
@@ -4850,12 +4859,78 @@ a.serivces__spiral__pos-eight::before {
     background-size: 100%;
     height: 43px;
     width: 25.5px;
+    position: relative;
+}
+.ico-scroll-down::after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    width: 2px;
+    height: 13px;
+    background: white;
+    -webkit-animation-name: scrollmove;
+            animation-name: scrollmove;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+@-webkit-keyframes scrollmove {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(0, 10px, 0);
+                transform: translate3d(0, 10px, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes scrollmove {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(0, 10px, 0);
+                transform: translate3d(0, 10px, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
 }
 .ico-scroll-down--gray {
     background: url('../images/mouse_scroll_down_gray.png') no-repeat center;
     background-size: 100%;
     height: 43px;
     width: 25.5px;
+    position: relative;
+}
+.ico-scroll-down--gray::after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    width: 2px;
+    height: 13px;
+    background: #767676;
+    -webkit-animation-name: scrollmove;
+            animation-name: scrollmove;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 .ico-dropdown {
     background: url('../images/button_top_1.png') no-repeat center;
