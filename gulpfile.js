@@ -46,7 +46,7 @@ gulp.task('watch', function(){
 // build
 gulp.task('build', function (callback) {
   runSequence(
-    'clean:dist',
+    // 'clean:dist',
     'pug',
     'postcss',
     ['useref', 'fonts'],

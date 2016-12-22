@@ -84,63 +84,91 @@
   ul
     li
       display: block
-      position: relative
-      &.have-ul
-        &::after
-          background: url('../images/button_top_1.png') no-repeat center
-          size: 20px
-          background-size: 50%
-          transform: rotate(180deg)
-          transition: all .2s ease-in-out
-          display: inline-block
-          margin-left: 0px
-          position: absolute
-          right: 30px
-          top: 10px
-          content: ' '
-        &.active::after
-          transform: rotate(0deg)
-    a
-      display: inline-block
-      padding: 7px 0
-      font-size: 27px
-      outline: none
-      color: white
-      text-transform: uppercase
-      letter-spacing: 1px
-      font-weight: 400
-      transition: background 0.3s
-      position: relative
-      @media($desktop)
-        font-size: 22px
-      &::after
-        position: absolute
-        content: ' '
-        bottom: 3px
-        left: 0
-        display: block
-        background: #018280
-        width: 0
-        height: 3px
-        transition: width .4s ease-in-out
-    a:hover
-      color: #fff
-      &::after
-        width: 100%
-  ul.sublvl
-    padding: 0
-    margin: 0 0 0 -50px
-    padding-left: 60px
-    background: color(white a(10%))
-    display: none
+      // position: relative
+      // &.have-ul
+      //   &::after
+      //     background: url('../images/button_top_1.png') no-repeat center
+      //     size: 20px
+      //     background-size: 50%
+      //     transform: rotate(180deg)
+      //     transition: all .2s ease-in-out
+      //     display: inline-block
+      //     margin-left: 0px
+      //     position: absolute
+      //     right: 30px
+      //     top: 10px
+      //     content: ' '
+      //   &.active::after
+      //     transform: rotate(0deg)
+  a
+    display: inline-block
+    padding: 7px 0
+    font-size: 27px
+    outline: none
+    color: white
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-weight: 400
+    transition: background 0.3s
+    position: relative
     @media($desktop)
-      margin-left: -35px
-      padding-left: 45px
+      font-size: 22px
+    &::after
+      position: absolute
+      content: ' '
+      bottom: 3px
+      left: 0
+      display: block
+      background: #018280
+      width: 0
+      height: 3px
+      transition: width .4s ease-in-out
+  a:hover
+    color: #fff
+    &::after
+      width: 100%
+  ul.sublvl
+    transform: translate3d(400px, 0, 0)
+    z-index: 60
+    background: #018280
+    box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2)
+    transition: all 0.5s
+    position: absolute -10vh 0 -10vh 0
+    padding-left: 30px
+    font-size: 22px
+    &.active
+      transform: translate3d(0px, 0, 0)
     a
       font-size: 22px
-      text-transform: none
-      @media($desktop)
-        font-size: 18px
+      &::after
+        background: #3db4b2
+  .sublvl__back
+    font-size: 13px
+    border-bottom: 2px solid color(white a(50%))
+    margin-left: -30px
+    color: white
+    line-height: 20px
+    padding: 20px 0 20px 30px
+    margin-bottom: 10px
+    cursor: pointer
+    transition: all .4s
+    &:hover
+      background: color(white a(10%))
+
+  // ul.sublvl
+  //   padding: 0
+  //   margin: 0 0 0 -50px
+  //   padding-left: 60px
+  //   background: color(white a(10%))
+  //   display: none
+  //   @media($desktop)
+  //     margin-left: -35px
+  //     padding-left: 45px
+  //   a
+  //     font-size: 22px
+  //     text-transform: none
+  //     @media($desktop)
+  //       font-size: 18px
 
 .st-effect-8
   &.st-container

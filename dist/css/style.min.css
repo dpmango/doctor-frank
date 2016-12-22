@@ -5309,10 +5309,10 @@ ul.mobile-menu__icons li:last-child {
     height: 45px;
     background: #3db4b2 url('../images/button_top_1.png') no-repeat center;
     background-size: 50%;
-    position: fixed;
+    position: absolute;
     z-index: 99;
-    right: 20px;
-    bottom: 10px;
+    right: 0px;
+    bottom: 85px;
     cursor: pointer;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -5353,6 +5353,7 @@ a.heading__crumbs__home {
     text-transform: uppercase;
     font-family: 'DIN';
     font-size: 75px;
+    font-weight: 400;
     line-height: 1.1em;
     margin: 40px 0 7px 0;
 }
@@ -7284,10 +7285,11 @@ a.btn {
 }
 /* generic modifiers */
 .btn--rounded {
-    border-radius: 2em;
+    border-radius: 2.5em;
 }
 .btn--huge {
-    padding: 20px 25px 15px 25px;
+    font-size: 12px;
+    padding: 22px 21px 17px 22px;
     font-family: 'MullerBold';
 }
 @media(max-width: 992px) {
@@ -7428,39 +7430,17 @@ a.btn {
     -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
     transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
+.st-menu {/* ul.sublvl *//*   padding: 0 *//*   margin: 0 0 0 -50px *//*   padding-left: 60px *//*   background: color(white a(10%)) *//*   display: none *//*   @media($desktop) *//*     margin-left: -35px *//*     padding-left: 45px *//*   a *//*     font-size: 22px *//*     text-transform: none *//*     @media($desktop) *//*       font-size: 18px */
+}
 .st-menu ul {
     margin: 10vh 0 3vh 50px;
     padding: 0;
     list-style: none;
 }
 .st-menu ul li {
-    display: block;
-    position: relative;
+    display: block;/* position: relative *//* &.have-ul *//*   &::after *//*     background: url('../images/button_top_1.png') no-repeat center *//*     size: 20px *//*     background-size: 50% *//*     transform: rotate(180deg) *//*     transition: all .2s ease-in-out *//*     display: inline-block *//*     margin-left: 0px *//*     position: absolute *//*     right: 30px *//*     top: 10px *//*     content: ' ' *//*   &.active::after *//*     transform: rotate(0deg) */
 }
-.st-menu ul li.have-ul {}
-.st-menu ul li.have-ul::after {
-    background: url('../images/button_top_1.png') no-repeat center;
-    width: 20px;
-    height: 20px;
-    background-size: 50%;
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    display: inline-block;
-    margin-left: 0px;
-    position: absolute;
-    right: 30px;
-    top: 10px;
-    content: ' ';
-}
-.st-menu ul li.have-ul.active::after {
-    -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
-}
-.st-menu ul a {
+.st-menu a {
     display: inline-block;
     padding: 7px 0;
     font-size: 27px;
@@ -7473,7 +7453,7 @@ a.btn {
     transition: background 0.3s;
     position: relative;
 }
-.st-menu ul a::after {
+.st-menu a::after {
     position: absolute;
     content: ' ';
     bottom: 3px;
@@ -7485,22 +7465,53 @@ a.btn {
     -webkit-transition: width .4s ease-in-out;
     transition: width .4s ease-in-out;
 }
-.st-menu ul a:hover {
+.st-menu a:hover {
     color: #fff;
 }
-.st-menu ul a:hover::after {
+.st-menu a:hover::after {
     width: 100%;
 }
 .st-menu ul.sublvl {
-    padding: 0;
-    margin: 0 0 0 -50px;
-    padding-left: 60px;
-    background: rgba(255, 255, 255, 0.1);
-    display: none;
+    -webkit-transform: translate3d(400px, 0, 0);
+            transform: translate3d(400px, 0, 0);
+    z-index: 60;
+    background: #018280;
+    -webkit-box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
+            box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    top: -10vh;
+    right: 0;
+    bottom: -10vh;
+    left: 0;
+    position: absolute;
+    padding-left: 30px;
+    font-size: 22px;
 }
 .st-menu ul.sublvl a {
     font-size: 22px;
-    text-transform: none;
+}
+.st-menu ul.sublvl a::after {
+    background: #3db4b2;
+}
+.st-menu ul.sublvl.active {
+    -webkit-transform: translate3d(0px, 0, 0);
+            transform: translate3d(0px, 0, 0);
+}
+.st-menu .sublvl__back {
+    font-size: 13px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    margin-left: -30px;
+    color: white;
+    line-height: 20px;
+    padding: 20px 0 20px 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.st-menu .sublvl__back:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 @media(max-width: 992px) {
     .st-menu ul {
@@ -7508,19 +7519,8 @@ a.btn {
     }
 }
 @media(max-width: 992px) {
-    .st-menu ul a {
+    .st-menu a {
         font-size: 22px;
-    }
-}
-@media(max-width: 992px) {
-    .st-menu ul.sublvl {
-        margin-left: -35px;
-        padding-left: 45px;
-    }
-}
-@media(max-width: 992px) {
-    .st-menu ul.sublvl a {
-        font-size: 18px;
     }
 }
 .st-effect-8 .st-pusher {
