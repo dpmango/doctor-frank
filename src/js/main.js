@@ -282,6 +282,8 @@ $(document).ready(function(){
       onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
   });
 
+
+
   $('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
 		fixedContentPos: false,

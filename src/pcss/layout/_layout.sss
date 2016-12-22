@@ -183,17 +183,21 @@ body, html
       background-position: 20% center
       background-size: cover
 
+.relative
+  position: relative
 .services
   height: 100vh
-  height: 800px !important
   position: relative
-  &--mainpage
+  overflow: hidden
+  &__spiral__bg
     @mixin bgImg hand_2.jpg
+    background-position: center center
     background-size: cover
-    background-color: white
-    @media($wide)
-      background-size: 100%
-      background-position: top center
+    position: absolute 0 0 0 0
+    height: 800px !important
+
+  &--mainpage
+    background-color: #c0c0c0
     @media($desktop)
       display: none
     transform: scale(0.8)
