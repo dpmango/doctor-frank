@@ -5322,6 +5322,11 @@ ul.mobile-menu__icons li:last-child {
         display: none;
     }
 }
+.scroll-up--mainpage {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
 .scroll-up.visible {
     opacity: 1;
 }
