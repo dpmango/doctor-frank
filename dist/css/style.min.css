@@ -4659,11 +4659,26 @@ body, html {
 .hero--mainpage {
     background: url('../images/main_slide_1.jpg') no-repeat center;
     background-size: cover;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: opacity .7s, -webkit-transform .7s;
+    transition: opacity .7s, -webkit-transform .7s;
+    transition: transform .7s, opacity .7s;
+    transition: transform .7s, opacity .7s, -webkit-transform .7s;
+    opacity: 0;
+    will-change: transform;
 }
 @media(max-width: 576px) {
     .hero--mainpage {
         background-position: 80% center;
     }
+}
+.hero--mainpage.active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
 .hero--short {
     min-height: 500px;
@@ -4765,12 +4780,28 @@ body, html {
     height: 100vh;
     min-height: 700px;
     position: relative;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: opacity .7s, -webkit-transform .7s;
+    transition: opacity .7s, -webkit-transform .7s;
+    transition: transform .7s, opacity .7s;
+    transition: transform .7s, opacity .7s, -webkit-transform .7s;
+    opacity: 0;
+    will-change: transform;
+}
+.about.active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
 .about--mainpage {
     background: url('../images/main_slide_2.jpg') no-repeat center;
     background-size: cover;
     background-position: top center;
     background-size: 100% 80%;
+    background-color: white;
 }
 @media(max-width: 992px) {
     .about--mainpage {
@@ -4787,13 +4818,23 @@ body, html {
 }
 .services {
     height: 100vh;
-    height: 700px !important;
+    height: 800px !important;
     position: relative;
 }
 .services--mainpage {
     background: url('../images/hand_2.jpg') no-repeat center;
     background-size: cover;
     background-size: cover;
+    background-color: white;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: opacity .7s, -webkit-transform .7s;
+    transition: opacity .7s, -webkit-transform .7s;
+    transition: transform .7s, opacity .7s;
+    transition: transform .7s, opacity .7s, -webkit-transform .7s;
+    opacity: 0;
+    will-change: transform;
 }
 @media(max-width: 1200px) {
     .services--mainpage {
@@ -4805,6 +4846,12 @@ body, html {
     .services--mainpage {
         display: none;
     }
+}
+.services--mainpage.active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
 /* inner pages */
 .faq {

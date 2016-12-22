@@ -153,7 +153,7 @@ $(document).ready(function(){
       // SidebarMenuEffects();
     } else {
       $(this).addClass('is-active');
-      $(this).find('.hamburger-label').text('Свернуть меню');
+      $(this).find('.hamburger-label').text('Свернуть');
       $('.mobile-menu').fadeIn();
       $('.hero').addClass('active-mobile');
     }
@@ -200,11 +200,14 @@ $(document).ready(function(){
       lockAnchors: false,
       anchors:['firstPage', 'secondPage', 'thirdPage'],
       navigation: false,
+      // false
       navigationPosition: 'right',
       navigationTooltips: ['firstSlide', 'secondSlide'],
       showActiveTooltip: false,
-      slidesNavigation: false,
+      slidesNavigation: true,
+      //false
       slidesNavPosition: 'bottom',
+      white: false,
 
       //Scrolling
       css3: true,
@@ -224,7 +227,8 @@ $(document).ready(function(){
       interlockedSlides: false,
       dragAndMove: false,
       offsetSections: false,
-      resetSliders: false,
+      resetSliders: true,
+      //false
       fadingEffect: false,
       normalScrollElements: '#element1, .element2',
       scrollOverflow: false,
@@ -242,7 +246,7 @@ $(document).ready(function(){
       controlArrows: true,
       verticalCentered: false,
       sectionsColor : ['transparent', 'transparent'],
-      paddingTop: '15px',
+      paddingTop: '0px',
       paddingBottom: '0px',
       fixedElements: '.header, .hamburger--spin, .scroll-up',
       responsiveWidth: 576,
@@ -268,6 +272,7 @@ $(document).ready(function(){
         } else {
           $('.scroll-up').removeClass('visible');
         }
+
       },
       afterLoad: function(anchorLink, index){},
       afterRender: function(){},

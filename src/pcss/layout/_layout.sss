@@ -106,6 +106,13 @@ body, html
     @mixin bgImg main_slide_1.jpg
     @media($mobile)
       background-position: 80% center
+    transform: scale(1)
+    transition: transform .7s, opacity .7s
+    opacity: 0
+    will-change: transform
+    &.active
+      opacity: 1
+      transform: scale(1)
   &--short
     min-height: 500px
     height: 500px
@@ -155,10 +162,18 @@ body, html
   height: 100vh
   min-height: 700px
   position: relative
+  transform: scale(0.8)
+  transition: transform .7s, opacity .7s
+  opacity: 0
+  will-change: transform
+  &.active
+    opacity: 1
+    transform: scale(1)
   &--mainpage
     @mixin bgImg main_slide_2.jpg
     background-position: top center
     background-size: 100% 80%
+    background-color: white
     @media($desktop)
       background-size: cover
 
@@ -170,16 +185,24 @@ body, html
 
 .services
   height: 100vh
-  height: 700px !important
+  height: 800px !important
   position: relative
   &--mainpage
     @mixin bgImg hand_2.jpg
     background-size: cover
+    background-color: white
     @media($wide)
       background-size: 100%
       background-position: top center
     @media($desktop)
       display: none
+    transform: scale(0.8)
+    transition: transform .7s, opacity .7s
+    opacity: 0
+    will-change: transform
+    &.active
+      opacity: 1
+      transform: scale(1)
 
 // inner pages
 .faq
