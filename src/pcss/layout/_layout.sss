@@ -160,7 +160,7 @@ body, html
 
 .about
   height: 100vh
-  min-height: 700px
+  min-height: 800px
   position: relative
   transform: scale(0.8)
   transition: transform .7s, opacity .7s
@@ -172,7 +172,7 @@ body, html
   &--mainpage
     @mixin bgImg main_slide_2.jpg
     background-position: top center
-    background-size: 100% 80%
+    background-size: 100% 625px
     background-color: white
     @media($desktop)
       background-size: cover
@@ -187,6 +187,7 @@ body, html
   position: relative
 .services
   height: 100vh
+  min-height: 800px
   position: relative
   overflow: hidden
   &__spiral__bg
@@ -195,6 +196,9 @@ body, html
     background-size: cover
     position: absolute 0 0 0 0
     height: 800px !important
+    @media($wide)
+      background-size: 100%
+      background-position: top center
 
   &--mainpage
     background-color: #c0c0c0

@@ -36,6 +36,7 @@ gulp.task('default', function (callback) {
 // watch
 gulp.task('watch', function(){
   //gulp.watch('./src/sass/*.+(scss|sass)', ['sass']);
+  gulp.watch('./src/sass/services.sass', ['services']);
   gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
   gulp.watch('./src/views/**/*.pug', ['pug']);
   gulp.watch('./src/*.html', browserSync.reload);
@@ -48,7 +49,7 @@ gulp.task('build', function (callback) {
     'clean:dist',
     'pug',
     'postcss',
-    ['useref', 'images', 'fonts'],
+    ['useref', 'fonts'],
     callback
   )
 })
@@ -112,6 +113,12 @@ gulp.task('bootstrap', function() {
       .pipe( gulp.dest('./src/css/lib') )
 });
 
+gulp.task('services', function() {
+  return gulp.src('./src/sass/services.sass')
+      .pipe( sass({ includePaths : ['./src/sass'] }) )
+      .pipe( postcss(processors) )
+      .pipe( gulp.dest('./src/css/lib') )
+});
 
 /////
 // OPTIMIZATION TASKS

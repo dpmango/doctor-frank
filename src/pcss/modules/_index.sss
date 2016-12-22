@@ -3,8 +3,10 @@
 .scroll-down
   padding: 2vh 0
   position: absolute
-  bottom: -100px
+  bottom: 20px
   left: 50%
+  z-index: 99
+  text-align: center
   transform: translateX(-50%)
   @media($mobile)
     display: none
@@ -16,6 +18,7 @@
     line-height: 1
   &--gray
     padding-top: 20px
+    bottom: 20px
     span
       color: $grayColor
 
