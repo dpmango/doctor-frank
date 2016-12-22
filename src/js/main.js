@@ -249,7 +249,7 @@ $(document).ready(function(){
       paddingTop: '0px',
       paddingBottom: '0px',
       fixedElements: '.header, .hamburger--spin, .scroll-up',
-      responsiveWidth: 576,
+      responsiveWidth: 1200,
       responsiveHeight: 0,
       responsiveSlides: false,
 

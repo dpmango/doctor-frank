@@ -184,7 +184,7 @@ body, html {
         background-position: 80% center;
     }
 }
-@media(max-width: 576px) {
+@media(max-width: 1200px) {
     .hero--mainpage {
         opacity: 1;
         -webkit-transform: scale(1);
@@ -308,7 +308,7 @@ body, html {
     opacity: 0;
     will-change: transform;
 }
-@media(max-width: 576px) {
+@media(max-width: 1200px) {
     .about {
         opacity: 1;
         -webkit-transform: scale(1);
@@ -381,7 +381,7 @@ body, html {
     opacity: 0;
     will-change: transform;
 }
-@media(max-width: 992px) {
+@media(max-width: 1200px) {
     .services--mainpage {
         display: none;
     }
@@ -806,6 +806,11 @@ ul.mobile-menu__icons li:last-child {
 }
 .scroll-down--gray span {
     color: #4b4b4b;
+}
+@media(max-width: 1200px) {
+    .scroll-down--gray {
+        display: none;
+    }
 }
 .scroll-up {
     opacity: 0;
@@ -2145,10 +2150,7 @@ a.serivces__spiral__pos-eight::before {
 }
 .personal__card {
     display: block;
-    position: relative;/* mansory */
-    float: left;
-    width: 23%;/* height: 250px */
-    margin: 1%;
+    position: relative;/* mansory *//* float: left *//* width: 23% *//* // height: 250px *//* margin: 1% */
     overflow: hidden;/*modifiers *//* &.mt30 *//*   margin-top: 0 */
 }
 @media(max-width: 576px) {
@@ -2192,8 +2194,7 @@ a.serivces__spiral__pos-eight::before {
 .personal__card--no-hover:hover::after {
     opacity: 0;
 }
-.personal__card--huge {
-    width: 48%;
+.personal__card--huge {/* width: 48% */
 }
 /* height: 520px */
 .personal__card--huge .personal__card__name {
@@ -2201,24 +2202,20 @@ a.serivces__spiral__pos-eight::before {
 }
 @media(max-width: 576px) {
     .personal__card--huge {
-        width: 100%;
-        margin: 1% 0;
+        width: 100%;/* margin: 1% 0 */
     }
 }
 /* height: 520px */
 .personal__card--long .personal__card__name {
     top: 30%;
 }
-.personal__card--wide {
-    width: 48%;
-}
+/* width: 48% */
 .personal__card--wide .personal__card__name {
     top: 30%;
 }
 @media(max-width: 576px) {
     .personal__card--wide {
-        width: 100%;
-        margin: 1% 0;
+        width: 100%;/* margin: 1% 0 */
     }
 }
 .personal__card__name {

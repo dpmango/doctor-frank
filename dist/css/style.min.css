@@ -6635,10 +6635,7 @@ a.serivces__spiral__pos-eight::before {
 }
 .personal__card {
     display: block;
-    position: relative;/* mansory */
-    float: left;
-    width: 23%;/* height: 250px */
-    margin: 1%;
+    position: relative;/* mansory *//* float: left *//* width: 23% *//* // height: 250px *//* margin: 1% */
     overflow: hidden;/*modifiers *//* &.mt30 *//*   margin-top: 0 */
 }
 @media(max-width: 576px) {
@@ -6682,8 +6679,7 @@ a.serivces__spiral__pos-eight::before {
 .personal__card--no-hover:hover::after {
     opacity: 0;
 }
-.personal__card--huge {
-    width: 48%;
+.personal__card--huge {/* width: 48% */
 }
 /* height: 520px */
 .personal__card--huge .personal__card__name {
@@ -6691,24 +6687,20 @@ a.serivces__spiral__pos-eight::before {
 }
 @media(max-width: 576px) {
     .personal__card--huge {
-        width: 100%;
-        margin: 1% 0;
+        width: 100%;/* margin: 1% 0 */
     }
 }
 /* height: 520px */
 .personal__card--long .personal__card__name {
     top: 30%;
 }
-.personal__card--wide {
-    width: 48%;
-}
+/* width: 48% */
 .personal__card--wide .personal__card__name {
     top: 30%;
 }
 @media(max-width: 576px) {
     .personal__card--wide {
-        width: 100%;
-        margin: 1% 0;
+        width: 100%;/* margin: 1% 0 */
     }
 }
 .personal__card__name {
