@@ -83,7 +83,8 @@
 /* $hd-from: width >= 1680px */
 /* variables */
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 a {
     color: inherit;
@@ -371,14 +372,17 @@ body, html {
 .flex {
     display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
             justify-content: space-between;
 }
 .flex--center {
     -webkit-box-align: center;
     -webkit-align-items: center;
+        -ms-flex-align: center;
             align-items: center;
 }
 .xs-order-1 {}
@@ -614,17 +618,21 @@ ul.mobile-menu__list {
     text-align: center;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
+        -ms-flex-direction: column;
             flex-direction: column;
 }
 ul.mobile-menu__list li {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
+        -ms-flex: 1;
             flex: 1;
 }
 ul.mobile-menu__list li a {
@@ -643,14 +651,18 @@ ul.mobile-menu__icons {
     padding-left: 0;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
             align-items: stretch;
 }
 ul.mobile-menu__icons li {
@@ -660,6 +672,7 @@ ul.mobile-menu__icons li {
     text-align: center;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 25%;
+        -ms-flex: 1 1 25%;
             flex: 1 1 25%;
     cursor: pointer;
 }
@@ -860,14 +873,18 @@ a.heading__crumbs__home {
 .heading__navi {
     display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
+        -ms-flex-align: start;
             align-items: flex-start;
     -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     font-size: 18px;
     margin-top: 40px;
@@ -889,6 +906,7 @@ a.heading__crumbs__home {
     .heading__navi {
         -webkit-box-pack: start;
         -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
                 justify-content: flex-start;
     }
 }
@@ -3966,7 +3984,8 @@ a.serivces__spiral__pos-eight::before {
     width: 100%;
 }
 .cd-dropdown ul li {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     position: absolute;
     width: 100%;
     pointer-events: none;
@@ -4421,11 +4440,14 @@ a.serivces__spiral__pos-eight::before {
     font-size: 18px;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     margin-bottom: 25px;
     padding-left: 30px;
@@ -4453,6 +4475,7 @@ a.serivces__spiral__pos-eight::before {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
+            -ms-flex-direction: column;
                 flex-direction: column;
         font-size: 18px;
         margin-bottom: 5px;
