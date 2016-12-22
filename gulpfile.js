@@ -63,7 +63,7 @@ var processors = [
     colorFunction(),
     assets( {loadPaths: ['./src/images'], relative: true } ),
     svginline(),
-    autoprefixer({browsers: ['> 1%', 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']}),
+    autoprefixer({browsers: ['> 1%', 'Safari >= 8', 'ie 8', 'ie 9', 'opera 12.1', 'iOS >= 8', 'android 4']}),
     // sorting(),
     // mqpacker(),
     pixrem(),

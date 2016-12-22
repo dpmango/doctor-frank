@@ -83,8 +83,7 @@
 /* $hd-from: width >= 1680px */
 /* variables */
 * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 a {
     color: inherit;
@@ -297,7 +296,7 @@ body, html {
 }
 .services {
     height: 100vh;
-    min-height: 800px;
+    height: 700px !important;
     position: relative;
 }
 .services--mainpage {
@@ -371,15 +370,15 @@ body, html {
 /* Helpers */
 .flex {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
             justify-content: space-between;
 }
 .flex--center {
     -webkit-box-align: center;
-        -ms-flex-align: center;
+    -webkit-align-items: center;
             align-items: center;
 }
 .xs-order-1 {}
@@ -614,18 +613,18 @@ ul.mobile-menu__list {
     font-size: 18px;
     text-align: center;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
+    -webkit-flex-direction: column;
             flex-direction: column;
 }
 ul.mobile-menu__list li {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
+    -webkit-flex: 1;
             flex: 1;
 }
 ul.mobile-menu__list li a {
@@ -643,15 +642,15 @@ ul.mobile-menu__icons {
     margin: 0;
     padding-left: 0;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
             justify-content: space-between;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
             align-items: stretch;
 }
 ul.mobile-menu__icons li {
@@ -660,7 +659,7 @@ ul.mobile-menu__icons li {
     padding: 0;
     text-align: center;
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 25%;
+    -webkit-flex: 1 1 25%;
             flex: 1 1 25%;
     cursor: pointer;
 }
@@ -860,16 +859,16 @@ a.heading__crumbs__home {
 }
 .heading__navi {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
             justify-content: space-between;
     -webkit-box-align: start;
-        -ms-flex-align: start;
+    -webkit-align-items: flex-start;
             align-items: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
     font-size: 18px;
     margin-top: 40px;
 }
@@ -889,7 +888,7 @@ a.heading__crumbs__home {
 @media(max-width: 992px) {
     .heading__navi {
         -webkit-box-pack: start;
-            -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
                 justify-content: flex-start;
     }
 }
@@ -3967,8 +3966,7 @@ a.serivces__spiral__pos-eight::before {
     width: 100%;
 }
 .cd-dropdown ul li {
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     position: absolute;
     width: 100%;
     pointer-events: none;
@@ -4422,13 +4420,13 @@ a.serivces__spiral__pos-eight::before {
 .content__tabs {
     font-size: 18px;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
             justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
     margin-bottom: 25px;
     padding-left: 30px;
 }
@@ -4454,7 +4452,7 @@ a.serivces__spiral__pos-eight::before {
     .content__tabs {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
+        -webkit-flex-direction: column;
                 flex-direction: column;
         font-size: 18px;
         margin-bottom: 5px;
