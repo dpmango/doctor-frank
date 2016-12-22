@@ -53,7 +53,7 @@
 			var value = this._transformSelect();
 			this.opts = this.listopts.children( 'li' );
 			this.optsCount = this.opts.length;
-			this.size = { width : 140, height : this.dd.height() };
+			this.size = { width : 200, height : this.dd.height() };
 
 			var elName = this.$el.attr( 'name' ), elId = this.$el.attr( 'id' ),
 				inputName = elName !== undefined ? elName : elId !== undefined ? elId : 'cd-dropdown-' + ( new Date() ).getTime();
@@ -109,7 +109,7 @@
 				.each( function( i ) {
 					$( this ).css( {
 						zIndex : self.minZIndex + self.optsCount - 1 - i,
-						top : self.options.slidingIn ? ( i + 1 ) * ( self.size.height + self.options.gutter ) : 0,
+						top : 40,
 						left : 0,
 						marginLeft : self.options.slidingIn ? i % 2 === 0 ? self.options.slidingIn : - self.options.slidingIn : 0,
 						opacity : self.options.slidingIn ? 0 : 1,
@@ -120,13 +120,13 @@
 			if( !this.options.slidingIn ) {
 				this.opts
 					.eq( this.optsCount - 1 )
-					.css( { top : this.options.stack ? 9 : 0, left : this.options.stack ? 4 : 0, width : this.options.stack ? this.size.width - 8 : this.size.width, transform : 'none' } )
+					.css( { top : 40, left : this.options.stack ? 4 : 0, width : this.options.stack ? this.size.width - 8 : this.size.width, transform : 'none' } )
 					.end()
 					.eq( this.optsCount - 2 )
-					.css( { top : this.options.stack ? 6 : 0, left : this.options.stack ? 2 : 0, width : this.options.stack ? this.size.width - 4 : this.size.width, transform : 'none' } )
+					.css( { top : 40, left : this.options.stack ? 2 : 0, width : this.options.stack ? this.size.width - 4 : this.size.width, transform : 'none' } )
 					.end()
 					.eq( this.optsCount - 3 )
-					.css( { top : this.options.stack ? 3 : 0, left : 0, transform : 'none' } );
+					.css( { top : 40, left : 0, transform : 'none' } );
 			}
 
 		},
@@ -160,7 +160,7 @@
 
 				$( this ).css( {
 					opacity : 1,
-					top : self.options.rotated ? self.size.height + self.options.gutter : ( i + 1 ) * ( self.size.height + self.options.gutter ),
+					top : self.options.rotated ? self.size.height + self.options.gutter : ( i + 1 ) * ( 40 + self.options.gutter ),
 					left : self.options.random ? Math.floor( Math.random() * 11 - 5 ) : 0,
 					width : self.size.width,
 					marginLeft : 0,

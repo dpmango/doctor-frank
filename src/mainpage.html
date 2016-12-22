@@ -8,19 +8,17 @@
     <!--build:js js/main.min.js-->
     <script src="/js/lib/jquery-2.2.4.min.js"></script>
     <script src="/js/lib/modernizr.custom.js"></script>
-    <script src="/js/lib/jquery.fullpage.min.js"></script>
     <script src="/js/lib/jquery.event.move.js"></script>
     <script src="/js/lib/jquery.twentytwenty.js"></script>
     <script src="/js/lib/jquery.magnific-popup.min.js"></script>
     <script src="/js/lib/jquery.maskedinput.min.js"></script>
-    <script src="/js/lib/masonry.pkgd.min.js"></script>
     <script src="/js/lib/jquery.dropdown.js"></script>
+    <script src="/js/lib/jquery.scrollify.min.js"></script>
     <script src="/js/main.js"></script>
     <!--endbuild-->
     <!--build:css css/style.min.css-->
     <link rel="stylesheet" href="css/lib/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/lib/hamburgers.css" type="text/css">
-    <link rel="stylesheet" href="css/lib/jquery.fullpage.css" type="text/css">
     <link rel="stylesheet" href="css/lib/twentytwenty.css" type="text/css">
     <link rel="stylesheet" href="css/lib/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -105,7 +103,7 @@
             </div>
           </header>
           <!--HERO::START-->
-          <div class="hero hero--mainpage section active">
+          <div class="hero hero--mainpage section active" id="section0">
             <div class="container">
               <div class="row">
                 <div class="col-sm-12 text-xs-center">
@@ -122,7 +120,7 @@
             <div class="scroll-down"><i class="ico ico-scroll-down"></i><span>Переходите <br> ниже</span></div>
           </div>
           <!--ABOUT::START-->
-          <section class="about about--mainpage section active">
+          <section class="about about--mainpage section" id="section1">
             <div class="container">
               <div class="row">
                 <div class="col-sm-6 col-md-5 offset-md-1 no-pad-xs">
@@ -138,7 +136,7 @@
             <div class="scroll-down scroll-down--gray"><i class="ico ico-scroll-down--gray"></i><span>Переходите <br> ниже</span></div>
           </section>
           <!--SERVICES::START-->
-          <section class="services services--mainpage section active">
+          <section class="services services--mainpage section" id="section2">
             <div class="container relative">
               <div class="services__spiral__bg"></div>
               <div class="row">
@@ -157,7 +155,7 @@
 <option value="personal.html">Услуга</option>
 <option value="personal.html">Услуга</option>
 </select></a><a class="serivces__spiral__pos-three" href="#"><select id="cd-dropdown3" class="cd-select">
-<option value="personal.html" selected>Детская <br> стоматология</option>
+<option value="personal.html" selected>Детская стоматология</option>
 <option value="personal.html">Диагностика</option>
 <option value="personal.html">Услуга</option>
 <option value="personal.html">Услуга</option>
@@ -197,7 +195,8 @@
               </div>
             </div>
           </section>
-          <!--top--><a class="scroll-up scroll-up--mainpage" href="#firstPage"></a>
+          <!--top--><a class="scroll-up scroll-up--mainpage" href="#section0"></a>
+          <div class="hidden-xs-up"><a id="trigger-sectionOne" href="#sectionFirst"></a><a id="trigger-sectionTwo" href="#sectionSecond"></a><a id="trigger-sectionThree" href="#sectionThird"></a></div>
           <!-- MODAL-->
           <div class="zoom-anim-dialog mfp-hide modal" id="modalCallback">
             <div class="container">
@@ -236,29 +235,29 @@
                             </div>
                           </div>
                         </div>
-                        <div class="modal__form__input">
+                        <div class="modal__form__input selector">
                           <input type="text" id="doctor" name="doctor" autocomplete="off" required>
                           <label>Врач <span class="ico ico-dropdown"></span></label>
-                          <select>
-                            <option data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</option>
-                            <option data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</option>
-                            <option data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</option>
-                            <option data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</option>
-                            <option data-name="Молоток Николай Петрович">Молоток Николай Петрович</option>
-                            <option data-name="Петросян Василий Иванович">Петросян Василий Иванович</option>
-                            <option data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</option>
-                            <option data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</option>
-                            <option data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</option>
-                            <option data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</option>
-                            <option data-name="Молоток Николай Петрович">Молоток Николай Петрович</option>
-                            <option data-name="Петросян Василий Иванович">Петросян Василий Иванович</option>
-                            <option data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</option>
-                            <option data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</option>
-                            <option data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</option>
-                            <option data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</option>
-                            <option data-name="Молоток Николай Петрович">Молоток Николай Петрович</option>
-                            <option data-name="Петросян Василий Иванович">Петросян Василий Иванович</option>
-                          </select>
+                          <div class="select">
+                            <div class="option" data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</div>
+                            <div class="option" data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</div>
+                            <div class="option" data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</div>
+                            <div class="option" data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</div>
+                            <div class="option" data-name="Молоток Николай Петрович">Молоток Николай Петрович</div>
+                            <div class="option" data-name="Петросян Василий Иванович">Петросян Василий Иванович</div>
+                            <div class="option" data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</div>
+                            <div class="option" data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</div>
+                            <div class="option" data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</div>
+                            <div class="option" data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</div>
+                            <div class="option" data-name="Молоток Николай Петрович">Молоток Николай Петрович</div>
+                            <div class="option" data-name="Петросян Василий Иванович">Петросян Василий Иванович</div>
+                            <div class="option" data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</div>
+                            <div class="option" data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</div>
+                            <div class="option" data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</div>
+                            <div class="option" data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</div>
+                            <div class="option" data-name="Молоток Николай Петрович">Молоток Николай Петрович</div>
+                            <div class="option" data-name="Петросян Василий Иванович">Петросян Василий Иванович</div>
+                          </div>
                         </div><a class="mt50 btn btn--outline btn--huge btn--white btn--rounded btn--fill btn--right" href="#">ПЕРЕЗВОНИТЕ МНЕ →</a>
                       </div>
                     </div>

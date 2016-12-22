@@ -46,18 +46,25 @@
       display: inline-block
   a&__pos-two
     top: 42.8%
-    right: .7%
+    right: .5%
     &::after
       display: inline-block
   a&__pos-three
     top: 62%
     right: 15.1%
+    .cd-dropdown
+      ul
+        bottom: -65px
+        top: auto
     &::before
       display: inline-block
       vertical-align: 10px
   a&__pos-four
     top: 87%
-    right: 15.2%
+    right: 15.7%
+    ul
+      bottom: 45px
+      top: auto
     &::after
       display: inline-block
     .cd-dropdown > span
@@ -75,11 +82,17 @@
   a&__pos-seven
     top: 67%
     left: 27.2%
+    ul
+      bottom: 45px
+      top: auto
     &::before
       display: inline-block
   a&__pos-eight
     top: 82.6%
-    left: 15.3%
+    left: 15.4%
+    ul
+      bottom: -65px
+      top: auto
     &::before
       display: inline-block
       vertical-align: 5px
@@ -114,7 +127,7 @@
   //   content: '\25B2'
   ul
     list-style-type: none
-    width: 150px !important
+    width: 170px !important
     margin: 0
     padding: 0
     display: block
@@ -159,10 +172,12 @@
     position: absolute
     top: 0px
     width: 100%
+    z-index: 9999
     li
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
       position: absolute
       width: 100%
+      width: 200px !important
       pointer-events: none
   // > span
   //   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)

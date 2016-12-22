@@ -194,93 +194,117 @@ $(document).ready(function(){
         return false;
 	});
 
-  $('#fullpage').fullpage({
-      //Navigation
-      menu: '#menu',
-      lockAnchors: false,
-      anchors:['firstPage', 'secondPage', 'thirdPage'],
-      navigation: false,
-      // false
-      navigationPosition: 'right',
-      navigationTooltips: ['firstSlide', 'secondSlide'],
-      showActiveTooltip: false,
-      slidesNavigation: true,
-      //false
-      slidesNavPosition: 'bottom',
-      white: false,
-
-      //Scrolling
-      css3: true,
-      scrollingSpeed: 700,
-      autoScrolling: true,
-      fitToSection: true,
-      fitToSectionDelay: 1000,
-      scrollBar: false,
-      easing: 'easeInOutCubic',
-      easingcss3: 'ease',
-      loopBottom: false,
-      loopTop: false,
-      loopHorizontal: true,
-      continuousVertical: false,
-      continuousHorizontal: false,
-      scrollHorizontally: false,
-      interlockedSlides: false,
-      dragAndMove: false,
-      offsetSections: false,
-      resetSliders: true,
-      //false
-      fadingEffect: false,
-      normalScrollElements: '#element1, .element2',
-      scrollOverflow: false,
-      scrollOverflowOptions: null,
-      touchSensitivity: 15,
-      normalScrollElementTouchThreshold: 5,
-      bigSectionsDestination: top,
-
-      //Accessibility
-      keyboardScrolling: true,
-      animateAnchor: true,
-      recordHistory: true,
-
-      //Design
-      controlArrows: true,
-      verticalCentered: false,
-      sectionsColor : ['transparent', 'transparent'],
-      paddingTop: '0px',
-      paddingBottom: '0px',
-      fixedElements: '.header, .hamburger--spin, .scroll-up',
-      responsiveWidth: 1200,
-      responsiveHeight: 0,
-      responsiveSlides: false,
-
-      //Custom selectors
-      sectionSelector: '.section',
-      slideSelector: '.slide',
-
-      lazyLoading: true,
-
-      //events
-      onLeave: function(index, nextIndex, direction){
-        if(index == 1 && direction =='down'){
-            $('.header').addClass('header--floating');
-        } else if (index == 2 && direction =='up'){
-          $('.header').removeClass('header--floating');
-        }
-
-        if(index == 2 && direction == 'down' ){
-          $('.scroll-up').addClass('visible');
-        } else {
-          $('.scroll-up').removeClass('visible');
-        }
-
+  $.scrollify({
+  		section : ".section",
+  		sectionName : "section-name",
+  		interstitialSection : "",
+  		easing: "easeOutExpo",
+  		scrollSpeed: 1000,
+  		offset : 0,
+  		scrollbars: true,
+  		standardScrollElements: "#sectionThird",
+  		setHeights: true,
+  		overflowScroll: true,
+  		updateHash: true,
+  		touchScroll:true,
+  		before:function(index, sections) {
+        $('.section').removeClass('active');
+        $('#section' + index).addClass('active');
       },
-      afterLoad: function(anchorLink, index){},
-      afterRender: function(){},
-      afterResize: function(){},
-      afterResponsive: function(isResponsive){},
-      afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-      onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-  });
+  		after:function() {},
+  		afterResize:function() {},
+  		afterRender:function() {}
+  	});
+
+  // FCK DAT SHIT
+
+  // $('#fullpage').fullpage({
+  //     //Navigation
+  //     menu: '#menu',
+  //     lockAnchors: false,
+  //     anchors:['firstPage', 'secondPage', 'thirdPage'],
+  //     navigation: false,
+  //     // false
+  //     navigationPosition: 'right',
+  //     navigationTooltips: ['firstSlide', 'secondSlide'],
+  //     showActiveTooltip: false,
+  //     slidesNavigation: true,
+  //     //false
+  //     slidesNavPosition: 'bottom',
+  //     white: false,
+  //
+  //     //Scrolling
+  //     css3: true,
+  //     scrollingSpeed: 700,
+  //     autoScrolling: true,
+  //     fitToSection: true,
+  //     fitToSectionDelay: 1000,
+  //     scrollBar: false,
+  //     easing: 'easeInOutCubic',
+  //     easingcss3: 'ease',
+  //     loopBottom: false,
+  //     loopTop: false,
+  //     loopHorizontal: true,
+  //     continuousVertical: false,
+  //     continuousHorizontal: false,
+  //     scrollHorizontally: false,
+  //     interlockedSlides: false,
+  //     dragAndMove: false,
+  //     offsetSections: false,
+  //     resetSliders: true,
+  //     //false
+  //     fadingEffect: false,
+  //     normalScrollElements: '#element1, .element2',
+  //     scrollOverflow: false,
+  //     scrollOverflowOptions: null,
+  //     touchSensitivity: 15,
+  //     normalScrollElementTouchThreshold: 5,
+  //     bigSectionsDestination: top,
+  //
+  //     //Accessibility
+  //     keyboardScrolling: true,
+  //     animateAnchor: true,
+  //     recordHistory: true,
+  //
+  //     //Design
+  //     controlArrows: true,
+  //     verticalCentered: false,
+  //     sectionsColor : ['transparent', 'transparent'],
+  //     paddingTop: '0px',
+  //     paddingBottom: '0px',
+  //     fixedElements: '.header, .hamburger--spin, .scroll-up',
+  //     responsiveWidth: 1200,
+  //     responsiveHeight: 0,
+  //     responsiveSlides: false,
+  //
+  //     //Custom selectors
+  //     sectionSelector: '.section',
+  //     slideSelector: '.slide',
+  //
+  //     lazyLoading: true,
+  //
+  //     //events
+  //     onLeave: function(index, nextIndex, direction){
+  //       if(index == 1 && direction =='down'){
+  //           $('.header').addClass('header--floating');
+  //       } else if (index == 2 && direction =='up'){
+  //         $('.header').removeClass('header--floating');
+  //       }
+  //
+  //       if(index == 2 && direction == 'down' ){
+  //         $('.scroll-up').addClass('visible');
+  //       } else {
+  //         $('.scroll-up').removeClass('visible');
+  //       }
+  //
+  //     },
+  //     afterLoad: function(anchorLink, index){},
+  //     afterRender: function(){},
+  //     afterResize: function(){},
+  //     afterResponsive: function(isResponsive){},
+  //     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+  //     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+  // });
 
 
 
@@ -349,11 +373,26 @@ $(document).ready(function(){
 		.closest('.container').find('.content__tabs__content').fadeOut('middle').eq($(this).index()).fadeIn('middle');
 	});
 
+  var putVal = ""
   //modal select handler
-  $('.modal__form__input select').on('change', function(){
-    putVal = $(this).val();
-    $(this).closest('.modal__form__input').find('input').val(putVal);
+  $('.modal__form__input.selector').on('click', function(){
+    $(this).find('.select').toggleClass('is-active');
   });
+  $('.modal__form__input.selector .option').click(function(){
+    putVal = $(this).data('name');
+    $(this).closest('.modal__form__input').find('input').val(putVal);
+  })
+
+  $(document).mouseup(function (e) {
+	    var container = new Array();
+	    container.push($('.modal__form__input.selector .select'));
+
+	    $.each(container, function(key, value) {
+	        if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
+	            $(value).removeClass('is-active');
+	        }
+	    });
+    });
 
   // Custom form click handler
   $('.modal__form__input label').click(function(event){
@@ -413,6 +452,40 @@ $(document).ready(function(){
   //   // gutter: 10
   // });
 
+var lastScrollTop = 0;
+
+  // $(window).scroll(function(event) {
+	// 	var wScroll = $(this).scrollTop();
+  //   var First = $('#sectionFirst');
+  //   var Second = $('#sectionSecond');
+  //   var Third = $('#sectionSecond');
+  //
+  //   // var sectionFirstContainer = $('#sectionFirst').height();
+  //   // var sectionSecondContainer = $('#sectionSecond').height();
+  //   // var sectionThirdContainer = $('#sectionThird').height();
+  //
+  //   var FirstTop = First.offset().top;
+  //   var FirstBottom = First.offset().top + First.outerHeight;
+  //   var SecondTop = Second.offset().top;
+  //   var SecondBottom = Second.offset().top + Second.outerHeight;
+  //   var bottom_of_screen = ($(this).scrollTop()) + ($(this).height());
+  //
+  //   console.log(SecondTop);
+  //   console.log(SecondBottom);
+  //   console.log(bottom_of_screen);
+  //
+  //   var st = $(this).scrollTop();
+  //
+  //   if ( (bottom_of_screen > SecondTop) && (bottom_of_screen < SecondBottom) ){
+  //       $('#trigger-sectionTwo').trigger('click');
+  //   } else {
+  //      // upscroll code
+  //   }
+  //
+  //   lastScrollTop = st;
+  //
+  // });
+
 });
 
 $(window).load(function() {
@@ -420,3 +493,73 @@ $(window).load(function() {
 });
 
 //mansory grid
+
+//
+// // ------------- VARIABLES ------------- //
+// var ticking = false;
+// var isFirefox = (/Firefox/i.test(navigator.userAgent));
+// var isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv\:11\./i.test(navigator.userAgent));
+// var scrollSensitivitySetting = 30; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive)
+// var slideDurationSetting = 600; //Amount of time for which slide is "locked"
+// var currentSlideNumber = 0;
+// var totalSlideNumber = $(".section").length;
+//
+// // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
+// function parallaxScroll(evt) {
+//   if (isFirefox) {
+//     //Set delta for Firefox
+//     delta = evt.detail * (-120);
+//   } else if (isIe) {
+//     //Set delta for IE
+//     delta = -evt.deltaY;
+//   } else {
+//     //Set delta for all other browsers
+//     delta = evt.wheelDelta;
+//   }
+//
+//   if (ticking != true) {
+//     if (delta <= -scrollSensitivitySetting) {
+//       //Down scroll
+//       ticking = true;
+//       if (currentSlideNumber !== totalSlideNumber - 1) {
+//         currentSlideNumber++;
+//         nextItem();
+//       }
+//       slideDurationTimeout(slideDurationSetting);
+//     }
+//     if (delta >= scrollSensitivitySetting) {
+//       //Up scroll
+//       ticking = true;
+//       if (currentSlideNumber !== 0) {
+//         currentSlideNumber--;
+//       }
+//       previousItem();
+//       slideDurationTimeout(slideDurationSetting);
+//     }
+//   }
+// }
+//
+// // ------------- SET TIMEOUT TO TEMPORARILY "LOCK" SLIDES ------------- //
+// function slideDurationTimeout(slideDuration) {
+//   setTimeout(function() {
+//     ticking = false;
+//   }, slideDuration);
+// }
+//
+// // ------------- ADD EVENT LISTENER ------------- //
+// var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
+// window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
+// $(window).scroll(function() {
+// } );
+// // ------------- SLIDE MOTION ------------- //
+// function nextItem() {
+//   console.log('next');
+//   var $previousSlide = $(".section").eq(currentSlideNumber - 1);
+//   $previousSlide.removeClass("up-scroll").addClass("down-scroll");
+// }
+//
+// function previousItem() {
+//   console.log('prev');
+//   var $currentSlide = $(".section").eq(currentSlideNumber);
+//   $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+// }

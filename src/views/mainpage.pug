@@ -85,7 +85,7 @@ body.black
 
 
           //HERO::START
-          .hero.hero--mainpage.section.active
+          .hero.hero--mainpage.section.active#section0
             .container
               .row
                 .col-sm-12.text-xs-center
@@ -105,7 +105,7 @@ body.black
               //-       span Переходите <br> ниже
 
           //ABOUT::START
-          section.about.about--mainpage.section.active
+          section.about.about--mainpage.section#section1
             .container
               .row
                 .col-sm-6.col-md-5.offset-md-1.no-pad-xs
@@ -126,7 +126,7 @@ body.black
               //-       span Переходите <br> ниже
 
           //SERVICES::START
-          section.services.services--mainpage.section.active
+          section.services.services--mainpage.section#section2
             .container.relative
               .services__spiral__bg
               .row
@@ -151,7 +151,7 @@ body.black
                       </select>
                     a.serivces__spiral__pos-three(href="#")
                       <select id="cd-dropdown3" class="cd-select">
-                        <option value="personal.html" selected>Детская <br> стоматология</option>
+                        <option value="personal.html" selected>Детская стоматология</option>
                         <option value="personal.html">Диагностика</option>
                         <option value="personal.html">Услуга</option>
                         <option value="personal.html">Услуга</option>
@@ -198,6 +198,9 @@ body.black
                         <option value="personal.html">Услуга</option>
                       </select>
           //top
-          a(href="#firstPage").scroll-up.scroll-up--mainpage
-
+          a(href="#section0").scroll-up.scroll-up--mainpage
+          .hidden-xs-up
+            a#trigger-sectionOne(href="#sectionFirst")
+            a#trigger-sectionTwo(href="#sectionSecond")
+            a#trigger-sectionThree(href="#sectionThird")
           include shared/modal.pug
