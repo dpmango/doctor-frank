@@ -110,6 +110,9 @@ body, html
     transition: transform .7s, opacity .7s
     opacity: 0
     will-change: transform
+    @media($mobile)
+      opacity: 1
+      transform: scale(1)
     &.active
       opacity: 1
       transform: scale(1)
@@ -166,6 +169,9 @@ body, html
   transition: transform .7s, opacity .7s
   opacity: 0
   will-change: transform
+  @media($mobile)
+    opacity: 1
+    transform: scale(1)
   &.active
     opacity: 1
     transform: scale(1)

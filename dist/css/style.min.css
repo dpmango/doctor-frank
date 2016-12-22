@@ -4674,6 +4674,14 @@ body, html {
         background-position: 80% center;
     }
 }
+@media(max-width: 576px) {
+    .hero--mainpage {
+        opacity: 1;
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
+    }
+}
 .hero--mainpage.active {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -4789,6 +4797,14 @@ body, html {
     transition: transform .7s, opacity .7s, -webkit-transform .7s;
     opacity: 0;
     will-change: transform;
+}
+@media(max-width: 576px) {
+    .about {
+        opacity: 1;
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
+    }
 }
 .about.active {
     opacity: 1;
