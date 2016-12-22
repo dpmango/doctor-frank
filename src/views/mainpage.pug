@@ -8,7 +8,7 @@ body.black
       include shared/sidebar-menu.pug
 
       .st-content.white#section-top
-        .st-content-inner#fullpage
+        .st-content-inner#-fullpage
           #st-trigger-effects
             button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
               span.hamburger-box
@@ -85,7 +85,7 @@ body.black
 
 
           //HERO::START
-          .hero.hero--mainpage.section
+          .hero.hero--mainpage.section.active
             .container
               .row
                 .col-sm-12.text-xs-center
@@ -105,7 +105,7 @@ body.black
               //-       span Переходите <br> ниже
 
           //ABOUT::START
-          section.about.about--mainpage.section
+          section.about.about--mainpage.section.active
             .container
               .row
                 .col-sm-6.col-md-5.offset-md-1.no-pad-xs
@@ -126,7 +126,7 @@ body.black
               //-       span Переходите <br> ниже
 
           //SERVICES::START
-          section.services.services--mainpage.section
+          section.services.services--mainpage.section.active
             .container.relative
               .services__spiral__bg
               .row
