@@ -4674,7 +4674,7 @@ body, html {
         background-position: 80% center;
     }
 }
-@media(max-width: 576px) {
+@media(max-width: 1200px) {
     .hero--mainpage {
         opacity: 1;
         -webkit-transform: scale(1);
@@ -4798,7 +4798,7 @@ body, html {
     opacity: 0;
     will-change: transform;
 }
-@media(max-width: 576px) {
+@media(max-width: 1200px) {
     .about {
         opacity: 1;
         -webkit-transform: scale(1);
@@ -4871,7 +4871,7 @@ body, html {
     opacity: 0;
     will-change: transform;
 }
-@media(max-width: 992px) {
+@media(max-width: 1200px) {
     .services--mainpage {
         display: none;
     }
@@ -5296,6 +5296,11 @@ ul.mobile-menu__icons li:last-child {
 }
 .scroll-down--gray span {
     color: #4b4b4b;
+}
+@media(max-width: 1200px) {
+    .scroll-down--gray {
+        display: none;
+    }
 }
 .scroll-up {
     opacity: 0;
