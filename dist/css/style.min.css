@@ -6818,6 +6818,11 @@ a.serivces__spiral__pos-eight::before {
 .modal--personal {
     height: auto;
     min-height: 100vh;
+    overflow-y: scroll;
+}
+.modal--personal .modal__personal__content {
+    overflow-y: scroll;
+    height: 100vh;
 }
 .modal__heading {
     font-size: 100px;

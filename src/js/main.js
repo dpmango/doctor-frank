@@ -293,7 +293,15 @@ $(document).ready(function(){
 		preloader: false,
 		midClick: true,
 		removalDelay: 0,
-		mainClass: 'my-mfp-zoom-in'
+		mainClass: 'my-mfp-zoom-in',
+    callbacks: {
+      open: function() {
+        $('body, html').css('overflow-y', 'hidden');
+      },
+      close: function() {
+        $('body, html').css('overflow-y', 'scroll');
+      }
+    }
 	});
 
   $('.popup-with-zoom-anim.overflow-fix').magnificPopup({
