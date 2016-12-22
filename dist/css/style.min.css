@@ -4844,7 +4844,7 @@ body, html {
 .services__spiral__bg {
     background: url('../images/hand_2.jpg') no-repeat center;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     background-size: cover;
     top: 0;
     right: 0;
@@ -5899,7 +5899,7 @@ a.heading__crumbs__home {
 /* services */
 .services__title {
     font-family: 'DIN';
-    margin-top: 160px;
+    margin-top: 30vh;
     color: white;
     font-size: 89px;
     line-height: 1;
