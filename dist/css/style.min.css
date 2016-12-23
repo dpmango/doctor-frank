@@ -6761,8 +6761,10 @@ a.serivces__spiral__pos-eight::before {
     opacity: 1 !important;
 }
 .modal__form__input .select .option {
+    font-size: 14.4px;
+    font-size: 0.9rem;
     color: #333;
-    padding: .4em 20px;
+    padding: .3em 20px;
     cursor: pointer;
     border-bottom: 1px solid rgba(0,0,0,.2);
 }

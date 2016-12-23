@@ -321,9 +321,11 @@ $(document).ready(function(){
     callbacks: {
       open: function() {
         $('body, html').css('overflow-y', 'hidden');
+        $.scrollify.disable();
       },
       close: function() {
         $('body, html').css('overflow-y', 'scroll');
+        $.scrollify.enable();
       }
     }
 	});
@@ -341,9 +343,11 @@ $(document).ready(function(){
     callbacks: {
       open: function() {
         $('body, html').css('overflow-y', 'hidden');
+        $.scrollify.disable();
       },
       close: function() {
         $('body, html').css('overflow-y', 'scroll');
+        $.scrollify.enable();
       }
     }
 	});
