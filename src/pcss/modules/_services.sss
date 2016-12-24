@@ -12,7 +12,7 @@
   @media($tablet)
     font-size: 60px
 .serivces__spiral
-  a
+  > a, .a
     font-size: 12px
     display: inline-block
     color: $grayColor
@@ -22,10 +22,12 @@
     transition: color .4s ease-in-out
     span
       display: inline-block
-    &:hover
-      color: $colorPrimary
-      &::before, &::after
-        background: $colorPrimary
+      width: 80px
+      line-height: 20px
+      font-size: 12px
+      padding: 10px 0
+      position: relative
+      cursor: pointer
     &::before, &::after
       size: 18px
       border-radius: 50%
@@ -36,161 +38,127 @@
       content: ' '
       display: none
       transition: background .4s ease-in-out
+    &:hover
+      color: $colorPrimary
+      &::before, &::after
+        background: $colorPrimary
+      .spiral__dropdown
+        opacity: 1
+        height: auto
+        overflow: visible
+        li
+          opacity: 1
+          transform: translate3d(0, 0, 0)
+    .relative
+      height: 0px
+      width: 0px
+      overflow: visible
   &__wrap
     position: relative
     display: inline-block
-  a&__pos-one
+  a&__pos-one, .a&__pos-one
     top: 23.2%
     right: 14.8%
     &::before
       display: inline-block
-  a&__pos-two
+  a&__pos-two, .a&__pos-two
     top: 42.8%
-    right: .5%
-    &::after
+    right: 3.1%
+    ul.spiral__dropdown
+      left: -170px
+    span
+      padding-right: 30px
+    &::before
       display: inline-block
-  a&__pos-three
+      margin-right: -100px
+
+  a&__pos-three, .a&__pos-three
     top: 62%
     right: 15.1%
-    .cd-dropdown
-      ul
-        bottom: -105px
-        top: auto
+    ul.spiral__dropdown
+      bottom: 230px
+      top: auto
     &::before
       display: inline-block
       vertical-align: 10px
-  a&__pos-four
+  a&__pos-four, .a&__pos-four
     top: 87%
-    right: 15.7%
-    ul
-      bottom: 10px
+    right: 9.1%
+    ul.spiral__dropdown
+      bottom: 210px
       top: auto
-    &::after
+    &::before
       display: inline-block
     .cd-dropdown > span
       width: 110px
-  a&__pos-five
+  a&__pos-five, .a&__pos-five
     top: 48.9%
     left: 18.6%
     &::before
       display: inline-block
-  a&__pos-six
+  a&__pos-six, .a&__pos-six
     top: 62%
     left: 4.3%
     &::before
       display: inline-block
-  a&__pos-seven
+  a&__pos-seven, .a&__pos-seven
     top: 67%
     left: 27.2%
-    ul
-      bottom: 10px
-      top: auto
     &::before
       display: inline-block
-  a&__pos-eight
+  a&__pos-eight, .a&__pos-eight
     top: 82.6%
     left: 15.4%
-    ul
-      bottom: -105px
+    ul.spiral__dropdown
+      bottom: 230px
       top: auto
     &::before
       display: inline-block
       vertical-align: 5px
 
-.cd-dropdown, .cd-select
+// Custom links
+
+.spiral__dropdown
+  list-style: none
+  margin: 0
+  padding: 0
+  position: absolute
+  z-index: 99
+  top: 5px
+  left: 15px
+  width: 200px
+  display: block
   position: relative
-  margin: 0px 0
-  display: inline-block
-
-.cd-dropdown
-  > span
-    width: 80px
-    line-height: 20px
-    font-size: 12px
+  height: 1px
+  overflow: hidden
+  transition: all .5s ease-in
+  li
     display: block
-    padding: 10px 0
-    position: relative
-    cursor: pointer
-    // &:after
-    //   content: '\25BC'
-    //   position: absolute
-    //   right: 0px
-    //   top: 15%
-    //   width: 50px
-    //   text-align: center
-    //   font-size: 12px
-    //   padding: 10px
-    //   height: 70%
-    //   line-height: 24px
-    //   border-left: 1px solid #ddd
-  // &.cd-active > span:after
-  //   content: '\25B2'
-  ul
-    list-style-type: none
-    width: 170px !important
-    margin: 0
-    padding: 0
-    display: block
-    position: relative
-    li
-      display: block
-      width: 100%
-      span
-        width: 100%
-        background: #fff
-        line-height: 40px
-        padding: 0 20px 0 20px
-        display: block
-        color: #bcbcbc
-        cursor: pointer
-        font-weight: 700
-        -webkit-backface-visibility: hidden
-        -webkit-touch-callout: none
-        -webkit-user-select: none
-        -khtml-user-select: none
-        -moz-user-select: none
-        -ms-user-select: none
-        user-select: none
-  > span
-    -webkit-backface-visibility: hidden
-    -webkit-touch-callout: none
-    -webkit-user-select: none
-    -khtml-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    user-select: none
-  > span span
-    &[class^="icon-"], &[class*=" icon-"]
-      padding: 0 30px 0 45px
-
-.cd-select
-  border: 1px solid #ddd
-
-
-.cd-dropdown
-  ul
-    position: absolute
-    top: 40px
     width: 100%
-    z-index: 9999
-    li
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
-      position: absolute
+    border-bottom: 1px solid #ccc
+    transition: all .3s ease-out
+    opacity: 0
+    &:nth-child(even)
+      transform: translate3d(-100px, -20px, 0)
+    &:nth-child(odd)
+      transform: translate3d(100px, 20px, 0)
+    a
       width: 100%
-      width: 200px !important
-      pointer-events: none
-  // > span
-  //   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
-
-.cd-active.cd-dropdown
-  > span
-    color: $colorPrimaryLight
-  ul li
-    pointer-events: auto
-    span
+      background: #fff
+      line-height: 40px
+      padding: 0 20px 0 20px
+      display: block
+      color: #bcbcbc
+      cursor: pointer
+      font-weight: 700
+      -webkit-backface-visibility: hidden
+      -webkit-touch-callout: none
+      -webkit-user-select: none
+      -khtml-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
       transition: all 0.2s linear 0s
       &:hover
         background: $colorPrimaryLight
         color: #fff
-
-// Services inner

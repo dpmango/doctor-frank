@@ -195,18 +195,18 @@ $(document).ready(function(){
 	});
 
   $.scrollify({
-  		section : ".section",
+  		section : ".s1ection",
   		sectionName : "section-name",
   		interstitialSection : "",
   		easing: "easeOutExpo",
   		scrollSpeed: 1000,
   		offset : 0,
   		scrollbars: true,
-  		standardScrollElements: "#sectionThird",
+  		standardScrollElements: "#section2",
   		setHeights: true,
   		overflowScroll: true,
-  		updateHash: true,
-  		touchScroll:true,
+  		updateHash: false,
+  		touchScroll: false,
   		before:function(index, sections) {
         $('.section').removeClass('active');
         $('#section' + index).addClass('active');
@@ -409,11 +409,11 @@ $(document).ready(function(){
   $("input[name=time]").mask("99 : 99");
 
   // 3rd screen fancy dropdowns
-  $( '#cd-dropdown' ).dropdown( {
-    gutter : 0,
-    stack : false,
-    slidingIn : 200
-  } );
+  // $( '#cd-dropdown' ).dropdown( {
+  //   gutter : 0,
+  //   stack : false,
+  //   slidingIn : 200
+  // } );
   $( '#cd-dropdown2' ).dropdown( {
     gutter : 0,
     stack : false,
