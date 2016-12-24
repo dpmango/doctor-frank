@@ -57,19 +57,24 @@
   &--long
     // height: 520px
     .personal__card__name
-      top: 30%
+      top: 45%
+    .personal__card__status
+      position: absolute 55% 10%
   &--wide
     // width: 48%
     @media($mobile)
       width: 100%
       // margin: 1% 0
     .personal__card__name
-      top: 30%
+      position: absolute 30% 5%
+    .personal__card__status
+      position: absolute 49% 5%
 
   &__name
     color: #003733
     text-transform: uppercase
     font-size: 18px
+    line-height: 1.2em
     font-family: 'HarmoniaSemiBold'
     margin-bottom: 10px
     position: absolute 30% 10%
@@ -79,7 +84,9 @@
   &__status
     color: white
     font-size: 18px
+    line-height: 1.2em
     font-family: 'HarmoniaItalic'
+    font-style: italic
     margin-bottom: 10px
     position: absolute 50% 10%
     opacity: 0

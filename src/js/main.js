@@ -456,6 +456,63 @@ $(document).ready(function(){
   //   // gutter: 10
   // });
 
+  // datarange
+
+	var daterangepicker_locale = {
+	        "format": "DD.MM.YYYY",
+	        "separator": " - ",
+	        "applyLabel": "Применить",
+	        "cancelLabel": "Отменить",
+	        "fromLabel": "От",
+	        "toLabel": "До",
+	        "customRangeLabel": "Custom",
+	        "weekLabel": "W",
+	        "daysOfWeek": [
+	            "Вс",
+	            "Пн",
+	            "Вт",
+	            "Ср",
+	            "Чт",
+	            "Пт",
+	            "Сб"
+	        ],
+	        "monthNames": [
+	            "Январь",
+	            "Февраль",
+	            "Март",
+	            "Апрель",
+	            "Май",
+	            "Июнь",
+	            "Июль",
+	            "Август",
+	            "Сентябрь",
+	            "Октбрь",
+	            "Ноябрь",
+	            "Декабрь"
+	        ],
+	        "firstDay": 1
+	}
+  $('input[name="daterange"]').daterangepicker({
+	    "showWeekNumbers": false,
+	    "singleDatePicker": true,
+	    "showCustomRangeLabel": false,
+      "autoUpdateInput": false,
+	    "autoApply": true,
+	    "startDate": new Date(),
+	    "opens": "right",
+	    "locale": daterangepicker_locale
+	}, function(start, end, label) {
+		// $('#calc__select-startdate input').val(start.format('DD.MM.YYYY'));
+		// console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+	});
+  $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('DD.MM.YYYY'));
+  });
+
+  $('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+  });
+
 var lastScrollTop = 0;
 
   // $(window).scroll(function(event) {

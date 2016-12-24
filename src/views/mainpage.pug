@@ -9,15 +9,11 @@ body.black
 
       .st-content.white#section-top
         .st-content-inner#-fullpage
-          #st-trigger-effects
-            button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
-              span.hamburger-box
-                span.hamburger-inner
 
           //TRANSPARENT HEADER:: START
           header.header.header--transparent
             .container
-              .row
+              .row.relative
                 .col-sm-12
                   .header__wrapper
                     ul.header__navi
@@ -82,7 +78,10 @@ body.black
                       li.fl-r
                         a(href="#")
                           i.ico.ico-social-insta
-
+                #st-trigger-effects
+                  button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
+                    span.hamburger-box
+                      span.hamburger-inner
 
           //HERO::START
           .hero.hero--mainpage.section.active#section0
@@ -95,8 +94,8 @@ body.black
                   .hero__title МОЙ ОПЫТ. <br /> МОЯ ОТВЕТСТВЕННОСТЬ.
                   .hero__signature Мария Михайловна Франк
                     span Кандидат медицинских наук, <br /> главный врач клиники Doctor FRANK
-            .scroll-down
-              i.ico.ico-scroll-down
+            .scroll-down.scroll-down--gray
+              i.ico.ico-scroll-down--gray
               span Переходите <br> ниже
               //- .row
               //-   .col-sm-12.text-xs-center
@@ -197,10 +196,10 @@ body.black
                         <option value="personal.html">Услуга</option>
                         <option value="personal.html">Услуга</option>
                       </select>
-          //top
-          a(href="#section0").scroll-up.scroll-up--mainpage
-          .hidden-xs-up
-            a#trigger-sectionOne(href="#sectionFirst")
-            a#trigger-sectionTwo(href="#sectionSecond")
-            a#trigger-sectionThree(href="#sectionThird")
+              //top
+              a(href="#section0").scroll-up.scroll-up--mainpage
+              .hidden-xs-up
+                a#trigger-sectionOne(href="#sectionFirst")
+                a#trigger-sectionTwo(href="#sectionSecond")
+                a#trigger-sectionThree(href="#sectionThird")
           include shared/modal.pug

@@ -560,6 +560,19 @@ body, html {
     }
 }
 /* margins */
+.mb70 {
+    margin-bottom: 70px;
+}
+@media(max-width: 992px) {
+    .mb70 {
+        margin-bottom: 50px;
+    }
+}
+@media(max-width: 576px) {
+    .mb70 {
+        margin-bottom: 35px;
+    }
+}
 .mb50 {
     margin-bottom: 50px;
 }
@@ -608,16 +621,22 @@ body, html {
 /* 2. Modules */
 /* hamburger overwrite */
 .hamburger--spin {
-    position: fixed;
+    position: absolute;
     z-index: 99;
-    right: 10px;
-    top: 0px;
+    right: -60px;
+    top: -2px;
 }
 .hamburger--spin .hamburger-inner {
     background-color: black;
 }
 .hamburger--spin .hamburger-inner:before, .hamburger--spin .hamburger-inner:after {
     background-color: black;
+}
+@media(max-width: 1310px) {
+    .hamburger--spin {
+        position: fixed;
+        right: 10px;
+    }
 }
 .hamburger--spin:focus {
     outline: none;
@@ -831,12 +850,18 @@ ul.mobile-menu__icons li:last-child {
     background: #3db4b2 url('../images/button_top_1.png') no-repeat center;
     background-size: 50%;
     position: absolute;
-    z-index: 99;
-    right: 0px;
+    z-index: 9990;
+    right: -47px;
     bottom: 85px;
     cursor: pointer;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+}
+@media(max-width: 1310px) {
+    .scroll-up {
+        position: absolute;
+        right: 15px;
+    }
 }
 @media(max-width: 576px) {
     .scroll-up {
@@ -844,9 +869,16 @@ ul.mobile-menu__icons li:last-child {
     }
 }
 .scroll-up--mainpage {
-    position: fixed;
-    right: 20px;
+    position: absolute;
+    right: -47px;
+    opacity: 1;
     bottom: 20px;
+}
+@media(max-width: 1310px) {
+    .scroll-up--mainpage {
+        position: fixed;
+        right: 20px;
+    }
 }
 .scroll-up.visible {
     opacity: 1;
@@ -1491,7 +1523,7 @@ a.serivces__spiral__pos-three {
     right: 15.1%;
 }
 a.serivces__spiral__pos-three .cd-dropdown ul {
-    bottom: -65px;
+    bottom: -105px;
     top: auto;
 }
 a.serivces__spiral__pos-three::before {
@@ -1503,7 +1535,7 @@ a.serivces__spiral__pos-four {
     right: 15.7%;
 }
 a.serivces__spiral__pos-four ul {
-    bottom: 45px;
+    bottom: 10px;
     top: auto;
 }
 a.serivces__spiral__pos-four .cd-dropdown > span {
@@ -1531,7 +1563,7 @@ a.serivces__spiral__pos-seven {
     left: 27.2%;
 }
 a.serivces__spiral__pos-seven ul {
-    bottom: 45px;
+    bottom: 10px;
     top: auto;
 }
 a.serivces__spiral__pos-seven::before {
@@ -1542,7 +1574,7 @@ a.serivces__spiral__pos-eight {
     left: 15.4%;
 }
 a.serivces__spiral__pos-eight ul {
-    bottom: -65px;
+    bottom: -105px;
     top: auto;
 }
 a.serivces__spiral__pos-eight::before {
@@ -1616,7 +1648,7 @@ a.serivces__spiral__pos-eight::before {
 }
 .cd-dropdown ul {
     position: absolute;
-    top: 0px;
+    top: 40px;
     width: 100%;
     z-index: 9999;
 }
@@ -1666,17 +1698,25 @@ a.serivces__spiral__pos-eight::before {
     position: absolute;
     display: block;
     left: 55px;
-    top: 85px;
+    top: 170px;
     content: ' ';
-    background: url('../images/faq_dots.png') repeat-x left center;
-    background-size: cover;
-    height: 312.5px;
+    background: url('../images/faq_dots.png') repeat-y left center;
+    background-size: 100%;
+    height: 300px;
     width: 4.5px;
 }
 @media(max-width: 992px) {
     .faq__item::before {
-        height: 267.8571px;
+        height: 282.8571px;
+        left: 45px;
+        top: 105px;
+        height: 200px;
+    }
+}
+@media(max-width: 768px) {
+    .faq__item::before {
         left: 40px;
+        top: 100px;
     }
 }
 @media(max-width: 576px) {
@@ -1685,10 +1725,11 @@ a.serivces__spiral__pos-eight::before {
     }
 }
 .faq__item__question {
-    background: url('../images/talk_buble.png') no-repeat center;
+    background: white url('../images/talk_buble.png') no-repeat center;
     background-size: cover;
     height: 106.5px;
     width: 115.5px;
+    margin-bottom: 5px;
 }
 @media(max-width: 992px) {
     .faq__item__question {
@@ -1735,7 +1776,7 @@ a.serivces__spiral__pos-eight::before {
 .faq__item__content {
     margin-top: 80px;
     font-size: 18px;
-    line-height: 1.6em;
+    line-height: 1.65em;
     color: #4b4b4b;
     position: relative;
 }
@@ -1754,7 +1795,8 @@ a.serivces__spiral__pos-eight::before {
     }
 }
 .faq__item__content::after, .faq__item__content::before {
-    font-size: 75px;
+    font-size: 65px;
+    line-height: 1em;
     font-family: 'HarmoniaBlack';
     position: absolute;
 }
@@ -1776,6 +1818,11 @@ a.serivces__spiral__pos-eight::before {
     left: 20px;
     line-height: 0;
 }
+@media(max-width: 992px) {
+    .faq__item__content::after {
+        top: 35px;
+    }
+}
 @media(max-width: 576px) {
     .faq__item__content::after {
         top: 30px;
@@ -1783,8 +1830,18 @@ a.serivces__spiral__pos-eight::before {
 }
 .faq__item__content::before {
     content: '“';
-    top: -5px;
+    top: -35px;
     left: -5px;
+}
+@media(max-width: 992px) {
+    .faq__item__content::before {
+        top: -25px;
+    }
+}
+@media(max-width: 576px) {
+    .faq__item__content::before {
+        top: -20px;
+    }
 }
 .faq__item__status {
     color: #9e9e9e;
@@ -1802,6 +1859,9 @@ a.serivces__spiral__pos-eight::before {
 }
 .faq__item__answer .img-fluid {
     max-width: 115.5px;
+    background: white;
+    padding-top: 5px;
+    margin-top: -5px;
 }
 .faq__item__answer .faq__item__name {
     color: #3db4b2;
@@ -2244,11 +2304,29 @@ a.serivces__spiral__pos-eight::before {
 }
 /* height: 520px */
 .personal__card--long .personal__card__name {
-    top: 30%;
+    top: 45%;
+}
+.personal__card--long .personal__card__status {
+    top: 55%;
+    right: 10%;
+    bottom: 55%;
+    left: 10%;
+    position: absolute;
 }
 /* width: 48% */
 .personal__card--wide .personal__card__name {
     top: 30%;
+    right: 5%;
+    bottom: 30%;
+    left: 5%;
+    position: absolute;
+}
+.personal__card--wide .personal__card__status {
+    top: 49%;
+    right: 5%;
+    bottom: 49%;
+    left: 5%;
+    position: absolute;
 }
 @media(max-width: 576px) {
     .personal__card--wide {
@@ -2259,6 +2337,7 @@ a.serivces__spiral__pos-eight::before {
     color: #003733;
     text-transform: uppercase;
     font-size: 18px;
+    line-height: 1.2em;
     font-family: 'HarmoniaSemiBold';
     margin-bottom: 10px;
     top: 30%;
@@ -2274,7 +2353,9 @@ a.serivces__spiral__pos-eight::before {
 .personal__card__status {
     color: white;
     font-size: 18px;
+    line-height: 1.2em;
     font-family: 'HarmoniaItalic';
+    font-style: italic;
     margin-bottom: 10px;
     top: 50%;
     right: 10%;

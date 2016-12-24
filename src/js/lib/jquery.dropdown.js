@@ -135,7 +135,7 @@
 			var self = this;
 
 			this.selectlabel.on( 'mousedown.dropdown', function( event ) {
-				self.opened ? self.close() : self.open();
+        self.opened ? self.close() : self.open();
 				return false;
 
 			} );
@@ -154,13 +154,21 @@
 		},
 		open : function() {
 			var self = this;
+      // $('.cd-dropdown').each( function(){
+      //   $(this).removeClass('cd-active');
+      //   self.opts.each( function( i ) {
+      //
+      //   } );
+      // });
+
+
 			this.dd.toggleClass( 'cd-active' );
 			this.listopts.css( 'height', ( this.optsCount + 1 ) * ( this.size.height + this.options.gutter ) );
 			this.opts.each( function( i ) {
 
 				$( this ).css( {
 					opacity : 1,
-					top : self.options.rotated ? self.size.height + self.options.gutter : ( i + 1 ) * ( 40 + self.options.gutter ),
+					top : self.options.rotated ? self.size.height + self.options.gutter : ( i ) * ( 40 + self.options.gutter ),
 					left : self.options.random ? Math.floor( Math.random() * 11 - 5 ) : 0,
 					width : self.size.width,
 					marginLeft : 0,
