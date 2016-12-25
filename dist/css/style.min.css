@@ -4408,8 +4408,8 @@ body, html {
     position: absolute;
 }
 .header--move {
-    -webkit-transform: translate3d(-45%, 0, 0);
-            transform: translate3d(-45%, 0, 0);
+    -webkit-transform: translate3d(-25%, 0, 0);
+            transform: translate3d(-25%, 0, 0);
 }
 .footer {
     margin-top: 15px;
