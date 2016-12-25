@@ -94,7 +94,8 @@ $(document).ready(function(){
        eventtype = mobilecheck() ? 'touchstart' : 'click',
        resetMenu = function() {
          classie.remove( container, 'st-menu-open' );
-         $("#show-me-menu").removeClass('is-active');
+         $("#show-me-menu").css('opacity', '0');
+         //$("#show-me-menu").removeClass('is-active');
          $('.header').removeClass('header--move');
        },
        bodyClickFn = function(evt) {
@@ -114,7 +115,8 @@ $(document).ready(function(){
          classie.add( container, effect );
          setTimeout( function() {
            classie.add( container, 'st-menu-open' );
-           $("#show-me-menu").addClass('is-active');
+           $("#show-me-menu").hide();
+           //$("#show-me-menu").addClass('is-active');
            $('.header').addClass('header--move');
          }, 25 );
          document.addEventListener( eventtype, bodyClickFn );
@@ -127,16 +129,23 @@ $(document).ready(function(){
 
   })();
 
+  $('#close-sidebar').on("click", function(){
+    $('.st-container').removeClass( 'st-menu-open' );
+    $("#show-me-menu").removeClass('is-active').removeClass('hidden-xs-up');
+    $('.header').removeClass('header--move');
+  });
   // hamburger
   $("#show-me-menu").on("click", function(){
     if ( $(this).hasClass('is-active') ) {
       $(this).removeClass('is-active');
+      $(this).removeClass('hidden-xs-up');
       $('#st-container').removeClass( 'st-menu-open' ).removeClass( 'st-effect-8' );
       $('.header').removeClass('header--move');
       $('html, body, .st-container, .st-pusher').css('height', "auto");
       // SidebarMenuEffects();
     } else {
       $(this).addClass('is-active');
+      $(this).addClass('hidden-xs-up');
       $('#st-container').addClass( 'st-menu-open' ).addClass( 'st-effect-8' );
       $('.header').addClass('header--move');
       $('html, body, .st-container, .st-pusher').css('height', "100%");
