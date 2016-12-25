@@ -130,9 +130,10 @@ $(document).ready(function(){
   })();
 
   $('#close-sidebar').on("click", function(){
-    $('.st-container').removeClass( 'st-menu-open' );
+    $('.st-container').removeClass( 'st-menu-open' ).removeClass( 'st-effect-8' );
     $("#show-me-menu").removeClass('is-active').removeClass('hidden-xs-up');
     $('.header').removeClass('header--move');
+    $('html, body, .st-container, .st-pusher').css('height', "auto");
   });
   // hamburger
   $("#show-me-menu").on("click", function(){
