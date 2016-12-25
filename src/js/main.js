@@ -195,14 +195,14 @@ $(document).ready(function(){
 	});
 
   $.scrollify({
-  		section : ".s1ection",
+  		section : ".section",
   		sectionName : "section-name",
   		interstitialSection : "",
   		easing: "easeOutExpo",
   		scrollSpeed: 1000,
   		offset : 0,
-  		scrollbars: true,
-  		standardScrollElements: "#section2",
+  		scrollbars: false,
+  		standardScrollElements: "#section4",
   		setHeights: true,
   		overflowScroll: true,
   		updateHash: false,
@@ -215,6 +215,14 @@ $(document).ready(function(){
   		afterResize:function() {},
   		afterRender:function() {}
   	});
+
+  // alway stay on top at upload
+  setTimeout(moveTop, 500)
+  function moveTop(){
+    $.scrollify.instantMove("#section0");
+    $('body').animate({scrollTop: $('body').offset().top}, 500);
+  }
+
 
   // FCK DAT SHIT
 
@@ -414,41 +422,41 @@ $(document).ready(function(){
   //   stack : false,
   //   slidingIn : 200
   // } );
-  $( '#cd-dropdown2' ).dropdown( {
-    gutter : 0,
-    stack : false,
-    slidingIn : 200
-  } );
-  $( '#cd-dropdown3' ).dropdown( {
-    gutter : 0,
-    stack : false,
-    slidingIn : 200
-  } );
-  $( '#cd-dropdown4' ).dropdown( {
-    gutter : 0,
-    stack : false,
-    slidingIn : 200
-  } );
-  $( '#cd-dropdown5' ).dropdown( {
-    gutter : 0,
-    stack : false,
-    slidingIn : 200
-  } );
-  $( '#cd-dropdown6' ).dropdown( {
-    gutter : 0,
-    stack : false,
-    slidingIn : 200
-  } );
-  $( '#cd-dropdown7' ).dropdown( {
-    gutter : 0,
-    stack : false,
-    slidingIn : 200
-  } );
-  $( '#cd-dropdown8' ).dropdown( {
-    gutter : 0,
-    stack : false,
-    slidingIn : 200
-  } );
+  // $( '#cd-dropdown2' ).dropdown( {
+  //   gutter : 0,
+  //   stack : false,
+  //   slidingIn : 200
+  // } );
+  // $( '#cd-dropdown3' ).dropdown( {
+  //   gutter : 0,
+  //   stack : false,
+  //   slidingIn : 200
+  // } );
+  // $( '#cd-dropdown4' ).dropdown( {
+  //   gutter : 0,
+  //   stack : false,
+  //   slidingIn : 200
+  // } );
+  // $( '#cd-dropdown5' ).dropdown( {
+  //   gutter : 0,
+  //   stack : false,
+  //   slidingIn : 200
+  // } );
+  // $( '#cd-dropdown6' ).dropdown( {
+  //   gutter : 0,
+  //   stack : false,
+  //   slidingIn : 200
+  // } );
+  // $( '#cd-dropdown7' ).dropdown( {
+  //   gutter : 0,
+  //   stack : false,
+  //   slidingIn : 200
+  // } );
+  // $( '#cd-dropdown8' ).dropdown( {
+  //   gutter : 0,
+  //   stack : false,
+  //   slidingIn : 200
+  // } );
   // $('.mansory-grid').masonry({
   //   itemSelector: '.personal__card',
   //   percentPosition: true
@@ -514,38 +522,37 @@ $(document).ready(function(){
   });
 
 var lastScrollTop = 0;
-
-  // $(window).scroll(function(event) {
-	// 	var wScroll = $(this).scrollTop();
-  //   var First = $('#sectionFirst');
-  //   var Second = $('#sectionSecond');
-  //   var Third = $('#sectionSecond');
-  //
-  //   // var sectionFirstContainer = $('#sectionFirst').height();
-  //   // var sectionSecondContainer = $('#sectionSecond').height();
-  //   // var sectionThirdContainer = $('#sectionThird').height();
-  //
-  //   var FirstTop = First.offset().top;
-  //   var FirstBottom = First.offset().top + First.outerHeight;
-  //   var SecondTop = Second.offset().top;
-  //   var SecondBottom = Second.offset().top + Second.outerHeight;
-  //   var bottom_of_screen = ($(this).scrollTop()) + ($(this).height());
-  //
-  //   console.log(SecondTop);
-  //   console.log(SecondBottom);
-  //   console.log(bottom_of_screen);
-  //
-  //   var st = $(this).scrollTop();
-  //
-  //   if ( (bottom_of_screen > SecondTop) && (bottom_of_screen < SecondBottom) ){
-  //       $('#trigger-sectionTwo').trigger('click');
-  //   } else {
-  //      // upscroll code
-  //   }
-  //
-  //   lastScrollTop = st;
-  //
-  // });
+// $(window).scroll(function(event) {
+// 	var wScroll = $(this).scrollTop();
+//   var First = $('#sectionFirst');
+//   var Second = $('#sectionSecond');
+//   var Third = $('#sectionSecond');
+//
+//   // var sectionFirstContainer = $('#sectionFirst').height();
+//   // var sectionSecondContainer = $('#sectionSecond').height();
+//   // var sectionThirdContainer = $('#sectionThird').height();
+//
+//   var FirstTop = First.offset().top;
+//   var FirstBottom = First.offset().top + First.outerHeight;
+//   var SecondTop = Second.offset().top;
+//   var SecondBottom = Second.offset().top + Second.outerHeight;
+//   var bottom_of_screen = ($(this).scrollTop()) + ($(this).height());
+//
+//   console.log(SecondTop);
+//   console.log(SecondBottom);
+//   console.log(bottom_of_screen);
+//
+//   var st = $(this).scrollTop();
+//
+//   if ( (bottom_of_screen > SecondTop) && (bottom_of_screen < SecondBottom) ){
+//       $('#trigger-sectionTwo').trigger('click');
+//   } else {
+//      // upscroll code
+//   }
+//
+//   lastScrollTop = st;
+//
+// });
 
 });
 
