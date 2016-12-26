@@ -10,6 +10,11 @@
     @media($mobile)
       position: relative
 
+.mobile-flex
+  opacity: 1
+  @media($mobile)
+    display: flex
+    flex-direction: column-reverse
 .about__block
   padding: 45px 40px
   @media($desktop)
@@ -48,8 +53,6 @@
   &--light
     margin-top: 36.5vh
     background: #f3f3f3
-    @media($mobile)
-      margin-top: 0
     @media(height <= 720px)
       margin-top: 31vh
     span
@@ -62,7 +65,7 @@
     @media($tablet)
       padding-right: 50px
     @media($mobile)
-      margin-top: 350px
-      padding-right: 0
+      margin-top: 0vh !important
+      padding-right: 15px
     @media(height <= 720px)
       margin-top: 40vh
