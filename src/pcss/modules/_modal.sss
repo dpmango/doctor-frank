@@ -1,5 +1,4 @@
 // modal
-
 .mfp-container
   padding: 0
 .modal
@@ -13,7 +12,6 @@
   @media($mobile)
     overflow-y: scroll
     height: 100%
-
   &--personal
     height: auto
     min-height: 100vh
@@ -152,12 +150,9 @@
         height: 0
         z-index: 999
         transition: all .4s ease
+        overflow: -moz-scrollbars-vertical
         @media($mobile)
           top: 40px
-        ::-webkit-scrollbar
-          display: 1 !important
-        ::scrollbar
-          display: 1 !important
         .option
           font-size: 0.9rem
           color: $fontColor

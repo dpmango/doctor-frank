@@ -53,12 +53,21 @@ body, html
   overflow-x: hidden
   @media($mobile)
     overflow-y: scroll !important
-
-.st-content-inner, .st-content
   ::-webkit-scrollbar
-    opacity: 0
+    display: none
+    -webkit-appearance: none
   ::scrollbar
-    opacity: 0
+    display: none
+
+  div.select::-webkit-scrollbar
+    display: block !important
+    opacity: 1 !important
+    width: 10px
+    -webkit-appearance: block
+  div.select::scrollbar
+    display: block !important
+    opacity: 1 !important
+    width: 10px
 
 .container
   width: 100%
@@ -105,6 +114,10 @@ body, html
     min-height: auto
   &--mainpage
     @mixin bgImg main_slide_1.jpg
+    @media($desktop)
+      background-position: 60% center
+    @media($tablet)
+      background-position: 70% center
     @media($mobile)
       @mixin bgImg hero-mainpage-mobile.png
       background-position: center
@@ -184,6 +197,8 @@ body, html
   opacity: 0
   will-change: transform
   @media($mobile)
+    height: auto !important
+    min-height: auto !important
     opacity: 1
     transform: scale(1)
   &.active

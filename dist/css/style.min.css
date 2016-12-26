@@ -4363,16 +4363,27 @@ body, html {
     max-width: 100%;
     overflow-x: hidden;
 }
+body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+    display: none;
+    -webkit-appearance: none;
+}
+body ::scrollbar, html ::scrollbar {
+    display: none;
+}
+body div.select::-webkit-scrollbar, html div.select::-webkit-scrollbar {
+    display: block !important;
+    opacity: 1 !important;
+    width: 10px;/* -webkit-appearance: block */
+}
+body div.select::scrollbar, html div.select::scrollbar {
+    display: block !important;
+    opacity: 1 !important;
+    width: 10px;
+}
 @media(max-width: 576px) {
     body, html {
         overflow-y: scroll !important;
     }
-}
-.st-content-inner ::-webkit-scrollbar, .st-content ::-webkit-scrollbar {
-    opacity: 0;
-}
-.st-content-inner ::scrollbar, .st-content ::scrollbar {
-    opacity: 0;
 }
 .container {
     width: 100%;
@@ -4439,6 +4450,16 @@ body, html {
     transition: transform .7s, opacity .7s, -webkit-transform .7s;
     opacity: 1;
     will-change: transform;
+}
+@media(max-width: 992px) {
+    .hero--mainpage {
+        background-position: 60% center;
+    }
+}
+@media(max-width: 768px) {
+    .hero--mainpage {
+        background-position: 70% center;
+    }
 }
 @media(max-width: 576px) {
     .hero--mainpage {
@@ -4592,6 +4613,8 @@ body, html {
 }
 @media(max-width: 576px) {
     .about {
+        height: auto !important;
+        min-height: auto !important;
         opacity: 1;
         -webkit-transform: scale(1);
             -ms-transform: scale(1);
@@ -6982,12 +7005,7 @@ a.serivces__spiral__pos-eight::before, .a.serivces__spiral__pos-eight::before {
     z-index: 999;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
-}
-.modal__form__input .select ::-webkit-scrollbar {
-    display: 1 !important;
-}
-.modal__form__input .select ::scrollbar {
-    display: 1 !important;
+    overflow: -moz-scrollbars-vertical;
 }
 .modal__form__input .select .option {
     font-size: 14.4px;
