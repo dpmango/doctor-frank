@@ -164,7 +164,7 @@ $(document).ready(function(){
       // SidebarMenuEffects();
     } else {
       $(this).addClass('is-active');
-      $(this).find('.hamburger-label').text('Свернуть');
+      $(this).find('.hamburger-label').text('Меню');
       $('.mobile-menu').fadeIn();
       $('.mobile-menu-active-bg').fadeIn('fast');
       // $('.hero').addClass('active-mobile');

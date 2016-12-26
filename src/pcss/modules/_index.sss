@@ -141,12 +141,17 @@
 
     @media($mobile)
       margin-top: 20px
+      justify-content: flex-start
     > a, .a
       display: inline-block
       color: $colorPrimaryLight
       transition: all .3s ease-in-out
       padding: 7px
       cursor: pointer
+      @media($mobile)
+        display: block
+        width: 100%
+        flex-basis: 100%
       &:hover
         .spiral__dropdown
           box-shadow: 0px 2px 8px rgba(0,0,0,.35)

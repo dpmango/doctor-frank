@@ -10,6 +10,10 @@
   margin: 0
   // height: 100vh
   min-height: 700px
+  @media($mobile)
+    overflow-y: scroll
+    height: 100%
+
   &--personal
     height: auto
     min-height: 100vh
@@ -282,6 +286,7 @@
     opacity: 0
     background: url('../images/form_pop_up.jpg') no-repeat center
     background-size: cover
+    height: 100%
 
 
   &.mfp-bg

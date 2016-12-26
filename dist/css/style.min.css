@@ -5364,6 +5364,19 @@ a.heading__crumbs__home {
 @media(max-width: 576px) {
     .heading__navi {
         margin-top: 20px;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+}
+@media(max-width: 576px) {
+    .heading__navi > a, .heading__navi .a {
+        display: block;
+        width: 100%;
+        -webkit-flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
     }
 }
 @media(max-width: 576px) {
@@ -5452,6 +5465,12 @@ a.heading__crumbs__home {
 }
 .header__navi li .ico:hover {
     opacity: .7;
+}
+@media(max-width: 576px) {
+    .header__navi li.header__navi__btn a {
+        padding-left: 15px;
+        padding-right: 25px;
+    }
 }
 @media(max-width: 880px) {
     .header__navi li.header__navi__lang-switcher.locale--ru {
@@ -6775,6 +6794,12 @@ a.serivces__spiral__pos-eight::before, .a.serivces__spiral__pos-eight::before {
     -webkit-transition-duration: .4s;
             transition-duration: .4s;
 }
+@media(max-width: 576px) {
+    .modal {
+        overflow-y: scroll;
+        height: 100%;
+    }
+}
 .modal--personal {
     height: auto;
     min-height: 100vh;
@@ -7085,6 +7110,7 @@ a.serivces__spiral__pos-eight::before, .a.serivces__spiral__pos-eight::before {
     opacity: 0;
     background: url('../images/form_pop_up.jpg') no-repeat center;
     background-size: cover;
+    height: 100%;
 }
 .my-mfp-zoom-in::before {
     content: '';
