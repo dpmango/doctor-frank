@@ -54,10 +54,11 @@ body, html
   @media($mobile)
     overflow-y: scroll !important
 
-::-webkit-scrollbar
-  display: none
-::scrollbar
-  display: none
+.st-content-inner, .st-content
+  ::-webkit-scrollbar
+    opacity: 0
+  ::scrollbar
+    opacity: 0
 
 .container
   width: 100%

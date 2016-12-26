@@ -107,11 +107,11 @@ body, html {
         overflow-y: scroll !important;
     }
 }
-::-webkit-scrollbar {
-    display: none;
+.st-content-inner ::-webkit-scrollbar, .st-content ::-webkit-scrollbar {
+    opacity: 0;
 }
-::scrollbar {
-    display: none;
+.st-content-inner ::scrollbar, .st-content ::scrollbar {
+    opacity: 0;
 }
 .container {
     width: 100%;
@@ -651,11 +651,16 @@ body, html {
 
 /* 2. Modules */
 /* hamburger overwrite */
+.header--floating .hamburger--spin {
+    top: -2px;
+}
 .hamburger--spin {
     position: absolute;
     z-index: 99;
     right: -60px;
-    top: -2px;
+    top: -82px;
+    -webkit-transition: top .3s ease-in-out;
+    transition: top .3s ease-in-out;
 }
 .hamburger--spin .hamburger-inner {
     background-color: black;
@@ -667,6 +672,7 @@ body, html {
     .hamburger--spin {
         position: fixed;
         right: 10px;
+        top: -2px;
     }
 }
 .hamburger--spin:focus {
@@ -2702,6 +2708,7 @@ a.serivces__spiral__pos-eight::before, .a.serivces__spiral__pos-eight::before {
     background: white;
     border-radius: .4em;
     padding: 10px 0px;
+    height: 150px;
     max-height: 150px;
     overflow-y: scroll;
     opacity: 0;
@@ -2711,10 +2718,10 @@ a.serivces__spiral__pos-eight::before, .a.serivces__spiral__pos-eight::before {
     transition: all .4s ease;
 }
 .modal__form__input .select ::-webkit-scrollbar {
-    opacity: 1 !important;
+    display: 1 !important;
 }
 .modal__form__input .select ::scrollbar {
-    opacity: 1 !important;
+    display: 1 !important;
 }
 .modal__form__input .select .option {
     font-size: 14.4px;
@@ -2979,7 +2986,7 @@ a.serivces__spiral__pos-eight::before, .a.serivces__spiral__pos-eight::before {
 div.mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.my-mfp-zoom-in.mfp-ready {}
 @media(max-width: 576px) {
     div.mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.my-mfp-zoom-in.mfp-ready {
-        height: 100% !important;
+        min-height: 600px;/* height: 100% !important */
         overflow-y: visible;
     }
 }
@@ -3297,7 +3304,7 @@ a.btn {
 .st-menu ul.sublvl {
     -webkit-transform: translate3d(400px, 0, 0);
             transform: translate3d(400px, 0, 0);
-    z-index: 60;
+    z-index: 9999;
     background: #018280;
     -webkit-box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
             box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
@@ -3321,8 +3328,14 @@ a.btn {
     -webkit-transform: translate3d(0px, 0, 0);
             transform: translate3d(0px, 0, 0);
 }
+.st-menu .sublbl__title {
+    padding: 20px 0;
+    text-transform: uppercase;
+    color: white;
+}
 .st-menu .sublvl__back {
     font-size: 13px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     margin-left: -30px;
     color: white;

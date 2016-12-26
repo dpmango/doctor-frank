@@ -1,13 +1,18 @@
 // hamburger overwrite
+.header--floating
+  .hamburger--spin
+    top: -2px
 
 .hamburger--spin
   position: absolute
   z-index: 99
   right: -60px
-  top: -2px
+  top: -82px
+  transition: top .3s ease-in-out
   @media(width <= 1310px)
     position: fixed
     right: 10px
+    top: -2px
   &:focus
     outline: none
   .hamburger-inner

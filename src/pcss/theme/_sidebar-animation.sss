@@ -129,7 +129,7 @@
       width: 100%
   ul.sublvl
     transform: translate3d(400px, 0, 0)
-    z-index: 60
+    z-index: 9999
     background: #018280
     box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2)
     transition: all 0.5s
@@ -142,8 +142,13 @@
       font-size: 22px
       &::after
         background: #3db4b2
+  .sublbl__title
+    padding: 20px 0
+    text-transform: uppercase
+    color: white
   .sublvl__back
     font-size: 13px
+    border-top: 2px solid color(white a(50%))
     border-bottom: 2px solid color(white a(50%))
     margin-left: -30px
     color: white

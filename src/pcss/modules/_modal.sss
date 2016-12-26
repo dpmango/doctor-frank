@@ -145,6 +145,7 @@
         background: white
         border-radius: .4em
         padding: 10px 0px
+        height: 150px
         max-height: 150px
         overflow-y: scroll
         opacity: 0
@@ -154,9 +155,9 @@
         @media($mobile)
           top: 40px
         ::-webkit-scrollbar
-          opacity: 1 !important
+          display: 1 !important
         ::scrollbar
-          opacity: 1 !important
+          display: 1 !important
         .option
           font-size: 0.9rem
           color: $fontColor
@@ -344,5 +345,6 @@
 
 div.mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.my-mfp-zoom-in.mfp-ready
   @media($mobile)
-    height: 100% !important
+    min-height: 600px
+    // height: 100% !important
     overflow-y: visible
