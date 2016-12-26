@@ -116,7 +116,7 @@ $(document).ready(function(){
          setTimeout( function() {
            classie.add( container, 'st-menu-open' );
            $("#show-me-menu").hide();
-           //$("#show-me-menu").addClass('is-active');
+           $("#show-me-menu").addClass('is-active');
            $('.header').addClass('header--move');
          }, 25 );
          document.addEventListener( eventtype, bodyClickFn );
@@ -149,7 +149,7 @@ $(document).ready(function(){
       $(this).addClass('hidden-xs-up');
       $('#st-container').addClass( 'st-menu-open' ).addClass( 'st-effect-8' );
       $('.header').addClass('header--move');
-      $('html, body, .st-container, .st-pusher').css('height', "100%");
+      // $('html, body, .st-container, .st-pusher').css('height', "100%");
       // SidebarMenuEffects();
     }
   });
