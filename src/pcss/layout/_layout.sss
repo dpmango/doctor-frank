@@ -161,6 +161,16 @@ body, html
     background-position: top center
     min-height: 600px
 
+.mobile-menu-active-bg
+  display: none
+  background: $colorPrimaryLight
+  height: 100vh
+  max-height: 100vh
+  position: fixed 0 0 0 0
+  z-index: 1
+  @media($tablet-from)
+    display: none !important
+
 .about
   height: 100vh
   min-height: 700px
@@ -180,9 +190,12 @@ body, html
     background-position: top center
     background-size: 100% 625px
     background-color: white
+    @media(height <= 720px)
+      background-position: center -80px
+      background-size: contain
+
     @media($desktop)
       background-size: cover
-
     @media($mobile)
       height: auto
       min-height: auto
@@ -193,15 +206,16 @@ body, html
   position: relative
 .services
   height: 100vh
-  min-height: 800px
+  min-height: 852px
   position: relative
   overflow: hidden
   &__spiral__bg
-    @mixin bgImg hand_2.jpg
-    background-position: top center
-    background-size: cover
+    background-image: url('../images/hand.png'), url('../images/back_gray.jpg')
+    background-repeat: no-repeat, no-repeat
+    background-position: top center, center
+    background-size: contain, cover
     position: absolute 0 0 0 0
-    height: 800px !important
+    height: 852px !important
     @media($wide)
       background-size: 100%
       background-position: top center

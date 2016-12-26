@@ -159,13 +159,15 @@ $(document).ready(function(){
       $(this).removeClass('is-active');
       $(this).find('.hamburger-label').text('Меню');
       $('.mobile-menu').fadeOut();
-      $('.hero').removeClass('active-mobile');
+      $('.mobile-menu-active-bg').fadeOut('fast');
+      // $('.hero').removeClass('active-mobile');
       // SidebarMenuEffects();
     } else {
       $(this).addClass('is-active');
       $(this).find('.hamburger-label').text('Свернуть');
       $('.mobile-menu').fadeIn();
-      $('.hero').addClass('active-mobile');
+      $('.mobile-menu-active-bg').fadeIn('fast');
+      // $('.hero').addClass('active-mobile');
     }
   });
 
@@ -212,7 +214,7 @@ $(document).ready(function(){
   		scrollSpeed: 1000,
   		offset : 0,
   		scrollbars: false,
-  		standardScrollElements: "#section4",
+  		standardScrollElements: "#section2",
   		setHeights: true,
   		overflowScroll: true,
   		updateHash: false,
