@@ -4567,6 +4567,11 @@ body, html {
     position: fixed;
     z-index: 1;
 }
+@media(min-width: 768px) {
+    .mobile-menu-active-bg {
+        display: none !important;
+    }
+}
 .about {
     height: 100vh;
     min-height: 700px;
@@ -5613,6 +5618,11 @@ a.heading__crumbs__home {
 }
 .hero__logo.mt10 {
     margin-top: 4px !important;
+}
+@media(max-width: 768px) {
+    .hero__logo.mt10 {
+        margin-top: 22px !important;
+    }
 }
 .hero__logo__light {
     display: inline-block;
