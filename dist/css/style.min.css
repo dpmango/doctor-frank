@@ -4373,7 +4373,8 @@ body ::scrollbar, html ::scrollbar {
 body div.select::-webkit-scrollbar, html div.select::-webkit-scrollbar {
     display: block !important;
     opacity: 1 !important;
-    width: 10px;/* -webkit-appearance: block */
+    width: 10px;
+    -webkit-appearance: block;
 }
 body div.select::scrollbar, html div.select::scrollbar {
     display: block !important;
