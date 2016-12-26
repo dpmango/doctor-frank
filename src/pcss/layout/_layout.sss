@@ -106,7 +106,10 @@ body, html
   &--mainpage
     @mixin bgImg main_slide_1.jpg
     @media($mobile)
-      background-position: 80% center
+      @mixin bgImg hero-mainpage-mobile.png
+      background-position: center
+      background-size: cover
+      min-height: 570px
     transform: scale(1)
     transition: transform .7s, opacity .7s
     opacity: 1

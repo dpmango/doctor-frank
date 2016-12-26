@@ -181,7 +181,11 @@ body, html {
 }
 @media(max-width: 576px) {
     .hero--mainpage {
-        background-position: 80% center;
+        background: url('../images/hero-mainpage-mobile.png') no-repeat center;
+        background-size: cover;
+        background-position: center;
+        background-size: cover;
+        min-height: 570px;
     }
 }
 @media(max-width: 576px) {
@@ -1140,7 +1144,7 @@ a.heading__crumbs__home {
 /*footer */
 .footer__copy {
     border-top: 2px solid #aeaeae;
-    padding: 30px 0 35px 0;
+    padding: 33px 0 35px 0;
 }
 @media(max-width: 576px) {
     .footer__copy {
@@ -1150,7 +1154,7 @@ a.heading__crumbs__home {
 }
 .footer__developer {
     color: #3db4b2;
-    padding: 30px 0 35px 0;
+    padding: 35px 0px 35px 0;
 }
 @media(max-width: 576px) {
     .footer__developer {
@@ -1429,7 +1433,7 @@ a.heading__crumbs__home {
 }
 @media(max-width: 576px) {
     .hero__title {
-        margin-top: 100px;
+        margin-top: 90px;
         font-size: 35px;
     }
 }
@@ -1449,6 +1453,7 @@ a.heading__crumbs__home {
     .hero__signature {
         font-size: 17px;
         margin-bottom: 200px;
+        width: 50%;
     }
 }
 @media(max-width: 576px) {
@@ -2940,6 +2945,11 @@ a.serivces__spiral__pos-eight::before, .a.serivces__spiral__pos-eight::before {
         -ms-transform: scale(0.01);
             transform: scale(0.01);
     opacity: 0;
+}
+@media(max-width: 576px) {
+    .my-mfp-zoom-in .mfp-container {
+        background: #3db4b2;
+    }
 }
 .my-mfp-zoom-in.mfp-bg {
     opacity: 0;
