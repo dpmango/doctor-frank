@@ -8,15 +8,21 @@
   color: white
   width: 100%
   margin: 0
-  height: 100vh
+  // height: 100vh
   min-height: 700px
   &--personal
     height: auto
     min-height: 100vh
-    overflow-y: scroll
+    //overflow-y: scroll
+    @media($mobile)
+      height: auto
+      overflow-y: visible
     .modal__personal__content
       overflow-y: scroll
       height: 100vh
+      @media($mobile)
+        overflow-y: scroll
+        height: 100%
   .mfp-close
     background: url('../images/modal_close.png') no-repeat center
     background-size: cover
@@ -125,6 +131,7 @@
         width: 100%
         max-height: 100px
       .select
+        display: none
         position: absolute
         top: 60px
         left: 0
@@ -134,8 +141,11 @@
         max-height: 150px
         overflow-y: scroll
         opacity: 0
+        height: 0
         z-index: 999
         transition: all .4s ease
+        @media($mobile)
+          top: 40px
         ::-webkit-scrollbar
           opacity: 1 !important
         ::scrollbar
@@ -150,6 +160,8 @@
             background: rgba(0,0,0,.1)
         &.is-active
           opacity: 1
+          height: auto
+          display: block
 
 
 
@@ -242,6 +254,8 @@
     transition: transform .5s 0s ease-in,-webkit-transform .5s 0s ease-in
     -webkit-transform: scale(.01)
     transform: scale(.01)
+    @media($mobile)
+      display: none
   &.mfp-ready
     width: 100%
     height: 100%
@@ -318,3 +332,9 @@
     opacity: 0.8
   &.mfp-removing.mfp-bg
     opacity: 0
+
+
+div.mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.my-mfp-zoom-in.mfp-ready
+  @media($mobile)
+    height: 100% !important
+    overflow-y: visible
