@@ -8,7 +8,7 @@ body.black
       include shared/sidebar-menu.pug
 
       .st-content.white#section-top
-        .st-content-inner#-fullpage
+        .st-content-inner#fullpage
           .mobile-menu-active-bg.text-xs-center
             a(href="/")
               .hero__logo.img-fluid.mt10
@@ -82,7 +82,7 @@ body.black
                         a(href="#")
                           i.ico.ico-social-insta
                 #st-trigger-effects
-                  button.hamburger.hamburger--spin#show-me-menu(type="button" data-effect="st-effect-8")
+                  button.hamburger.hamburger--spin.fixedScroll#show-me-menu(type="button" data-effect="st-effect-8")
                     span.hamburger-box
                       span.hamburger-inner
 
@@ -231,7 +231,7 @@ body.black
                             a(href="#") Диагностика
 
               //top
-              a(href="#section0").scroll-up.scroll-up--mainpage
+              a(href="#firstPage").scroll-up.scroll-up--mainpage
               .hidden-xs-up
                 a#trigger-sectionOne(href="#sectionFirst")
                 a#trigger-sectionTwo(href="#sectionSecond")

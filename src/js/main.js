@@ -205,35 +205,122 @@ $(document).ready(function(){
             scrollTop: $(el).offset().top}, 1000);
         return false;
 	});
+  $('#fullpage').fullpage({
+    //Navigation
+    menu: '#menu',
+    lockAnchors: false,
+    anchors:['firstPage', 'secondPage', 'thirdPage'],
+    navigation: false,
+    // false
+    navigationPosition: 'right',
+    navigationTooltips: ['firstSlide', 'secondSlide'],
+    showActiveTooltip: false,
+    slidesNavigation: true,
+    //false
+    slidesNavPosition: 'bottom',
+    white: false,
 
-  $.scrollify({
-  		section : ".section",
-  		sectionName : "section-name",
-  		interstitialSection : "",
-  		easing: "easeOutExpo",
-  		scrollSpeed: 1000,
-  		offset : 0,
-  		scrollbars: false,
-  		standardScrollElements: "#section2",
-  		setHeights: true,
-  		overflowScroll: true,
-  		updateHash: false,
-  		touchScroll: false,
-  		before:function(index, sections) {
-        $('.section').removeClass('active');
-        $('#section' + index).addClass('active');
-      },
-  		after:function() {},
-  		afterResize:function() {},
-  		afterRender:function() {}
-  	});
+    //Scrolling
+    css3: true,
+    scrollingSpeed: 700,
+    autoScrolling: true,
+    fitToSection: true,
+    fitToSectionDelay: 1000,
+    scrollBar: false,
+    easing: 'easeInOutCubic',
+    easingcss3: 'ease',
+    loopBottom: false,
+    loopTop: false,
+    loopHorizontal: true,
+    continuousVertical: false,
+    continuousHorizontal: false,
+    scrollHorizontally: false,
+    interlockedSlides: false,
+    dragAndMove: false,
+    offsetSections: false,
+    resetSliders: true,
+    //false
+    fadingEffect: false,
+    normalScrollElements: '#element1, .element2',
+    scrollOverflow: false,
+    scrollOverflowOptions: null,
+    touchSensitivity: 15,
+    normalScrollElementTouchThreshold: 5,
+    bigSectionsDestination: top,
+
+    //Accessibility
+    keyboardScrolling: true,
+    animateAnchor: true,
+    recordHistory: true,
+
+    //Design
+    controlArrows: true,
+    verticalCentered: false,
+    sectionsColor : ['transparent', 'transparent'],
+    paddingTop: '0px',
+    paddingBottom: '0px',
+    fixedElements: '.header, #show-me-menu, .scroll-up',
+    responsiveWidth: 1200,
+    responsiveHeight: 0,
+    responsiveSlides: false,
+
+    //Custom selectors
+    sectionSelector: '.section',
+    slideSelector: '.slide',
+
+    lazyLoading: true,
+
+    //events
+    onLeave: function(index, nextIndex, direction){
+      if(index == 1 && direction =='down'){
+          $('.header').addClass('header--floating');
+      } else if (index == 2 && direction =='up'){
+        $('.header').removeClass('header--floating');
+      }
+
+      if(index == 2 && direction == 'down' ){
+        $('.scroll-up').addClass('visible');
+      } else {
+        $('.scroll-up').removeClass('visible');
+      }
+
+    },
+    afterLoad: function(anchorLink, index){},
+    afterRender: function(){},
+    afterResize: function(){},
+    afterResponsive: function(isResponsive){},
+    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+    onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+  });
+
+  // $.scrollify({
+  // 		section : ".section",
+  // 		sectionName : "section-name",
+  // 		interstitialSection : "",
+  // 		easing: "easeOutExpo",
+  // 		scrollSpeed: 1000,
+  // 		offset : 0,
+  // 		scrollbars: false,
+  // 		standardScrollElements: "#section2",
+  // 		setHeights: true,
+  // 		overflowScroll: true,
+  // 		updateHash: false,
+  // 		touchScroll: false,
+  // 		before:function(index, sections) {
+  //       $('.section').removeClass('active');
+  //       $('#section' + index).addClass('active');
+  //     },
+  // 		after:function() {},
+  // 		afterResize:function() {},
+  // 		afterRender:function() {}
+  // 	});
 
   // alway stay on top at upload
-  setTimeout(moveTop, 500)
-  function moveTop(){
-    $.scrollify.instantMove("#section0");
-    $('body').animate({scrollTop: $('body').offset().top}, 500);
-  }
+  // setTimeout(moveTop, 500)
+  // function moveTop(){
+  //   $.scrollify.instantMove("#section0");
+  //   $('body').animate({scrollTop: $('body').offset().top}, 500);
+  // }
 
 
   $('.popup-with-zoom-anim').magnificPopup({
