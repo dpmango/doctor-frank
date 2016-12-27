@@ -21,10 +21,11 @@
       background-color: black
 
   &.is-active
+    color: white !important
     .hamburger-inner
-      background-color: white
+      background-color: white !important
       &:before, &:after
-        background-color: white
+        background-color: white !important
 
   &.hamburger--white
     .hamburger-inner
@@ -86,11 +87,12 @@
   border: 2px solid white
   border-top: none
   display: none
+  color: white !important
   @media($tablet-from)
     display: none !important
   ul&__list
     list-style: none
-    margin-left: 40px
+    margin-left: 0px
     margin-right: 0
     padding: 20px 0 5px 0
     text-transform: uppercase

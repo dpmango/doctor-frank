@@ -2,7 +2,11 @@ doctype html
 html
   include shared/head.pug
 
-body.black
+body.mainpager
+  .mobile-menu-active-bg.text-xs-center
+    a(href="/")
+      .hero__logo.img-fluid.mt10
+    .hero__logo__light
   .st-container#st-container
     .st-pusher
       include shared/sidebar-menu.pug
@@ -10,10 +14,6 @@ body.black
       .st-content.white#section-top
         .st-content-inner
           #fullpage
-            .mobile-menu-active-bg.text-xs-center
-              a(href="/")
-                .hero__logo.img-fluid.mt10
-              .hero__logo__light
             //TRANSPARENT HEADER:: START
             header.header.header--transparent
               .container
@@ -89,152 +89,155 @@ body.black
 
             //HERO::START
             .hero.hero--mainpage.section.active#section0
-              .container
-                .row
-                  .col-sm-12.text-xs-center
-                    a(href="/")
-                      .hero__logo.img-fluid
-                    .hero__logo__light
-                .row
-                  .col-sm-12
-                    .hero__title МОЙ ОПЫТ. <br /> МОЯ ОТВЕТСТВЕННОСТЬ.
-                    .hero__signature Мария Михайловна Франк
-                      span Кандидат медицинских наук, <br /> главный врач клиники Doctor FRANK
-              .scroll-down.scroll-down--gray
-                i.ico.ico-scroll-down--gray
-                span переходите <br> ниже
-                //- .row
-                //-   .col-sm-12.text-xs-center
-                //-     .scroll-down
-                //-       i.ico.ico-scroll-down
-                //-       span Переходите <br> ниже
+              .content-fp
+                .container
+                  .row
+                    .col-sm-12.text-xs-center
+                      a(href="/")
+                        .hero__logo.img-fluid
+                      .hero__logo__light
+                  .row
+                    .col-sm-12
+                      .hero__title МОЙ ОПЫТ. <br /> МОЯ ОТВЕТСТВЕННОСТЬ.
+                      .hero__signature Мария Михайловна Франк
+                        span Кандидат медицинских наук, <br /> главный врач клиники Doctor FRANK
+                .scroll-down.scroll-down--gray
+                  i.ico.ico-scroll-down--gray
+                  span переходите <br> ниже
+                  //- .row
+                  //-   .col-sm-12.text-xs-center
+                  //-     .scroll-down
+                  //-       i.ico.ico-scroll-down
+                  //-       span Переходите <br> ниже
 
             //ABOUT::START
             section.about.about--mainpage.section#section1
-              .container
-                .row.relative.mobile-flex
-                  .col-sm-6.col-md-5.offset-md-1.no-pad-xs
-                    .about__block.about__block--primary
-                      span В своих решениях мы опираемся на знания и многолетний собственный опыт и опыт наших зарубежных коллег. Наш пациент знает, что получает лучшее.
-                      a.btn.btn--huge.btn--rounded.btn--outline.btn--white(href="kliniki.html") ПОЛНАЯ ИНФОРМАЦИЯ →
-                  .col-sm-7.pull-sm-1.absolute.no-pad-xs
-                    .about__block.about__block--light
-                      .about__block__title О клиниках
-                      span Безусловный приоритет работы нашей клиники - оказание всесторонней высококвалифицированной стоматологической помощи взрослым и детям. Используя новейшие технологии мировой стоматологии , мы уверены в их качестве, пользе , безопасности.
-                  .scroll-down.scroll-down--gray.scroll-down--about
-                    i.ico.ico-scroll-down--gray
-                    span переходите <br> ниже
+              .content-fp
+                .container
+                  .row.relative.mobile-flex
+                    .col-sm-6.col-md-5.offset-md-1.no-pad-xs
+                      .about__block.about__block--primary
+                        span В своих решениях мы опираемся на знания и многолетний собственный опыт и опыт наших зарубежных коллег. Наш пациент знает, что получает лучшее.
+                        a.btn.btn--huge.btn--rounded.btn--outline.btn--white(href="kliniki.html") ПОЛНАЯ ИНФОРМАЦИЯ →
+                    .col-sm-7.pull-sm-1.absolute.no-pad-xs
+                      .about__block.about__block--light
+                        .about__block__title О клиниках
+                        span Безусловный приоритет работы нашей клиники - оказание всесторонней высококвалифицированной стоматологической помощи взрослым и детям. Используя новейшие технологии мировой стоматологии , мы уверены в их качестве, пользе , безопасности.
+                    .scroll-down.scroll-down--gray.scroll-down--about
+                      i.ico.ico-scroll-down--gray
+                      span переходите <br> ниже
 
             //SERVICES::START
             section.services.services--mainpage.section#section2
-              .container.relative
-                .services__spiral__bg
-                .row
-                  .col-sm-12.h100
-                    .services__title УСЛУГИ <br> КЛИНИКИ
-                    .serivces__spiral
-                      .a.serivces__spiral__pos-one(href="#")
-                        span Диагностика
-                        .relative
-                          ul.spiral__dropdown
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
+              .content-fp
+                .container.relative
+                  .services__spiral__bg
+                  .row
+                    .col-sm-12.h100
+                      .services__title УСЛУГИ <br> КЛИНИКИ
+                      .serivces__spiral
+                        .a.serivces__spiral__pos-one(href="#")
+                          span Диагностика
+                          .relative
+                            ul.spiral__dropdown
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
 
-                      .a.serivces__spiral__pos-two(href="#")
-                        span Ортодония
-                        .relative
-                          ul.spiral__dropdown
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                      .a.serivces__spiral__pos-three(href="#")
-                        span Детская стоматология
-                        .relative
-                          ul.spiral__dropdown
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                      .a.serivces__spiral__pos-four(href="#")
-                        span Пародонтология
-                        .relative
-                          ul.spiral__dropdown
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                      .a.serivces__spiral__pos-five(href="#")
-                        span Имплантация
-                        .relative
-                          ul.spiral__dropdown
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                      .a.serivces__spiral__pos-six(href="#")
-                        span Протезирование
-                        .relative
-                          ul.spiral__dropdown
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                      .a.serivces__spiral__pos-seven(href="#")
-                        span Терапия
-                        .relative
-                          ul.spiral__dropdown
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                      .a.serivces__spiral__pos-eight(href="#")
-                        span Эстетическая <br> стоматология
-                        .relative
-                          ul.spiral__dropdown
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
-                            li
-                              a(href="#") Диагностика
+                        .a.serivces__spiral__pos-two(href="#")
+                          span Ортодония
+                          .relative
+                            ul.spiral__dropdown
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                        .a.serivces__spiral__pos-three(href="#")
+                          span Детская стоматология
+                          .relative
+                            ul.spiral__dropdown
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                        .a.serivces__spiral__pos-four(href="#")
+                          span Пародонтология
+                          .relative
+                            ul.spiral__dropdown
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                        .a.serivces__spiral__pos-five(href="#")
+                          span Имплантация
+                          .relative
+                            ul.spiral__dropdown
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                        .a.serivces__spiral__pos-six(href="#")
+                          span Протезирование
+                          .relative
+                            ul.spiral__dropdown
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                        .a.serivces__spiral__pos-seven(href="#")
+                          span Терапия
+                          .relative
+                            ul.spiral__dropdown
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                        .a.serivces__spiral__pos-eight(href="#")
+                          span Эстетическая <br> стоматология
+                          .relative
+                            ul.spiral__dropdown
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
+                              li
+                                a(href="#") Диагностика
 
-                //top
-                a(href="#firstPage").scroll-up.scroll-up--mainpage
-                .hidden-xs-up
-                  a#trigger-sectionOne(href="#sectionFirst")
-                  a#trigger-sectionTwo(href="#sectionSecond")
-                  a#trigger-sectionThree(href="#sectionThird")
+                  //top
+                  a(href="#firstPage").scroll-up.scroll-up--mainpage
+                  .hidden-xs-up
+                    a#trigger-sectionOne(href="#sectionFirst")
+                    a#trigger-sectionTwo(href="#sectionSecond")
+                    a#trigger-sectionThree(href="#sectionThird")
             include shared/modal.pug

@@ -50,7 +50,7 @@ body, html
   font-family: 'Harmonia'
   font-size: 14px
   max-width: 100%
-  overflow-x: hidden
+  overflow-x: hidden !important
   @media($mobile)
     overflow-y: scroll !important
   ::-webkit-scrollbar
@@ -88,7 +88,7 @@ body, html
     left: 0
     top: 110px
     width: 100%
-    z-index: 99
+    z-index: 102
     @media($mobile)
       top: 90px
   &--floating
@@ -110,27 +110,34 @@ body, html
   padding-top: 1em
   position: relative
   @media($mobile)
-    height: auto
+    height: auto !important
+    max-height: 570px !important
     min-height: auto
   &--mainpage
-    @mixin bgImg main_slide_1.jpg
-    @media($desktop)
-      background-position: 60% center
-    @media($tablet)
-      background-position: 70% center
-    @media($mobile)
-      @mixin bgImg hero-mainpage-mobile.png
-      background-position: center
-      background-size: cover
-      min-height: 570px
-    transform: scale(1)
-    transition: transform .7s, opacity .7s
-    opacity: 1
-    will-change: transform
-    @media($mobile)
-      opacity: 1
-      transform: scale(1)
-    &.active
+    .content-fp
+      @mixin bgImg main_slide_1.jpg
+      @media($desktop)
+        background-position: 60% center
+      @media($tablet)
+        background-position: 70% center
+      @media($mobile)
+        @mixin bgImg hero-mainpage-mobile.png
+        background-position: center
+        background-size: cover
+        min-height: 570px
+
+      height: 100vh
+      min-height: 700px
+      transform: scale(.8)
+      transition: transform .7s, opacity .7s
+      opacity: 0.1
+      will-change: transform
+      @media($mobile)
+        height: auto
+      @media($wide)
+        opacity: 1
+        transform: scale(1)
+    &.active .content-fp
       opacity: 1
       transform: scale(1)
   &--short
@@ -184,7 +191,7 @@ body, html
   height: 100vh
   max-height: 100vh
   position: fixed 0 0 0 0
-  z-index: 1
+  z-index: 100
   @media($tablet-from)
     display: none !important
 
@@ -192,32 +199,40 @@ body, html
   height: 100vh
   min-height: 700px
   position: relative
-  transform: scale(0.8)
-  transition: transform .7s, opacity .7s
-  opacity: 0
-  will-change: transform
   @media($mobile)
     height: auto !important
-    min-height: auto !important
+    min-height: auto
+  .content-fp
+    height: 100vh
+    min-height: 700px
+    position: relative
+    transform: scale(0.8)
+    opacity: 0
+    transition: transform .7s, opacity .7s
+    will-change: transform
+    @media($mobile)
+      height: auto
+      min-height: auto
+    @media($wide)
+      opacity: 1
+      transform: scale(1)
+  &.active .content-fp
     opacity: 1
     transform: scale(1)
-  &.active
-    opacity: 1
-    transform: scale(1)
-  &--mainpage
+  &--mainpage .content-fp
     @mixin bgImg main_slide_2.jpg
     background-position: top center
     background-size: 100% 625px
     background-color: white
     @media(height <= 720px)
       background-position: center -80px
-      background-size: contain
+      background-size: 100% 80%
 
     @media($desktop)
       background-size: cover
     @media($mobile)
-      height: auto
-      min-height: auto
+      height: auto !important
+      min-height: auto !important
       background-position: 20% center
       background-size: cover
 
@@ -243,11 +258,13 @@ body, html
     background-color: #c0c0c0
     @media($wide)
       display: none
-    transform: scale(0.8)
-    transition: transform .7s, opacity .7s
-    opacity: 0
-    will-change: transform
-    &.active
+    .content-fp
+      transform: scale(0.8)
+      transition: transform .7s, opacity .7s
+      opacity: 0
+      will-change: transform
+      overflow-y: scroll
+    &.active .content-fp
       opacity: 1
       transform: scale(1)
 

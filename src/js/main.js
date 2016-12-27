@@ -156,6 +156,7 @@ $(document).ready(function(){
 
   $("#show-mobile-menu").on("click", function(){
     if ( $(this).hasClass('is-active') ) {
+      $(this).closest('.header').removeClass('is-active');
       $(this).removeClass('is-active');
       $(this).find('.hamburger-label').text('Меню');
       $('.mobile-menu').fadeOut();
@@ -163,6 +164,7 @@ $(document).ready(function(){
       // $('.hero').removeClass('active-mobile');
       // SidebarMenuEffects();
     } else {
+      $(this).closest('.header').addClass('is-active');
       $(this).addClass('is-active');
       $(this).find('.hamburger-label').text('Меню');
       $('.mobile-menu').fadeIn();
@@ -257,8 +259,8 @@ $(document).ready(function(){
     sectionsColor : ['transparent', 'transparent', '#c0c0c0'],
     paddingTop: '0px',
     paddingBottom: '0px',
-    fixedElements: '.header, #show-me-menu, .scroll-up',
-    responsiveWidth: 576,
+    fixedElements: '.header, .scroll-up',
+    responsiveWidth: 1200,
     responsiveHeight: 600,
     responsiveSlides: false,
 
@@ -284,8 +286,8 @@ $(document).ready(function(){
 
     },
     afterLoad: function(anchorLink, index){
-      window.dispatchEvent(new Event('resize'));
-      console.log('rendered');
+      // window.dispatchEvent(new Event('resize'));
+      // console.log('rendered');
     },
     afterRender: function(){
     },
@@ -363,11 +365,11 @@ $(document).ready(function(){
     callbacks: {
       open: function() {
         $('body, html').css('overflow-y', 'hidden');
-        $.scrollify.disable();
+        // $.scrollify.disable();
       },
       close: function() {
         $('body, html').css('overflow-y', 'scroll');
-        $.scrollify.enable();
+        // $.scrollify.enable();
       }
     }
 	});

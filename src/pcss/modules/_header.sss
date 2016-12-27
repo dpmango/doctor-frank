@@ -114,6 +114,10 @@ $blackHeaderColor: #8b8b8a
 
 .header--black
   color: $blackHeaderColor
+  .hamburger-inner
+    background-color: $blackHeaderColor
+    &:before, &:after
+      background-color: $blackHeaderColor
   .header__wrapper
     border-color: $blackHeaderColor
   .header__navi
@@ -135,3 +139,21 @@ $blackHeaderColor: #8b8b8a
       background-image: url('../images/insta_icon_gray.png')
     .ico-social-fb
       background-image: url('../images/facebook_icon_gray.png')
+  &.is-active
+    color: white
+    .hamburger-inner
+      background-color: white
+      &:before, &:after
+        background-color: white
+    .header__wrapper
+      border-color: white
+    .header__navi
+      li.header__navi__btn
+        a
+          border-color: white
+          &::after
+            color: white
+          &:hover
+            color: white
+            &::after
+              color: white
