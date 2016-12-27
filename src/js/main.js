@@ -211,12 +211,10 @@ $(document).ready(function(){
     lockAnchors: false,
     anchors:['firstPage', 'secondPage', 'thirdPage'],
     navigation: false,
-    // false
     navigationPosition: 'right',
     navigationTooltips: ['firstSlide', 'secondSlide'],
     showActiveTooltip: false,
-    slidesNavigation: true,
-    //false
+    slidesNavigation: false,
     slidesNavPosition: 'bottom',
     white: false,
 
@@ -256,19 +254,19 @@ $(document).ready(function(){
     //Design
     controlArrows: true,
     verticalCentered: false,
-    sectionsColor : ['transparent', 'transparent'],
+    sectionsColor : ['transparent', 'transparent', '#c0c0c0'],
     paddingTop: '0px',
     paddingBottom: '0px',
     fixedElements: '.header, #show-me-menu, .scroll-up',
-    responsiveWidth: 1200,
-    responsiveHeight: 0,
+    responsiveWidth: 576,
+    responsiveHeight: 600,
     responsiveSlides: false,
 
     //Custom selectors
     sectionSelector: '.section',
     slideSelector: '.slide',
 
-    lazyLoading: true,
+    lazyLoading: false,
 
     //events
     onLeave: function(index, nextIndex, direction){
@@ -337,11 +335,13 @@ $(document).ready(function(){
     callbacks: {
       open: function() {
         $('body, html').css('overflow-y', 'hidden');
-        $.scrollify.disable();
+        // $.scrollify.disable();
+        // $.fn.fullpage.destroy('all');
       },
       close: function() {
         $('body, html').css('overflow-y', 'scroll');
-        $.scrollify.enable();
+        // $.scrollify.enable();
+        // $.fn.fullpage.reBuild();
       }
     }
 	});
