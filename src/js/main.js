@@ -283,8 +283,12 @@ $(document).ready(function(){
       }
 
     },
-    afterLoad: function(anchorLink, index){},
-    afterRender: function(){},
+    afterLoad: function(anchorLink, index){
+      window.dispatchEvent(new Event('resize'));
+      console.log('rendered');
+    },
+    afterRender: function(){
+    },
     afterResize: function(){},
     afterResponsive: function(isResponsive){},
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
