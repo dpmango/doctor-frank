@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Доктор Франк</title>
     <!--build:js js/main.min.js-->
-    <script src="/js/lib/jquery11.min.js"></script>
-    <script src="/js/lib/jquery.event.move.js"></script>
-    <script src="/js/lib/jquery.twentytwenty.js"></script>
-    <script src="/js/lib/jquery.magnific-popup.min.js"></script>
-    <script src="/js/lib/jquery.maskedinput.min.js"></script>
-    <script src="/js/lib/jquery.fullpage.min.js"></script>
-    <script src="/js/lib/moment.min.js"></script>
-    <script src="/js/lib/daterangepicker.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="js/lib/jquery-2.2.4.min.js"></script>
+    <script src="js/lib/jquery.event.move.js"></script>
+    <script src="js/lib/jquery.twentytwenty.js"></script>
+    <script src="js/lib/jquery.magnific-popup.min.js"></script>
+    <script src="js/lib/jquery.maskedinput.min.js"></script>
+    <script src="js/lib/jquery.scrollify.min.js"></script>
+    <script src="js/lib/moment.min.js"></script>
+    <script src="js/lib/daterangepicker.js"></script>
+    <script src="js/main.js"></script>
     <!--endbuild-->
     <!--build:css css/style.min.css-->
     <link rel="stylesheet" href="css/lib/bootstrap.css" type="text/css">
@@ -28,7 +28,7 @@
   </head>
 </html>
 <body>
-  <div class="st-container" id="st-container">
+   <div class="st-container" id="st-container">
     <div class="st-pusher">
       <nav class="st-menu st-effect-8" id="menu-8">
         <button class="hamburger hamburger--spin is-active" id="close-sidebar" type="button" data-effect="st-effect-8"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
@@ -142,11 +142,11 @@
                         <p>Безусловный приоритет работы нашей клиники - оказание всесторонней высококвалифицированной стоматологической помощи взрослым и детям. Используя новейшие технологии мировой стоматологии , мы уверены в их качестве, пользе , безопасности.В своих решениях мы опираемся на знания и многолетний собственный опыт и опыт наших зарубежных коллег. Наш пациент знает, что получает лучшее. <br> Коллектив - наше преимущество!</p>
                         <div class="content__heading">Специалисты клиники</div>
                       </div>
-                      <div class="col-sm-6"><a href="#">Франк Мария Михайловна</a><a href="#">Беляева Анжела Евгеньевна</a><a href="#">Симонов Андрей Анатольевич</a><a href="#">Дзех Ольга Дмитриевна</a></div>
+                      <div class="col-sm-6"><a class="popup-with-zoom-anim" href="#modalPeopleOne">Франк Мария Михайловна</a><a href="#">Беляева Анжела Евгеньевна</a><a href="#">Симонов Андрей Анатольевич</a><a href="#">Дзех Ольга Дмитриевна</a></div>
                       <div class="col-sm-6"><a href="#">Франк Мария Михайловна</a><a href="#">Беляева Анжела Евгеньевна</a><a href="#">Симонов Андрей Анатольевич</a><a href="#">Дзех Ольга Дмитриевна</a></div>
                       <div class="col-sm-6">
                         <div class="content__heading">Адрес:</div>
-                        <p class="fz17">ул. Шейнкмана, <br /> т. 495-322-22-33, 495-322-22-33;:</p>
+                        <p class="fz17">ул.Шейнкмана, 90<br /> т. 223-04-73, 223-04-74:</p>
                       </div>
                       <div class="col-sm-6">
                         <div class="content__heading">Часы работы:</div>
@@ -177,7 +177,7 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="content__heading">Адрес:</div>
-                        <p class="fz17">ул. Бакинских комиссаров, <br /> т. 495-322-22-33, 495-322-22-33;:</p>
+                        <p class="fz17">ул. ул.Бакинских Комиссаров, 99<br /> т. 22-22-006, 22-22-007:</p>
                       </div>
                       <div class="col-sm-6">
                         <div class="content__heading">Часы работы:</div>
@@ -208,7 +208,7 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="content__heading">Адрес:</div>
-                        <p class="fz17">ул. Амундсена, <br /> т. 495-322-22-33, 495-322-22-33;:</p>
+                        <p class="fz17">ул.Амундсена, 61,<br /> т. 267-30-77:</p>
                       </div>
                       <div class="col-sm-6">
                         <div class="content__heading">Часы работы:</div>
@@ -311,6 +311,36 @@
               </div>
             </div>
           </div>
+		  <div class="zoom-anim-dialog modal modal--personal mfp-hide" id="modalPeopleOne">
+		              <div class="container">
+		                <div class="row">
+		                  <div class="col-sm-6 col-xs-6 offset-xs-3 offset-sm-0"><img class="img-fluid modal__personal__image" src="images/people/frank_2.jpg"></div>
+		                  <div class="col-sm-6">
+		                    <div class="modal__personal__content">
+		                      <div class="modal__personal__name">Франк <br> Мария Михайловна</div>
+		                      <div class="modal__personal__status">
+		                        Главный врач клиники <br>
+		                        Кандидат медицинских наук, врач хирург- имплантолог <br>
+		                        высшей категории, ортопед.
+		                      </div>
+		                      <div class="modal__personal__biography">
+		                        Образование, специализация,участие в семинарах,когрессах: <br>
+		                        <span>2000 год</span> - окончила СГМИ по специальности лечебное дело. Врач общей практики. <br>
+		                        <span>2003 год</span> -  окончила СГМИ по специальности стоматология. <br>
+		                        <span>2005 год</span> - окончила клиническую ординатуру по челюстно-лицевой хирургии . <br>
+		                        <span>2006 году</span> защитила кандидатскую диссертацию по вопросам хирургического лечения пародонтита. <br>
+		                        <span>2007 год</span> - специализация в клинике профессора Карло Тинти (Carlo Tinti) в г.Брешиа (Италия) по вопросам направленной регенерации костной ткани. <br>
+		                        <span>2008 год</span> - специализация по ортопедической стоматологии  ( г. Тверь). <br>
+		                        <span>2011 год</span> - специализация по вопросам открытого синус-лифтинга и одномоментной имплантации под рук. проф. Карло Майорана (C. Maiorano), Миланский университет, Италия. <br>
+		                        <span>2012 год</span> - специализация в центре остеоинтеграции под рук-вом проф. Патрика Палаччи ( Patric Pallacci) г.Марсель, Франция по вопросам комплексной реабилитации на имплантатах. <br>
+		                        <span>2013 год</span> - специализация в учебном центре Osteoplac под рук. Д-ра И. Гамборена (I. Gamborena) Сан-Себастьян, Испания, по вопросам имплантации во фронтальном отделе и достижения максимального эстетического результата. <br>
+		                        <span>2014 год</span> - индивидуальный курс в клинике Д-ра И. Гамборена (I. Gamborena ) <br>
+		                      </div>
+		                    </div>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
         </div>
       </div>
     </div>

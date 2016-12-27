@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Доктор Франк</title>
     <!--build:js js/main.min.js-->
-    <script src="/js/lib/jquery11.min.js"></script>
-    <script src="/js/lib/jquery.event.move.js"></script>
-    <script src="/js/lib/jquery.twentytwenty.js"></script>
-    <script src="/js/lib/jquery.magnific-popup.min.js"></script>
-    <script src="/js/lib/jquery.maskedinput.min.js"></script>
-    <script src="/js/lib/jquery.fullpage.min.js"></script>
-    <script src="/js/lib/moment.min.js"></script>
-    <script src="/js/lib/daterangepicker.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="js/lib/jquery-2.2.4.min.js"></script>
+    <script src="js/lib/jquery.fullpage.min.js"></script>
+    <script src="js/lib/jquery.event.move.js"></script>
+    <script src="js/lib/jquery.twentytwenty.js"></script>
+    <script src="js/lib/jquery.magnific-popup.min.js"></script>
+    <script src="js/lib/jquery.maskedinput.min.js"></script>
+    <script src="js/lib/jquery.scrollify.min.js"></script>
+    <script src="js/lib/moment.min.js"></script>
+    <script src="js/lib/daterangepicker.js"></script>
+    <script src="js/main.js"></script>
     <!--endbuild-->
     <!--build:css css/style.min.css-->
     <link rel="stylesheet" href="css/lib/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/lib/jquery.fullpage.css">
     <link rel="stylesheet" href="css/lib/hamburgers.css" type="text/css">
     <link rel="stylesheet" href="css/lib/twentytwenty.css" type="text/css">
     <link rel="stylesheet" href="css/lib/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/lib/services.css" type="text/css">
     <link rel="stylesheet" href="css/lib/daterangepicker.css" type="text/css">
     <!--endbuild-->
@@ -53,258 +55,249 @@
         </ul>
       </nav>
       <div class="st-content white" id="section-top">
-        <div class="st-content-inner">
+        <div class="st-content-inner" id="-fullpage">
+          <div class="mobile-menu-active-bg text-xs-center"><a href="/">
+              <div class="hero__logo img-fluid mt10"></div></a>
+            <div class="hero__logo__light"></div>
+          </div>
+          <!--TRANSPARENT HEADER:: START-->
+          <header class="header header--transparent">
+            <div class="container">
+              <div class="row relative">
+                <div class="col-sm-12">
+                  <div class="header__wrapper">
+                    <ul class="header__navi">
+                      <li class="header__navi__btn"><a class="popup-with-zoom-anim" href="#modalCallback">Записаться на прием</a></li>
+                      <div class="header__navi__sections">
+                        <li><a href="kliniki.html">НАШИ КЛИНИКИ</a></li>
+                        <li><a href="personal.html">ПЕРСОНАЛ</a></li>
+                        <li><a href="services.html">УСЛУГИ</a></li>
+                        <li><a href="portfolio.html">ПОРТФОЛИО</a></li>
+                        <li><a href="contact.html">КОНТАКТЫ</a></li>
+                      </div>
+                      <div class="header__navi__mobile-menu">
+                        <button class="hamburger hamburger--squeeze" id="show-mobile-menu" type="button" aria-label="Меню"><span class="hamburger-label">Меню</span><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+                      </div>
+                      <li class="header__navi__lang-switcher locale--ru"><a href="#">RU</a></li>
+                      <li class="header__navi__lang-switcher locale--en"><a href="#">EN</a></li>
+                      <li class="fl-r"><a href="#"><i class="ico ico-social-fb"></i></a></li>
+                      <li class="fl-r"><a href="#"><i class="ico ico-social-insta"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="mobile-menu">
+                    <ul class="mobile-menu__list">
+                      <li><a href="kliniki.html">Hаши клиники</a></li>
+                      <li><a href="personal.html">Персонал</a></li>
+                      <li><a href="services.html">Услуги</a></li>
+                      <li><a href="portfolio.html">Портфолио</a></li>
+                      <li><a href="#">Новости</a></li>
+                      <li><a href="#">Пациентам</a></li>
+                      <li><a href="faq.html">Вопрос-ответ</a></li>
+                      <li><a href="testimonials.html">Отзывы</a></li>
+                      <li><a href="partners.html">Партнеры</a></li>
+                      <li><a href="contact.html">Kонтакты</a></li>
+                    </ul>
+                    <ul class="mobile-menu__icons">
+                      <li class="header__navi__lang-switcher"><a href="#">RU</a></li>
+                      <li class="header__navi__lang-switcher"><a href="#">EN</a></li>
+                      <li class="fl-r"><a href="#"><i class="ico ico-social-fb"></i></a></li>
+                      <li class="fl-r"><a href="#"><i class="ico ico-social-insta"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="st-trigger-effects">
+                  <button class="hamburger hamburger--spin" id="show-me-menu" type="button" data-effect="st-effect-8"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <!--HERO::START-->
           <div id="fullpage">
-            <div class="mobile-menu-active-bg text-xs-center"><a href="/">
-                <div class="hero__logo img-fluid mt10"></div></a>
-              <div class="hero__logo__light"></div>
-            </div>
-            <!--TRANSPARENT HEADER:: START-->
-            <header class="header header--transparent">
-              <div class="container">
-                <div class="row relative">
-                  <div class="col-sm-12">
-                    <div class="header__wrapper">
-                      <ul class="header__navi">
-                        <li class="header__navi__btn"><a class="popup-with-zoom-anim" href="#modalCallback">Записаться на прием</a></li>
-                        <div class="header__navi__sections">
-                          <li><a href="kliniki.html">НАШИ КЛИНИКИ</a></li>
-                          <li><a href="personal.html">ПЕРСОНАЛ</a></li>
-                          <li><a href="services.html">УСЛУГИ</a></li>
-                          <li><a href="portfolio.html">ПОРТФОЛИО</a></li>
-                          <li><a href="contact.html">КОНТАКТЫ</a></li>
-                        </div>
-                        <div class="header__navi__mobile-menu">
-                          <button class="hamburger hamburger--squeeze" id="show-mobile-menu" type="button" aria-label="Меню"><span class="hamburger-label">Меню</span><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
-                        </div>
-                        <li class="header__navi__lang-switcher locale--ru"><a href="#">RU</a></li>
-                        <li class="header__navi__lang-switcher locale--en"><a href="#">EN</a></li>
-                        <li class="fl-r"><a href="#"><i class="ico ico-social-fb"></i></a></li>
-                        <li class="fl-r"><a href="#"><i class="ico ico-social-insta"></i></a></li>
-                      </ul>
-                    </div>
-                    <div class="mobile-menu">
-                      <ul class="mobile-menu__list">
-                        <li><a href="kliniki.html">Hаши клиники</a></li>
-                        <li><a href="personal.html">Персонал</a></li>
-                        <li><a href="services.html">Услуги</a></li>
-                        <li><a href="portfolio.html">Портфолио</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#">Пациентам</a></li>
-                        <li><a href="faq.html">Вопрос-ответ</a></li>
-                        <li><a href="testimonials.html">Отзывы</a></li>
-                        <li><a href="partners.html">Партнеры</a></li>
-                        <li><a href="contact.html">Kонтакты</a></li>
-                      </ul>
-                      <ul class="mobile-menu__icons">
-                        <li class="header__navi__lang-switcher"><a href="#">RU</a></li>
-                        <li class="header__navi__lang-switcher"><a href="#">EN</a></li>
-                        <li class="fl-r"><a href="#"><i class="ico ico-social-fb"></i></a></li>
-                        <li class="fl-r"><a href="#"><i class="ico ico-social-insta"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div id="st-trigger-effects">
-                    <button class="hamburger hamburger--spin fixedScroll" id="show-me-menu" type="button" data-effect="st-effect-8"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
-                  </div>
+          <div class="hero hero--mainpage section" id="section0">
+            <div class="container-outer"><div class="container">
+              <div class="row">
+                <div class="col-sm-12 text-xs-center"><a href="/">
+                    <div class="hero__logo img-fluid"></div></a>
+                  <div class="hero__logo__light"></div>
                 </div>
               </div>
-            </header>
-            <!--HERO::START-->
-            <div class="hero hero--mainpage section active" id="section0">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12 text-xs-center"><a href="/">
-                      <div class="hero__logo img-fluid"></div></a>
-                    <div class="hero__logo__light"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="hero__title">МОЙ ОПЫТ. <br /> МОЯ ОТВЕТСТВЕННОСТЬ.</div>
-                    <div class="hero__signature">Мария Михайловна Франк<span>Кандидат медицинских наук, <br /> главный врач клиники Doctor FRANK</span></div>
-                  </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="hero__title">МОЙ ОПЫТ. <br /> МОЯ ОТВЕТСТВЕННОСТЬ.</div>
+                  <div class="hero__signature">Мария Михайловна Франк<span>Кандидат медицинских наук, <br /> главный врач клиники Doctor FRANK</span></div>
                 </div>
               </div>
-              <div class="scroll-down scroll-down--gray"><i class="ico ico-scroll-down--gray"></i><span>переходите <br> ниже</span></div>
-            </div>
-            <!--ABOUT::START-->
-            <section class="about about--mainpage section" id="section1">
-              <div class="container">
-                <div class="row relative mobile-flex">
-                  <div class="col-sm-6 col-md-5 offset-md-1 no-pad-xs">
-                    <div class="about__block about__block--primary"><span>В своих решениях мы опираемся на знания и многолетний собственный опыт и опыт наших зарубежных коллег. Наш пациент знает, что получает лучшее.</span><a class="btn btn--huge btn--rounded btn--outline btn--white" href="kliniki.html">ПОЛНАЯ ИНФОРМАЦИЯ →</a></div>
+            </div></div>
+            <div class="scroll-down scroll-down--gray"><i class="ico ico-scroll-down--gray"></i><span>переходите <br> ниже</span></div>
+          </div>
+          <!--ABOUT::START-->
+          <section class="about about--mainpage section" id="section1">
+            <div class="container-outer"><div class="container">
+              <div class="row relative mobile-flex">
+                <div class="col-sm-6 col-md-5 offset-md-1 no-pad-xs">
+                  <div class="about__block about__block--primary"><span>В своих решениях мы опираемся на знания и многолетний собственный опыт и опыт наших зарубежных коллег. Наш пациент знает, что получает лучшее.</span><a class="btn btn--huge btn--rounded btn--outline btn--white" href="kliniki.html">ПОЛНАЯ ИНФОРМАЦИЯ →</a></div>
+                </div>
+                <div class="col-sm-7 pull-sm-1 absolute no-pad-xs">
+                  <div class="about__block about__block--light">
+                    <div class="about__block__title">О клиниках</div><span>Безусловный приоритет работы нашей клиники - оказание всесторонней высококвалифицированной стоматологической помощи взрослым и детям. Используя новейшие технологии мировой стоматологии , мы уверены в их качестве, пользе , безопасности.</span>
                   </div>
-                  <div class="col-sm-7 pull-sm-1 absolute no-pad-xs">
-                    <div class="about__block about__block--light">
-                      <div class="about__block__title">О клиниках</div><span>Безусловный приоритет работы нашей клиники - оказание всесторонней высококвалифицированной стоматологической помощи взрослым и детям. Используя новейшие технологии мировой стоматологии , мы уверены в их качестве, пользе , безопасности.</span>
+                </div>
+                <div class="scroll-down scroll-down--gray scroll-down--about"><i class="ico ico-scroll-down--gray"></i><span>переходите <br> ниже</span></div>
+              </div>
+            </div></div>
+          </section>
+          <!--SERVICES::START-->
+          <section class="services services--mainpage section" id="section2">
+            <div class="container-outer"><div class="container relative">
+              <div class="services__spiral__bg"></div>
+              <div class="row">
+                <div class="col-sm-12 h100">
+                  <div class="services__title">УСЛУГИ <br> КЛИНИКИ</div>
+                  <div class="serivces__spiral">
+                    <div class="a serivces__spiral__pos-one" href="#"><span>Диагностика</span>
+                      <div class="relative">
+                        <ul class="spiral__dropdown">
+                          <li><a href="#">Клиническое обследование</a></li>
+                          <li><a href="#">Компьютерная томография</a></li>
+                          <li><a href="#">Пародонтологический анализ</a></li>
+                          <li><a href="#">Фото и видео анализ</a></li>
+                          <li><a href="#">Функциональный анализ</a></li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                  <div class="scroll-down scroll-down--gray scroll-down--about"><i class="ico ico-scroll-down--gray"></i><span>переходите <br> ниже</span></div>
-                </div>
-              </div>
-            </section>
-            <!--SERVICES::START-->
-            <section class="services services--mainpage section" id="section2">
-              <div class="container relative">
-                <div class="services__spiral__bg"></div>
-                <div class="row">
-                  <div class="col-sm-12 h100">
-                    <div class="services__title">УСЛУГИ <br> КЛИНИКИ</div>
-                    <div class="serivces__spiral">
-                      <div class="a serivces__spiral__pos-one" href="#"><span>Диагностика</span>
-                        <div class="relative">
-                          <ul class="spiral__dropdown">
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                          </ul>
-                        </div>
+                    <div class="a serivces__spiral__pos-two" href="#"><span>Ортодония</span>
+                      <div class="relative">
+                        <ul class="spiral__dropdown">
+                          <li><a href="#">Брекет-системы</a></li>
+                          <li><a href="#">Съемные аппараты</a></li>
+                        </ul>
                       </div>
-                      <div class="a serivces__spiral__pos-two" href="#"><span>Ортодония</span>
-                        <div class="relative">
-                          <ul class="spiral__dropdown">
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                          </ul>
-                        </div>
+                    </div>
+                    <div class="a serivces__spiral__pos-three" href="#"><span>Детская стоматология</span>
+                      <div class="relative">
+                        <ul class="spiral__dropdown">
+                          <li><a href="#">Профилактика развития кариеса</a></li>
+                          <li><a href="#">Лечение кариеса</a></li>
+                        </ul>
                       </div>
-                      <div class="a serivces__spiral__pos-three" href="#"><span>Детская стоматология</span>
-                        <div class="relative">
-                          <ul class="spiral__dropdown">
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                          </ul>
-                        </div>
+                    </div>
+                    <div class="a serivces__spiral__pos-four" href="#"><span>Пародонтология</span>
+                      <div class="relative">
+                        <ul class="spiral__dropdown">
+                          <li><a href="#">Гигиена полости рта</a></li>
+                          <li><a href="#">Консервативное лечение пародонтита</a></li>
+                          <li><a href="#">Операции на тканях пародонта</a></li>
+                        </ul>
                       </div>
-                      <div class="a serivces__spiral__pos-four" href="#"><span>Пародонтология</span>
-                        <div class="relative">
-                          <ul class="spiral__dropdown">
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                          </ul>
-                        </div>
+                    </div>
+                    <div class="a serivces__spiral__pos-five" href="#"><span>Имплантация</span>
+                      <div class="relative">
+                        <ul class="spiral__dropdown">
+                          <li><a href="#">Немедленная имплантация зубов</a></li>
+                          <li><a href="#">Отсроченная имплантация</a></li>
+                          <li><a href="#">При полной потере зубов</a></li>
+                        </ul>
                       </div>
-                      <div class="a serivces__spiral__pos-five" href="#"><span>Имплантация</span>
-                        <div class="relative">
-                          <ul class="spiral__dropdown">
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                          </ul>
-                        </div>
+                    </div>
+                    <div class="a serivces__spiral__pos-six" href="#"><span>Протезирование</span>
+                      <div class="relative">
+                        <ul class="spiral__dropdown">
+                          <li><a href="#">Вкладки</a></li>
+                          <li><a href="#">Коронки</a></li>
+                          <li><a href="#">Коронки на имплантах</a></li>
+                        </ul>
                       </div>
-                      <div class="a serivces__spiral__pos-six" href="#"><span>Протезирование</span>
-                        <div class="relative">
-                          <ul class="spiral__dropdown">
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                          </ul>
-                        </div>
+                    </div>
+                    <div class="a serivces__spiral__pos-seven" href="#"><span>Терапия</span>
+                      <div class="relative">
+                        <ul class="spiral__dropdown">
+                          <li><a href="#">Лечение зубов под микроскопом</a></li>
+                        </ul>
                       </div>
-                      <div class="a serivces__spiral__pos-seven" href="#"><span>Терапия</span>
-                        <div class="relative">
-                          <ul class="spiral__dropdown">
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="a serivces__spiral__pos-eight" href="#"><span>Эстетическая <br> стоматология</span>
-                        <div class="relative">
-                          <ul class="spiral__dropdown">
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                            <li><a href="#">Диагностика</a></li>
-                          </ul>
-                        </div>
+                    </div>
+                    <div class="a serivces__spiral__pos-eight" href="#"><span>Эстетическая <br> стоматология</span>
+                      <div class="relative">
+                        <ul class="spiral__dropdown">
+                          <li><a href="#">Отбеливание</a></li>
+                          <li><a href="#">Виниры</a></li>
+                          <li><a href="#">Люминиры</a></li>
+                          <li><a href="#">Реставрация</a></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!--top--><a class="scroll-up scroll-up--mainpage" href="#firstPage"></a>
-                <div class="hidden-xs-up"><a id="trigger-sectionOne" href="#sectionFirst"></a><a id="trigger-sectionTwo" href="#sectionSecond"></a><a id="trigger-sectionThree" href="#sectionThird"></a></div>
               </div>
-            </section>
-            <!-- MODAL-->
-            <div class="zoom-anim-dialog mfp-hide modal" id="modalCallback">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="modal__heading">ЗАПИШИТЕСЬ <br /> НА ПРИЕМ</div>
-                    <div class="modal__desc">МЫ С РАДОСТЬЮ ВАМ ПЕРЕЗВОНИМ</div>
-                    <form class="modal__form">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <div class="modal__form__input">
-                            <input type="text" id="firstName" name="firstName" autocomplete="off" required>
-                            <label>Ф.И.О <span>*</span></label>
-                          </div>
-                          <div class="modal__form__input">
-                            <input type="text" id="phone" name="phone" autocomplete="off" required>
-                            <label>Ваш телефон <span>*</span></label>
-                          </div>
-                          <div class="modal__form__input">
-                            <input type="text" id="type" name="type" autocomplete="off" required>
-                            <label>Причина обращения</label>
-                          </div>
+              <!--top--><a class="scroll-up scroll-up--mainpage" href="#section0"></a>
+              <div class="hidden-xs-up"><a id="trigger-sectionOne" href="#sectionFirst"></a><a id="trigger-sectionTwo" href="#sectionSecond"></a><a id="trigger-sectionThree" href="#sectionThird"></a></div>
+            </div></div>
+          </section>
+          </div>
+          <!-- MODAL-->
+          <div class="zoom-anim-dialog mfp-hide modal" id="modalCallback">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="modal__heading">ЗАПИШИТЕСЬ <br /> НА ПРИЕМ</div>
+                  <div class="modal__desc">МЫ С РАДОСТЬЮ ВАМ ПЕРЕЗВОНИМ</div>
+                  <form class="modal__form">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="modal__form__input">
+                          <input type="text" id="firstName" name="firstName" autocomplete="off" required>
+                          <label>Ф.И.О <span>*</span></label>
                         </div>
-                        <div class="col-sm-6">
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <div class="modal__form__input relative">
-                                <input type="text" id="daterange" name="daterange" autocomplete="off" required>
-                                <label>Дата приема</label>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="modal__form__input">
-                                <input type="text" id="time" name="time" autocomplete="off" required>
-                                <label>Время</label>
-                              </div>
+                        <div class="modal__form__input">
+                          <input type="text" id="phone" name="phone" autocomplete="off" required>
+                          <label>Ваш телефон <span>*</span></label>
+                        </div>
+                        <div class="modal__form__input">
+                          <input type="text" id="type" name="type" autocomplete="off" required>
+                          <label>Причина обращения</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="modal__form__input relative">
+                              <input type="text" id="daterange" name="daterange" autocomplete="off" required>
+                              <label>Дата приема</label>
                             </div>
                           </div>
-                          <div class="modal__form__input selector">
-                            <input type="text" id="doctor" name="doctor" autocomplete="off" required>
-                            <label>Врач <span class="ico ico-dropdown"></span></label>
-                            <div class="select">
-                              <div class="option" data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</div>
-                              <div class="option" data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</div>
-                              <div class="option" data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</div>
-                              <div class="option" data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</div>
-                              <div class="option" data-name="Молоток Николай Петрович">Молоток Николай Петрович</div>
-                              <div class="option" data-name="Петросян Василий Иванович">Петросян Василий Иванович</div>
-                              <div class="option" data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</div>
-                              <div class="option" data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</div>
-                              <div class="option" data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</div>
-                              <div class="option" data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</div>
-                              <div class="option" data-name="Молоток Николай Петрович">Молоток Николай Петрович</div>
-                              <div class="option" data-name="Петросян Василий Иванович">Петросян Василий Иванович</div>
-                              <div class="option" data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</div>
-                              <div class="option" data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</div>
-                              <div class="option" data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</div>
-                              <div class="option" data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</div>
-                              <div class="option" data-name="Молоток Николай Петрович">Молоток Николай Петрович</div>
-                              <div class="option" data-name="Петросян Василий Иванович">Петросян Василий Иванович</div>
+                          <div class="col-sm-6">
+                            <div class="modal__form__input">
+                              <input type="text" id="time" name="time" autocomplete="off" required>
+                              <label>Время</label>
                             </div>
-                          </div><a class="mt50 btn btn--outline btn--huge btn--white btn--rounded btn--fill btn--right" href="#">ПЕРЕЗВОНИТЕ МНЕ →</a>
+                          </div>
                         </div>
+                        <div class="modal__form__input selector">
+                          <input type="text" id="doctor" name="doctor" autocomplete="off" required>
+                          <label>Врач <span class="ico ico-dropdown"></span></label>
+                          <div class="select">
+                            <div class="option" data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</div>
+                            <div class="option" data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</div>
+                            <div class="option" data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</div>
+                            <div class="option" data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</div>
+                            <div class="option" data-name="Молоток Николай Петрович">Молоток Николай Петрович</div>
+                            <div class="option" data-name="Петросян Василий Иванович">Петросян Василий Иванович</div>
+                            <div class="option" data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</div>
+                            <div class="option" data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</div>
+                            <div class="option" data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</div>
+                            <div class="option" data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</div>
+                            <div class="option" data-name="Молоток Николай Петрович">Молоток Николай Петрович</div>
+                            <div class="option" data-name="Петросян Василий Иванович">Петросян Василий Иванович</div>
+                            <div class="option" data-name="Иванова Нина Николаевна">Иванова Нина Николаевна</div>
+                            <div class="option" data-name="Петрова Наталья Сергеевна">Петрова Наталья Сергеевна</div>
+                            <div class="option" data-name="Сидорова Евгения Павловна">Сидорова Евгения Павловна</div>
+                            <div class="option" data-name="Зубодерова Васелина Антоновна">Зубодерова Васелина Антоновна</div>
+                            <div class="option" data-name="Молоток Николай Петрович">Молоток Николай Петрович</div>
+                            <div class="option" data-name="Петросян Василий Иванович">Петросян Василий Иванович</div>
+                          </div>
+                        </div><a class="mt50 btn btn--outline btn--huge btn--white btn--rounded btn--fill btn--right" href="#">ПЕРЕЗВОНИТЕ МНЕ →</a>
                       </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

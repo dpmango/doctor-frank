@@ -168,7 +168,7 @@ body div.select::scrollbar, html div.select::scrollbar {
 }
 .hero {
     /*height: 100vh;*/
-    /*min-height: 700px;*/
+    min-height: 700px;
     position: relative;
 }
 @media(max-width: 576px) {
@@ -401,7 +401,7 @@ body div.select::scrollbar, html div.select::scrollbar {
 }
 .services {
     /*height: 100vh;*/
-    /*min-height: 793px;*/
+    min-height: 793px;
     /*min-height: 852px;*/
     position: relative;
     overflow: hidden;
@@ -416,7 +416,7 @@ body div.select::scrollbar, html div.select::scrollbar {
     bottom: 0;
     left: 0;
     position: absolute;
-    height: 625px !important;
+    height: 100vh !important;
 }
 @media(max-width: 1000px) {
     .services__spiral__bg {
@@ -541,7 +541,7 @@ body div.select::scrollbar, html div.select::scrollbar {
 }
 .h100 {
     /*height: 100vh;*/
-    height: 625px;
+    height: 699px;
 }
 /* paddings */
 .no-pad-l {
@@ -914,16 +914,16 @@ ul.mobile-menu__icons li:last-child {
 .scroll-down--gray span {
     color: #4b4b4b;
 }
-@media(max-width: 1000px) {
+@media(max-width: 1200px) {
     .scroll-down--gray {
         display: none;
     }
 }
 .scroll-down--about {
-    bottom: -15px;
+    bottom: -130px;
 }
 .scroll-up {
-    opacity: 1;
+    opacity: 0;
     display: block;
     width: 45px;
     height: 45px;
@@ -1404,7 +1404,7 @@ a.heading__crumbs__home {
 }
 /* HERO */
 .hero__logo {
-    margin-top: 16px;
+    margin-top: 8px;
     display: inline-block;
     background: url('../images/logo_gray.png') no-repeat center;
     background-size: contain;
@@ -1696,14 +1696,14 @@ a.heading__crumbs__home {
 }
 a.serivces__spiral__pos-one, .a.serivces__spiral__pos-one {
     top: 20.5%;
-    right: 21.4%;
+    right: 19.4%;
 }
 a.serivces__spiral__pos-one::before, .a.serivces__spiral__pos-one::before {
     display: inline-block;
 }
 a.serivces__spiral__pos-two, .a.serivces__spiral__pos-two {
-        top: 35%;
-    right: 15.3%;
+    top: 35%;
+    right: 11.3%;
 }
 a.serivces__spiral__pos-two ul.spiral__dropdown, .a.serivces__spiral__pos-two ul.spiral__dropdown {
     left: -170px;
@@ -1717,7 +1717,7 @@ a.serivces__spiral__pos-two::before, .a.serivces__spiral__pos-two::before {
 }
 a.serivces__spiral__pos-three, .a.serivces__spiral__pos-three {
     top: 60%;
-    right: 23.5%;
+    right: 21%;
 }
 a.serivces__spiral__pos-three ul.spiral__dropdown, .a.serivces__spiral__pos-three ul.spiral__dropdown {
     bottom: 55px;
@@ -1728,8 +1728,8 @@ a.serivces__spiral__pos-three::before, .a.serivces__spiral__pos-three::before {
     vertical-align: 10px;
 }
 a.serivces__spiral__pos-four, .a.serivces__spiral__pos-four {
-        top: 87%;
-    right: 23.5%;
+    top: 87%;
+    right: 20.5%;
 }
 a.serivces__spiral__pos-four ul.spiral__dropdown, .a.serivces__spiral__pos-four ul.spiral__dropdown {
     bottom: 45px;
@@ -1743,28 +1743,28 @@ a.serivces__spiral__pos-four::before, .a.serivces__spiral__pos-four::before {
 }
 a.serivces__spiral__pos-five, .a.serivces__spiral__pos-five {
     top: 37%;
-    left: 25.3%;
+    left: 22.7%;
 }
 a.serivces__spiral__pos-five::before, .a.serivces__spiral__pos-five::before {
     display: inline-block;
 }
 a.serivces__spiral__pos-six, .a.serivces__spiral__pos-six {
     top: 53%;
-    left: 15%;
+    left: 11%;
 }
 a.serivces__spiral__pos-six::before, .a.serivces__spiral__pos-six::before {
     display: inline-block;
 }
 a.serivces__spiral__pos-seven, .a.serivces__spiral__pos-seven {
     top: 64%;
-    left: 34.3%;
+    left: 32.3%;
 }
 a.serivces__spiral__pos-seven::before, .a.serivces__spiral__pos-seven::before {
     display: inline-block;
 }
 a.serivces__spiral__pos-eight, .a.serivces__spiral__pos-eight {
-        top: 85%;
-    left: 32%;
+    top: 85%;
+    left: 29%;
 }
 a.serivces__spiral__pos-eight ul.spiral__dropdown, .a.serivces__spiral__pos-eight ul.spiral__dropdown {
     bottom: 55px;
